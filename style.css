@@ -59,3 +59,14 @@ body {
     url('font/ndebespacing.woff') format('woff');
   font-display: block;
 }
+
+#ndebe-h {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#ndebe-p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
