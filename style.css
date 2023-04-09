@@ -75,6 +75,7 @@ th, td {
 
 .keyboard-input-container {
   width: 100%;
+  max-width: 100%;
 }
 
 .footer {
@@ -145,4 +146,5 @@ h1 {
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
+  max-width: 100%;
 }
