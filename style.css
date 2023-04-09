@@ -66,6 +66,13 @@ th, td {
   padding: 20px;
 }
 
+.typing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .footer {
   background-color: black;
   color: white;
