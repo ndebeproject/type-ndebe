@@ -1,3 +1,4 @@
+/* Structural Changes */
 
 html {
   height: 100%;
@@ -19,6 +20,7 @@ html {
 body {
   margin: 0;
   height: 100%;
+  font-family: 'NdebeSpacing-Regular', sans-serif;
 }
 
 .main-container {
@@ -46,4 +48,13 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 20px;
+}
+
+/* Design Changes */
+
+@font-face {
+  font-family: 'NdebeSpacing-Regular';
+  src: local('NdebeSpacing-Regular'),
+    url('/font/ndebespacing.otf') format('opentype');
+  font-display: block;
 }
