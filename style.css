@@ -5,18 +5,6 @@ html {
   width: 100%;
 }
 
-@media (max-width: 768px) { /* Media query for mobile screens */
-  .main-container {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%;
-    height: auto;
-  }
-}
-
 body {
   margin: 0;
   height: 100%;
@@ -76,6 +64,30 @@ th, td {
   align-items: center;
   flex-direction: column;
   padding: 20px;
+}
+
+.footer {
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) { /* Media query for mobile screens */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Design Changes */
