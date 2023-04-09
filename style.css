@@ -95,6 +95,12 @@ th, td {
     width: 100%;
     height: auto;
   }
+
+  .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
+  .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
+    font-size: 0.8rem;
+  }
+
 }
 
 /* Design Changes */
@@ -107,6 +113,13 @@ th, td {
   font-display: block;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 #ndebe-h {
   font-size: 2.5rem;
   text-align: center;
@@ -116,4 +129,15 @@ th, td {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 10px;
+}
+
+/* Custom theme for the on-screen keyboard */
+.input {
+  font-family: 'NdebeSpacing-Regular', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.simple-keyboard.hg-theme-default.ndebe-theme {
+  font-family: 'NdebeSpacing-Regular', sans-serif;
 }
