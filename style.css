@@ -55,6 +55,7 @@ body {
 @font-face {
   font-family: 'NdebeSpacing-Regular';
   src: local('NdebeSpacing-Regular'),
-    url('/font/ndebespacing.otf') format('opentype');
+    url('/font/ndebespacing.otf') format('opentype'),
+    url('font/ndebespacing.woff') format('woff');
   font-display: block;
 }
