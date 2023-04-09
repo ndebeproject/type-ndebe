@@ -21,8 +21,7 @@ let keyboard = new Keyboard({
       ".com @ {space}",
     ]
   }
-  });
-
+});
 
 /**
  * Update simple-keyboard when input is changed directly
