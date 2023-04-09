@@ -40,6 +40,34 @@ body {
   box-sizing: border-box;
 }
 
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto; /* Add overflow-x property to fix table cut-off */
+}
+
+.reference-chart {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+.reference-chart th:first-child,
+.reference-chart td:first-child {
+  font-size: 24px; /* Change the font size of the first column */
+}
+
+.reference-chart th {
+  font-size: 28px; /* Change the font size of the first row */
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
 .right-section {
   background-color: #F9F8F8;
   flex: 1;
@@ -58,4 +86,15 @@ body {
     url('/font/ndebespacing.otf') format('opentype'),
     url('font/ndebespacing.woff') format('woff');
   font-display: block;
+}
+
+#ndebe-h {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#ndebe-p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
