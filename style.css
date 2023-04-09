@@ -70,6 +70,9 @@ th, td {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.keyboard-input-container {
   width: 100%;
 }
 
@@ -135,6 +138,8 @@ h1 {
   font-family: 'NdebeSpacing-Regular', sans-serif;
   background-color: black;
   color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
