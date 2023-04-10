@@ -221,7 +221,7 @@ h1 {
 
   .left-section,
   .right-section {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
