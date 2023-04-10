@@ -92,7 +92,7 @@ th, td {
   src: local('NdebePlain-Regular'),
     url('/font/ndebeplain.otf') format('opentype'),
     url('font/ndebeplain.woff') format('woff'),
-    url('font/ndebeplain.woff') format('woff2');
+    url('font/ndebeplain.woff2') format('woff2');
   font-display: block;
 }
 
