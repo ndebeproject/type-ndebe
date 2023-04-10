@@ -67,6 +67,7 @@ let keyboard = new Keyboard({
 
 document.querySelector(".input").addEventListener("input", (event) => {
   keyboard.setInput(event.target.value);
+  updateCharacterCount();
 });
 
 console.log(keyboard);
