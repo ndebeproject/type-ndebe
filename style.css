@@ -90,53 +90,6 @@ th, td {
   text-align: center;
 }
 
-@media (max-width: 768px) { /* Media query for mobile screens */
-  .main-container {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%;
-    height: auto;
-  }
-
-  .input {
-    height: 100px;
-    padding: 20px;
-    font-size: 20px;
-    border: none;
-  }
-
-  .simple-keyboard {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
-  .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
-    font-size: 0.8rem;
-  }
-
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
-    min-width: 150px;
-    max-width: none;
-  }
-
-  .simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
-    width: 33%;
-    max-width: none;
-  }
-
-  .simple-keyboard .hg-button-numbers {
-    max-width: 80px;
-  }
-
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
-    max-width: 80px;
-  }
-}
-
 /* Design Changes */
 
 @font-face {
@@ -259,4 +212,53 @@ h1 {
   background: #BB3E03;
   color: white;
   font-size: 2.25rem;
+}
+
+/* Mobile Settings */
+
+@media (max-width: 768px) { /* Media query for mobile screens */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .input {
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+  }
+
+  .simple-keyboard {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
+  .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
+    font-size: 0.8rem;
+  }
+
+  .simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
+    min-width: 150px;
+    max-width: none;
+  }
+
+  .simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
+    width: 33%;
+    max-width: none;
+  }
+
+  .simple-keyboard .hg-button-numbers {
+    max-width: 80px;
+  }
+
+  .simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
+    max-width: 80px;
+  }
 }
