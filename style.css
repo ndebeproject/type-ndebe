@@ -69,11 +69,6 @@ th, td {
 .typing-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.keyboard-input-container {
   width: 100%;
   max-width: 100%;
 }
@@ -90,53 +85,6 @@ th, td {
   text-align: center;
 }
 
-@media (max-width: 768px) { /* Media query for mobile screens */
-  .main-container {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%;
-    height: auto;
-  }
-
-  .input {
-    height: 100px;
-    padding: 20px;
-    font-size: 20px;
-    border: none;
-  }
-
-  .simple-keyboard {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
-  .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
-    font-size: 0.8rem;
-  }
-
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
-    min-width: 150px;
-    max-width: none;
-  }
-
-  .simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
-    width: 33%;
-    max-width: none;
-  }
-
-  .simple-keyboard .hg-button-numbers {
-    max-width: 80px;
-  }
-
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
-    max-width: 80px;
-  }
-}
-
 /* Design Changes */
 
 @font-face {
@@ -148,7 +96,7 @@ th, td {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -161,22 +109,28 @@ h1 {
 #ndebe-p {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 /* Custom theme for the on-screen keyboard */
 .input {
   font-family: 'NdebeSpacing-Regular', sans-serif;
+  font-size: 3rem;
   background-color: black;
   color: white;
-  width: 100%;
   box-sizing: border-box;
   border: none;
+  max-width:90%
+}
+
+.simple-keyboard {
+  box-sizing: border-box;
+  border: none;
+  max-width:90%
+
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
-  max-width: 100%;
 }
 
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
@@ -258,4 +212,41 @@ h1 {
   background: #BB3E03;
   color: white;
   font-size: 2.25rem;
+}
+
+/* Mobile Settings */
+
+@media (max-width: 768px) { /* Media query for mobile screens */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
+  .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
+    font-size: 0.8rem;
+  }
+
+  .simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
+    min-width: 150px;
+    max-width: none;
+  }
+
+  .simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
+    width: 33%;
+    max-width: none;
+  }
+
+  .simple-keyboard .hg-button-numbers {
+    max-width: 80px;
+  }
+
+  .simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
+    max-width: 80px;
+  }
 }
