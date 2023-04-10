@@ -70,10 +70,6 @@ th, td {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.keyboard-input-container {
-  width: 100%;
   max-width: 100%;
 }
 
@@ -100,7 +96,7 @@ th, td {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -118,18 +114,23 @@ h1 {
 /* Custom theme for the on-screen keyboard */
 .input {
   font-family: 'NdebeSpacing-Regular', sans-serif;
+  font-size: 3rem;
   background-color: black;
   color: white;
-  width: 90%;
   box-sizing: border-box;
   border: none;
+  max-width:90%
+}
+
+.simple-keyboard {
+  box-sizing: border-box;
+  border: none;
+  max-width:90%
+
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
-  width: 90%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
@@ -224,18 +225,6 @@ h1 {
   .right-section {
     width: 100%;
     height: auto;
-  }
-
-  .input {
-    height: 100px;
-    padding: 20px;
-    font-size: 20px;
-    border: none;
-  }
-
-  .simple-keyboard {
-    max-width: 500px;
-    margin: 0 auto;
   }
 
   .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
