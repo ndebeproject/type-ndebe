@@ -171,9 +171,91 @@ h1 {
   color: white;
   width: 100%;
   box-sizing: border-box;
+  border: none;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
   max-width: 100%;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button {
+  background: #000000;
+  color: white;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ogugu-numbers,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ogugu-numbers {
+  font-size: 1.75rem;
+/*
+  background: #69306d;
+  color: white;
+  */
+/* #AE2012; for punctuation */
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.okpolo-stems,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.okpolo-stems {
+
+  /*
+
+  background: #001219;
+  color: white;
+
+  */
+  padding-bottom:1%;
+  font-size: 2rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ome-radicals,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ome-radicals {
+  /*
+  background: #386641;
+  color: white;
+  */
+  padding-top:2%;
+  font-size: 3rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ekoye-enu,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ekoye-enu {
+  background: #FFA5AB;
+  color: black;
+  font-size: 2.25rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ekoye-ntela,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ekoye-ntela {
+  background: #DA627D;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ekoye-ani,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ekoye-ani {
+  background: #A53860;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.okpu-enu,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.okpu-enu {
+  background: #FF9F1C;
+  color: black;
+  font-size: 2.25rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.okpu-ntela,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.okpu-ntela {
+  background: #CA6702;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.okpu-ani,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.okpu-ani {
+  background: #BB3E03;
+  color: white;
+  font-size: 2.25rem;
 }
