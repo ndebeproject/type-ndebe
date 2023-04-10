@@ -161,7 +161,6 @@ h1 {
 #ndebe-p {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 /* Custom theme for the on-screen keyboard */
@@ -169,14 +168,16 @@ h1 {
   font-family: 'NdebeSpacing-Regular', sans-serif;
   background-color: black;
   color: white;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   border: none;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
+  width: 80%;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
