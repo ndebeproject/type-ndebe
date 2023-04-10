@@ -119,14 +119,11 @@ h1 {
   color: white;
   box-sizing: border-box;
   border: none;
-  max-width:90%
 }
 
 .simple-keyboard {
   box-sizing: border-box;
   border: none;
-  max-width:90%
-
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
@@ -232,21 +229,8 @@ h1 {
     font-size: 0.8rem;
   }
 
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
-    min-width: 150px;
-    max-width: none;
-  }
-
-  .simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
-    width: 33%;
-    max-width: none;
-  }
-
-  .simple-keyboard .hg-button-numbers {
-    max-width: 80px;
-  }
-
-  .simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
-    max-width: 80px;
+  .input,
+  .simple-keyboard {
+    max-width:90%
   }
 }
