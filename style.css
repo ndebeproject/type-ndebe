@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: 'NdebeSpacing-Regular', sans-serif;
+  font-family: 'NdebePlain-Regular', sans-serif;
 }
 
 .main-container {
@@ -88,10 +88,11 @@ th, td {
 /* Design Changes */
 
 @font-face {
-  font-family: 'NdebeSpacing-Regular';
-  src: local('NdebeSpacing-Regular'),
-    url('/font/ndebespacing.otf') format('opentype'),
-    url('font/ndebespacing.woff') format('woff');
+  font-family: 'NdebePlain-Regular';
+  src: local('NdebePlain-Regular'),
+    url('/font/ndebeplain.otf') format('opentype'),
+    url('font/ndebeplain.woff') format('woff'),
+    url('font/ndebeplain.woff') format('woff2');
   font-display: block;
 }
 
@@ -113,7 +114,7 @@ h1 {
 
 /* Custom theme for the on-screen keyboard */
 .input {
-  font-family: 'NdebeSpacing-Regular', sans-serif;
+  font-family: 'NdebePlain-Regular', sans-serif;
   font-size: 3rem;
   background-color: black;
   color: white;
@@ -127,7 +128,7 @@ h1 {
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
-  font-family: 'NdebeSpacing-Regular', sans-serif;
+  font-family: 'NdebePlain-Regular', sans-serif;
 }
 
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
@@ -220,7 +221,7 @@ h1 {
 
   .left-section,
   .right-section {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
