@@ -69,7 +69,6 @@ th, td {
 .typing-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
@@ -121,14 +120,14 @@ h1 {
   font-family: 'NdebeSpacing-Regular', sans-serif;
   background-color: black;
   color: white;
-  width: 80%;
+  width: 90%;
   box-sizing: border-box;
   border: none;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
   font-family: 'NdebeSpacing-Regular', sans-serif;
-  width: 80%;
+  width: 90%;
   max-width: 100%;
   box-sizing: border-box;
 }
