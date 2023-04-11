@@ -137,6 +137,16 @@ h1 {
   color: white;
 }
 
+.simple-keyboard.hg-layout-default.ndebe-theme .hg-button.punctuation,
+.simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.punctuation {
+  font-size: 1.5rem;
+/*
+  background: #69306d;
+  color: white;
+  */
+/* #AE2012; for punctuation */
+}
+
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button.ogugu-numbers,
 .simple-keyboard.hg-layout-shift.ndebe-theme .hg-button.ogugu-numbers {
   font-size: 1.75rem;

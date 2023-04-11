@@ -23,6 +23,10 @@ let keyboard = new Keyboard({
   },
   buttonTheme: [
     {
+      class: "punctuation",
+      buttons: "· - ; ' , . ! ( ) ?"
+    },
+    {
       class: "ogugu-numbers",
       buttons: "\uE100 \uE101 \uE102 \uE103 \uE104 \uE105 \uE106 \uE107 \uE108 \uE109 \uE10A \uE10B \uE10C \uE10D \uE10E \uE10F \uE110 \uE111 \uE112 \uE113"
     },
