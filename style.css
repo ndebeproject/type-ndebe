@@ -1,37 +1,34 @@
 /* Structural Changes */
 
-html {
-  height: 100%;
-  width: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  height: 100%;
   font-family: 'NdebePlain-Regular', sans-serif;
 }
 
 .main-container {
   display: flex;
-  min-height: 100vh;
+  flex-wrap: wrap;
 }
 
-.left-section {
+.section {
+  flex: 1;
+  padding: 20px;
+  min-width: 0;
+}
+
+.left {
   background-color: black;
   color: white;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .center-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   overflow-x: auto; /* Add overflow-x property to fix table cut-off */
 }
@@ -56,33 +53,17 @@ th, td {
   padding: 8px;
 }
 
-.right-section {
+.right {
   background-color: #edede9;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.typing-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
+  color: black;
 }
 
 .footer {
   background-color: black;
   color: white;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
 }
 
 /* Design Changes */
@@ -99,32 +80,28 @@ th, td {
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  text-align: center;
 }
 
 #ndebe-h {
   font-size: 2.5rem;
-  text-align: center;
 }
 
 #ndebe-p {
   font-size: 2rem;
-  text-align: center;
+}
+
+.input,
+.simple-keyboard {
+  width: 100%;
 }
 
 /* Custom theme for the on-screen keyboard */
 .input {
+  border: none;
   font-family: 'NdebePlain-Regular', sans-serif;
   font-size: 3rem;
   background-color: black;
   color: white;
-  box-sizing: border-box;
-  border: none;
-}
-
-.simple-keyboard {
-  box-sizing: border-box;
-  border: none;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
@@ -237,13 +214,16 @@ h1 {
 
 @media (max-width: 768px) { /* Media query for mobile screens */
   .main-container {
+    display: flex;
     flex-direction: column;
   }
 
-  .left-section,
-  .right-section {
-    width: 100%;
-    height: auto;
+  .left {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
   }
 
   .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
@@ -254,6 +234,6 @@ h1 {
 
   .input,
   .simple-keyboard {
-    max-width:90%
+    width: 100%;
   }
 }
