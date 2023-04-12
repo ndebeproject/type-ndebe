@@ -22,7 +22,7 @@ body {
   min-width: 0;
 }
 
-.left {
+.typing {
   background-color: white;
   color: black;
 }
@@ -34,7 +34,7 @@ body {
   overflow-x: auto; /* Add overflow-x property to fix table cut-off */
 }
 
-.right {
+.info {
   background-color: black;
   color: white;
 }
@@ -219,11 +219,11 @@ h1 {
     flex-direction: column;
   }
 
-  .left {
+  .typing {
     order: 1;
   }
 
-  .right {
+  .info {
     order: 2;
   }
 
