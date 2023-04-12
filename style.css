@@ -22,9 +22,9 @@ body {
   min-width: 0;
 }
 
-.left {
-  background-color: black;
-  color: white;
+.typing {
+  background-color: white;
+  color: black;
 }
 
 .center-container {
@@ -34,29 +34,46 @@ body {
   overflow-x: auto; /* Add overflow-x property to fix table cut-off */
 }
 
-.reference-chart {
+.info {
+  background-color: black;
+  color: white;
+}
+
+.consonant-chart,
+.vowel-chart{
   border-collapse: collapse;
   width: 100%;
-  font-size: 12px;
 }
 
-.reference-chart th:first-child,
-.reference-chart td:first-child {
-  font-size: 24px; /* Change the font size of the first column */
+.consonant-chart {
+  font-size: 0.8rem;
 }
 
-.reference-chart th {
-  font-size: 28px; /* Change the font size of the first row */
+.consonant-chart th:first-child,
+.consonant-chart td:first-child {
+  font-size: 2rem; /* Change the font size of the first column */
+}
+
+.consonant-chart th {
+  font-size: 2rem; /* Change the font size of the first row */
+}
+
+.vowel-chart {
+  font-size: 2rem;
+}
+
+.vowel-chart th:first-child,
+.vowel-chart td:first-child {
+  font-size: 0.8rem; /* Change the font size of the first column */
+}
+
+.vowel-chart th {
+  font-size: 0.8rem; /* Change the font size of the first row */
 }
 
 th, td {
   text-align: center;
   padding: 8px;
-}
-
-.right {
-  background-color: #edede9;
-  color: black;
 }
 
 .footer {
@@ -84,7 +101,8 @@ h1 {
 }
 
 #ndebe-h {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #BB3E03;
 }
 
 #ndebe-p {
@@ -101,8 +119,7 @@ h1 {
   border: none;
   font-family: 'NdebePlain-Regular', sans-serif;
   font-size: 3rem;
-  background-color: black;
-  color: white;
+  color: black;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
@@ -219,11 +236,11 @@ h1 {
     flex-direction: column;
   }
 
-  .left {
+  .typing {
     order: 1;
   }
 
-  .right {
+  .info {
     order: 2;
   }
 

@@ -14,7 +14,8 @@
 </head>
 <body>
   <div class="main-container">
-    <div class="section left">
+
+    <div class="section info">
       <div align="center">
         <h1>Type Ndebe</h1>
         <p>Ńdébé is a modern writing system for the Ìgbò language.</p>
@@ -24,7 +25,67 @@
       </div>
 
       <div class="center-container" style="overflow-x: auto;">
-        <table class="reference-chart"><!-- Table of Ndebe Characters -->
+
+        <table class="vowel-chart"><!-- Table of Ndebe Characters -->
+          <thead>
+            <tr class="first-row">
+              <th></th>
+              <th>A</th><!-- a -->
+              <th>Ẹ</th><!-- e-dot -->
+              <th>Ị</th><!-- i-dot -->
+              <th>Ọ</th><!-- o-dot -->
+              <th>Ụ</th><!-- u-dot -->
+              <th>E</th><!-- e -->
+              <th>I</th><!-- i -->
+              <th>O</th><!-- o -->
+              <th>U</th><!-- u -->
+              <th>N/M</th><!-- n / m -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="first-column">
+              <td>High</td>
+              <td></td><!-- A High -->
+              <td></td><!-- A High  -->
+              <td></td><!-- A High  -->
+              <td></td><!-- A High  -->
+              <td></td><!-- A High  -->
+              <td></td><!-- E High  -->
+              <td></td><!-- I High  -->
+              <td></td><!-- O High  -->
+              <td></td><!-- U High  -->
+              <td></td><!-- N/M High  -->
+            </tr>
+            <tr>
+              <td>Mid</td><!-- cross stem -->
+              <td></td><!-- A Mid  -->
+              <td></td><!-- A Mid -->
+              <td></td><!-- A Mid -->
+              <td></td><!-- A Mid -->
+              <td></td><!-- A Mid -->
+              <td></td><!-- E Mid -->
+              <td></td><!-- I Mid -->
+              <td></td><!-- O Mid -->
+              <td></td><!-- U Mid -->
+              <td></td><!-- N/M Mid -->
+            </tr>
+            <tr>
+              <td>Low</td>
+              <td></td><!-- A Low -->
+              <td></td><!-- A Low -->
+              <td></td><!-- A Low -->
+              <td></td><!-- A Low -->
+              <td></td><!-- A Low -->
+              <td></td><!-- E Low -->
+              <td></td><!-- I Low -->
+              <td></td><!-- O Low -->
+              <td></td><!-- U Low -->
+              <td></td><!-- N/M Low -->
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="consonant-chart"><!-- Table of Ndebe Characters -->
           <thead>
             <tr class="first-row">
               <th></th>
@@ -105,19 +166,21 @@
       </div><!--End of Center Container-->
     </div>
 
-    <div class="section right">
+    <div class="section typing">
       <div align="center">
         <h1>Type Ndebe</h1>
         <h1 id="ndebe-h">·</h1>
       </div>
 
       <div>
-        <input class="input" placeholder="...type..." /><!--CHARACTERS FROM SIMPLE KEYBOARD APPEAR HERE-->
+        <input class="input" placeholder="..." /><!--CHARACTERS FROM SIMPLE KEYBOARD APPEAR HERE-->
         <p id="charactersRemaining" align="left" style="font-size: small;">24 characters remaining</p>
       </div>
 
       <div class="simple-keyboard"></div><!--JAVASCRIPT SIMPLE KEYBOARD-->
     </div>
+
+
   </div>
   <div class="footer">
     <p>Type Ndebe and the Ndebe Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ndebe Project</a></p>
