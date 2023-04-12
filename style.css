@@ -23,8 +23,8 @@ body {
 }
 
 .left {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .center-container {
@@ -32,6 +32,11 @@ body {
   flex-direction: column;
   width: 100%;
   overflow-x: auto; /* Add overflow-x property to fix table cut-off */
+}
+
+.right {
+  background-color: black;
+  color: white;
 }
 
 .reference-chart {
@@ -52,11 +57,6 @@ body {
 th, td {
   text-align: center;
   padding: 8px;
-}
-
-.right {
-  background-color: #edede9;
-  color: black;
 }
 
 .footer {
@@ -84,7 +84,8 @@ h1 {
 }
 
 #ndebe-h {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #BB3E03;
 }
 
 #ndebe-p {
@@ -101,8 +102,7 @@ h1 {
   border: none;
   font-family: 'NdebePlain-Regular', sans-serif;
   font-size: 3rem;
-  background-color: black;
-  color: white;
+  color: black;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
