@@ -39,19 +39,36 @@ body {
   color: white;
 }
 
-.reference-chart {
+.consonant-chart,
+.vowel-chart{
   border-collapse: collapse;
   width: 100%;
-  font-size: 12px;
 }
 
-.reference-chart th:first-child,
-.reference-chart td:first-child {
-  font-size: 24px; /* Change the font size of the first column */
+.consonant-chart {
+  font-size: 0.8rem;
 }
 
-.reference-chart th {
-  font-size: 28px; /* Change the font size of the first row */
+.consonant-chart th:first-child,
+.consonant-chart td:first-child {
+  font-size: 2rem; /* Change the font size of the first column */
+}
+
+.consonant-chart th {
+  font-size: 2rem; /* Change the font size of the first row */
+}
+
+.vowel-chart {
+  font-size: 2rem;
+}
+
+.vowel-chart th:first-child,
+.vowel-chart td:first-child {
+  font-size: 0.8rem; /* Change the font size of the first column */
+}
+
+.vowel-chart th {
+  font-size: 0.8rem; /* Change the font size of the first row */
 }
 
 th, td {
