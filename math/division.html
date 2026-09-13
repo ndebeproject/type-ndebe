@@ -17,7 +17,7 @@
     <div class="brand"><a href="../index.html">Type Ndebe</a><span class="nd-brand"></span></div>
     <div class="ext"><a href="../index.html">Keyboard</a><a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">ndebe.org</a></div>
   </div>
-  <nav class="pagenav"><a href="index.html">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html" class="current">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html">Divisibility</a><a href="kaktovik.html">Kaktovik</a></nav>
+  <nav class="pagenav"><a href="index.html">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html" class="current">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html">Divisibility</a></nav>
   <div class="hero">
     <p class="sub">Arithmetic in Ndebe Numerals</p>
     <h1>Division</h1>
@@ -43,8 +43,8 @@
 </details>
     <h2 id="9-division">9. Division</h2>
 <h3 id="91-core-principles">9.1 Core Principles</h3>
-<p><strong>The Zero Rule (from Kaktovik):</strong> The Kaktovik zero symbol represents crossed arms — "no counting." Any component with a zero value (<code>0F</code> or <code>0B</code>) is not operated on. Skip it entirely.</p>
-<p><strong>The Rotation Rule (from Kaktovik):</strong> In Kaktovik, when the divisor pattern is found in the <strong>flag</strong> (upper) portion of the dividend, the result is written as a <strong>rotated</strong> symbol — i.e. multiplied by 5, elevating it to flag status. In Ndebe terms: finding the divisor in a <strong>flag</strong> contributes a <strong>flag value</strong> to the quotient; finding it in a <strong>body</strong> contributes a <strong>body value</strong>.</p>
+<p><strong>The Zero Rule:</strong> any component with a zero value (<code>0F</code> or <code>0B</code>) is not operated on. Skip it entirely — there is nothing to count.</p>
+<p><strong>The Rotation Rule:</strong> a flag is worth five times a body. So when the divisor is found in the <strong>flag</strong> of the dividend, it contributes a <strong>flag value</strong> to the quotient; when it is found in a <strong>body</strong>, it contributes a <strong>body value</strong>. The quotient digit is assembled from the two, flag first.</p>
 <p><strong>Windows:</strong> As in any long division, you work through the dividend one window at a time. The window starts as the leading digit(s) — as many digits as the divisor has. If the window is smaller than the divisor (compare using <a class="xref" href="index.html#4-comparing-numbers">§4</a>), extend it by one more digit. After each quotient digit, the remainder plus the next dividend digit forms the next window.</p>
 <h3 id="92-the-pattern-method-for-clean-cases">9.2 The Pattern Method — for clean cases</h3>
 <p>When the dividend is visually an exact multiple of the divisor, the answer can be read straight off the layers: divisor flags into dividend flags, divisor bodies into dividend bodies.</p>
