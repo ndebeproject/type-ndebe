@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtraction — Arithmetic in Ndebe Numerals | Type Ndebe</title>
+  <meta name="description" content="Subtraction: how to do arithmetic in Ndebe numerals, the base-20, sub-base-5 number system of the Ndebe script for Igbo.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="math.css">
+  <script src="https://cdn.counter.dev/script.js" data-id="96841804-846b-4a15-87cf-813711dff1ba" data-utcoffset="-4"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><a href="../index.html">Type Ndebe</a><span class="nd-brand"></span></div>
+    <div class="ext"><a href="../index.html">Keyboard</a><a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">ndebe.org</a></div>
+  </div>
+  <nav class="pagenav"><a href="index.html">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html" class="current">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html">Divisibility</a><a href="kaktovik.html">Kaktovik</a></nav>
+  <div class="hero">
+    <p class="sub">Arithmetic in Ndebe Numerals</p>
+    <h1>Subtraction</h1>
+    <div class="nd-big"> −  = </div>
+    
+  </div>
+  <main>
+    
+    <h2 id="7-subtraction">7. Subtraction</h2>
+<p><strong>Method:</strong> Operate on flags and bodies independently. Apply Flag Demotion or Place Demotion when needed. (Use <a class="xref" href="index.html#4-comparing-numbers">§4</a> to confirm the first number is the larger one.)</p>
+<h3 id="clean-case-13-7">Clean case: 13 − 7</h3>
+<div class="scroll"><table class="codeblock"><tr><td class="c">13 = 10F 3B</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 13"></span></span></td></tr><tr><td class="c">7  = 5F  2B</td><td class="g"></td></tr><tr><td class="c">───────────</td><td class="g"></td></tr><tr><td class="c">Flags:  10F − 5F = 5F</td><td class="g"></td></tr><tr><td class="c">Bodies: 3B  − 2B = 1B</td><td class="g"></td></tr><tr><td class="c">Result: 5F 1B = 6 ✓</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 6"></span></span></td></tr></table></div>
+
+<h3 id="with-flag-demotion-13-9">With Flag Demotion: 13 − 9</h3>
+<div class="scroll"><table class="codeblock"><tr><td class="c">13 = 10F 3B</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 13"></span></span></td></tr><tr><td class="c">9  = 5F  4B</td><td class="g"></td></tr><tr><td class="c">───────────</td><td class="g"></td></tr><tr><td class="c">Bodies: 3B − 4B → impossible → Flag Demotion</td><td class="g"></td></tr><tr><td class="c">10F demotes to 5F, body gains 5: now 5F 8B</td><td class="g"></td></tr><tr><td class="c">Flags:  5F − 5F = 0F</td><td class="g"></td></tr><tr><td class="c">Bodies: 8B − 4B = 4B</td><td class="g"></td></tr><tr><td class="c">Result: 0F 4B = 4 ✓</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 4"></span></span></td></tr></table></div>
+
+<h3 id="with-place-demotion-2-0-1-10">With Place Demotion: [2, 0]<span class="ndg"><span class="nd" title="Ndebe 2"></span><span class="nd" title="Ndebe 0"></span></span> − [1, 10]<span class="ndg"><span class="nd" title="Ndebe 1"></span><span class="nd" title="Ndebe 10"></span></span></h3>
+<div class="scroll"><table class="codeblock"><tr><td class="c">0F2B, 0F0B  −  0F1B, 10F0B        (40 − 30)</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 2"></span> <span class="nd" title="Ndebe 0"></span> <span class="nd" title="Ndebe 1"></span> <span class="nd" title="Ndebe 10"></span></span></td></tr><tr><td class="c">Units: 0F0B − 10F0B → impossible → Place Demotion</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 0"></span> <span class="nd" title="Ndebe 10"></span></span></td></tr><tr><td class="c">  Take 1 from the twenties (2B → 1B); units receives 15F0B + 5F0B</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 15"></span> <span class="nd" title="Ndebe 5"></span></span></td></tr><tr><td class="c">  15F + 5F − 10F = 10F           → units: 10F 0B</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 10"></span></span></td></tr><tr><td class="c">Twenties: 1B − 1B = 0B</td><td class="g"></td></tr><tr><td class="c">Result: 10F 0B = 10 ✓</td><td class="g"><span class="ndg"><span class="nd" title="Ndebe 10"></span></span></td></tr></table></div>
+    <div class="prevnext"><a href="addition.html">← Addition</a><a href="multiplication.html">Multiplication →</a></div>
+  </main>
+  <div class="footer">
+    <p>Type Ndebe and the Ndebe Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ndebe Project</a></p>
+  </div>
+</body>
+</html>

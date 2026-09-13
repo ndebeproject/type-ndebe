@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisibility Tests — Arithmetic in Ndebe Numerals | Type Ndebe</title>
+  <meta name="description" content="Divisibility Tests: how to do arithmetic in Ndebe numerals, the base-20, sub-base-5 number system of the Ndebe script for Igbo.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="math.css">
+  <script src="https://cdn.counter.dev/script.js" data-id="96841804-846b-4a15-87cf-813711dff1ba" data-utcoffset="-4"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><a href="../index.html">Type Ndebe</a><span class="nd-brand"></span></div>
+    <div class="ext"><a href="../index.html">Keyboard</a><a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">ndebe.org</a></div>
+  </div>
+  <nav class="pagenav"><a href="index.html">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html" class="current">Divisibility</a><a href="kaktovik.html">Kaktovik</a></nav>
+  <div class="hero">
+    <p class="sub">Arithmetic in Ndebe Numerals</p>
+    <h1>Divisibility Tests</h1>
+    <div class="nd-big"></div>
+    
+  </div>
+  <main>
+    
+    <h2 id="11-vigesimal-divisibility-tests">11. Vigesimal Divisibility Tests</h2>
+<p>These allow a reader to check divisibility without dividing. They are base-20-internal: only the number's own digits are examined.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Divisor</th>
+<th>Test</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2</strong></td>
+<td>Units digit is even (0, 2, 4, 6, 8, 10, 12, 14, 16, 18) — its body is 0B, 2B or 4B with an even flag level, or 1B/3B with an odd one</td>
+<td>Last-digit test</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Alternating digit sum is divisible by 3</td>
+<td>Alternating-sum test</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Units digit is one of {0, 4, 8, 12, 16}</td>
+<td>Last-digit test</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Units digit has <strong>no body</strong> (0B) — the flag alone decides</td>
+<td>Last-digit test</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Divisible by both 2 and 3</td>
+<td>Composite</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Alternating digit sum is divisible by 7</td>
+<td>Alternating-sum test</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>Units digit is 0 or 10</td>
+<td>Last-digit test</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td>Alternating digit sum is divisible by 11</td>
+<td>Alternating-sum test</td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td>Digital root (repeated digit sum) is divisible by 19</td>
+<td>Digit-sum test</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td>Units digit is 0</td>
+<td>Last-digit test</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Notes:</strong>
+- The <strong>÷5 test is visually immediate in Ndebe</strong>: look at the units glyph — no body means divisible by 5.
+- The alternating-sum tests for 3, 7, and 11 work because 3 × 7 = 21 = one more than the base (as 11 in base 10).
+- The digital-root test for 19 works because 19 = one less than the base (as 9 in base 10).</p>
+    <div class="prevnext"><a href="fractions.html">← Vigesimal Fractions</a><a href="kaktovik.html">Kaktovik vs Ndebe →</a></div>
+  </main>
+  <div class="footer">
+    <p>Type Ndebe and the Ndebe Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ndebe Project</a></p>
+  </div>
+</body>
+</html>
