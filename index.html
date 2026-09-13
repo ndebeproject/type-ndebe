@@ -22,7 +22,7 @@
         <p>Invented in 2009 by Lotanna Igwe-Odunze.</p>
         <p id="ndebe-p">····</p>
         <p id="ndebe-p">- ··</p>
-        <p class="math-link"><a href="math/">Arithmetic in Ndebe &rarr;</a></p>
+        <div class="segment segment-desktop" role="tablist" aria-label="View"><button type="button" class="seg active" data-view="typing" role="tab" aria-selected="true">Typing</button><button type="button" class="seg" data-view="arithmetic" role="tab" aria-selected="false">Arithmetic</button></div>
       </div>
 
       <div class="center-container" style="overflow-x: auto;">
@@ -168,6 +168,8 @@
     </div>
 
     <div class="section typing">
+      <div class="segment-wrap"><div class="segment segment-mobile" role="tablist" aria-label="View"><button type="button" class="seg active" data-view="typing" role="tab" aria-selected="true">Typing</button><button type="button" class="seg" data-view="arithmetic" role="tab" aria-selected="false">Arithmetic</button></div></div>
+      <div id="view-typing">
       <div align="center">
         <h1>Type Ndebe</h1>
         <h1 id="ndebe-h">·</h1>
@@ -179,6 +181,10 @@
       </div>
 
       <div class="simple-keyboard"></div><!--JAVASCRIPT SIMPLE KEYBOARD-->
+      </div><!--End of view-typing-->
+      <div id="view-arithmetic" hidden>
+        <iframe id="math-frame" title="Arithmetic in Ndebe Numerals" data-src="math/index.html"></iframe>
+      </div>
     </div>
 
 
@@ -189,5 +195,6 @@
   <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
   <script src="script.js"></script>
   <script src="keyboard.js"></script>
+  <script src="segment.js"></script>
 </body>
 </html>
