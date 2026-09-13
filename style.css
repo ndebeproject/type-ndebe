@@ -109,6 +109,21 @@ h1 {
   font-size: 2rem;
 }
 
+.math-link {
+  margin-top: 12px;
+  font-family: sans-serif;
+}
+
+.math-link a {
+  color: #BB3E03;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.math-link a:hover {
+  text-decoration: underline;
+}
+
 .input,
 .simple-keyboard {
   width: 100%;
