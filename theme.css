@@ -218,3 +218,16 @@ footer, .footer {
 .script-page .numeral-table th, .script-page .numeral-table td { padding: 12px 16px; border: 1px solid var(--line); text-align: left; }
 .script-page .numeral-table th { background: var(--card); }
 .script-page .numeral-table .ndebe { font-size: 36px; }
+
+/* Keep the script-name caption close to its glyph and description. */
+.script-page .hero-art { min-height: 318px; padding-top: 55px; padding-bottom: 0; align-content: center; row-gap: 12px; }
+.script-page .hero-art .script-name,
+.script-page .hero-art p { margin-top: 0; }
+.script-page .hero-art .script-name { margin-top: -10px; }
+
+@media (max-width: 800px) {
+  .script-page .hero-art { min-height: 215px; padding-bottom: 15px; }
+}
+@media (max-width: 480px) {
+  .script-page .hero-art { padding-top: 45px; }
+}
