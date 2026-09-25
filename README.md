@@ -16,3 +16,7 @@ Still unverified:
 - Embedded-font portability to a computer without the fonts installed.
 
 The fonts do not contain an OpenType MATH table; stretchable equation layout depends on the receiving application.
+
+## Ndebe Script Codex
+
+The complete reference page lives at [`/script/`](script/): searchable glyphs in both font families, teaching composition, numeral forms, input conventions and downloads. Serve the repository with a static HTTP server to preview it. Catalogue implementation notes are in [script/README.md](script/README.md).
