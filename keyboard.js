@@ -7,8 +7,8 @@
 const ndebeMainLayout = {
   default: [
     "` \uE101 \uE102 \uE103 \uE104 \uE105 \uE106 \uE107 \uE108 \uE109 \uE100 - = {bksp}",
-    "{tab} \uE259 \uE300 \uE253 \uE351 \uE350 \uE301 \uE265 \uE354 \uE262 \uE26B [ ] \\",
-    "{lock} \uE256 \uE302 \uE353 \uE352 \uE303 \uE250 \uE355 \uE304 \uE268 ; ' {enter}",
+    "{tab} \uE259 \uE300 \uE253 \uE351 \uE350 \uE301 \uE265 \uE354 \uE262 \uE268 [ ] \\",
+    "{lock} \uE256 \uE302 \uE353 \uE352 \uE303 \uE250 \uE355 \uE304 \uE26B ; ' {enter}",
     "{shift} \uE356 \uE25C \uE305 \uE25F \uE254 \uE26C \uE26D , . / {shift}",
     "@ · {space} {math}",
   ],
@@ -23,8 +23,8 @@ const ndebeMainLayout = {
 
 const ndebeMobileLayout = {
   default: [
-    "\uE259 \uE300 \uE253 \uE351 \uE350 \uE301 \uE265 \uE354 \uE262 \uE26B",
-    "\uE256 \uE302 \uE353 \uE352 \uE303 \uE250 \uE355 \uE304 \uE268",
+    "\uE259 \uE300 \uE253 \uE351 \uE350 \uE301 \uE265 \uE354 \uE262 \uE268",
+    "\uE256 \uE302 \uE353 \uE352 \uE303 \uE250 \uE355 \uE304 \uE26B",
     "{shift} \uE356 \uE25C \uE305 \uE25F \uE254 \uE26C \uE26D {backspace}",
     "{numbers} · {space} . {ent}"
   ],
@@ -97,9 +97,14 @@ const ndebeMobileLayout = {
           path.setAttribute('d',NdebeInputData.elisionIcon.path);path.setAttribute('transform','scale(1,-1)');path.setAttribute('fill','currentColor');svg.append(path);b.replaceChildren(svg);
         }
         const cp=token.codePointAt(0);if(cp>=0xE250&&cp<=0xE26D)b.classList.add((cp>=0xE26B?'nasal-':'vowel-')+((cp-(cp>=0xE26B?0xE26B:0xE250))%3));
+        if(cp>=0xE300&&cp<=0xE305)b.classList.add('stem-key');
+        if(cp>=0xE350&&cp<=0xE356)b.classList.add('radical-key');
+        if(cp>=0xE100&&cp<=0xE113)b.classList.add('number-key');
         if(token==='{space}')b.classList.add('space-key');
         if(token==='{lock}'){b.disabled=true;b.title='Caps Lock is unassigned';}
         b.setAttribute('aria-label',token==='.'?'Period: full stop after text, vigesimal after a number; hold for alternatives':token==='`'?'Elision':token==="'"?'Single quotation':token==='"'?'Double quotation':token==='·'?'Word separator':labels[token]||token);
+        const group=cp>=0xE250&&cp<=0xE26D?((['A','Ẹ','Ị','Ọ','Ụ','E','I','O','U','N/M'][Math.floor((cp-0xE250)/3)])+' · '+['high','mid','low'][(cp-0xE250)%3]+' tone'):cp>=0xE300&&cp<=0xE305?'Stem':cp>=0xE350&&cp<=0xE356?'Radical':cp>=0xE100&&cp<=0xE113?'Numeral':null;
+        if(group){b.title=group;b.setAttribute('aria-label',b.getAttribute('aria-label')+' · '+group);}
         b.addEventListener('pointerdown',e=>{if(e.button!==0)return;e.preventDefault();held=false;pointerStart=[e.clientX,e.clientY];clearTimeout(pressTimer);if(choices(token).length)pressTimer=setTimeout(()=>{held=true;showChoices(token);},450);});
         b.addEventListener('pointermove',e=>{if(pointerStart&&Math.hypot(e.clientX-pointerStart[0],e.clientY-pointerStart[1])>14){clearTimeout(pressTimer);held=true;}});
         b.addEventListener('pointercancel',()=>{clearTimeout(pressTimer);held=true;pointerStart=null;});

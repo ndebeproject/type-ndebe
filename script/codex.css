@@ -916,3 +916,9 @@ footer p {
 .downloads + .note {
   margin-top: 24px;
 }
+
+/* Keep the script name together at desktop and phone widths. */
+.hero h1 {
+  white-space: nowrap;
+  font-size: clamp(24px, 4.2vw, 58px);
+}

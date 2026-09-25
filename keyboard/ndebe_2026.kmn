@@ -1,7 +1,7 @@
 c Rebuilt from the current Type Ndebe mapping. Hardware candidate: test before distribution.
 store(&VERSION) '10.0'
 store(&NAME) 'Ndebe 2026 Input Candidate'
-store(&KEYBOARDVERSION) '2.0'
+store(&KEYBOARDVERSION) '2.1'
 store(&TARGETS) 'windows macosx linux'
 store(digits) U+E100 U+E101 U+E102 U+E103 U+E104 U+E105 U+E106 U+E107 U+E108 U+E109 U+E10A U+E10B U+E10C U+E10D U+E10E U+E10F U+E110 U+E111 U+E112 U+E113
 store(singleQuotes) U+E135 U+E136
@@ -17,7 +17,7 @@ group(main) using keys
 + [K_U] > U+E265
 + [K_I] > U+E354
 + [K_O] > U+E262
-+ [K_P] > U+E26B
++ [K_P] > U+E268
 + [K_A] > U+E256
 + [K_S] > U+E302
 + [K_D] > U+E353
@@ -26,7 +26,7 @@ group(main) using keys
 + [K_H] > U+E250
 + [K_J] > U+E355
 + [K_K] > U+E304
-+ [K_L] > U+E268
++ [K_L] > U+E26B
 + [K_Z] > U+E356
 + [K_X] > U+E25C
 + [K_C] > U+E305

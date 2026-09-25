@@ -28,3 +28,7 @@ Each public page has a labelled, responsive display-ad placement before its foot
 Ads are disabled in `ads-config.js`. Localhost shows an inert placeholder; the public site hides the placement until enabled with a valid publisher ID and display-unit slot ID. Local previews never request real ads. To activate later, add the AdSense IDs and complete the account/site and applicable consent setup before setting `enabled: true`. Keep AdSense Auto ads disabled if you want only these manual placements. The frame is themed; Google controls the ad artwork.
 
 Run placement checks with `node --test tests/ads.test.cjs`.
+
+## Visual theme
+
+The site uses Olive & cherry with locally hosted Noto Sans for Latin text, including Igbo diacritics. Shared colours and typography are in `theme.css`; page-specific styles retain layout and Ndebe glyph font assignments. The Noto Sans licence is in `font/NotoSans-OFL.txt`.

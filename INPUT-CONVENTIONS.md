@@ -70,3 +70,7 @@ The font uses U+25CC for the stem placeholder, U+E140 for the radical placeholde
 ## Editable document embedding
 
 The owner approved editable-document embedding on 24 September 2026. Current Ndebe Rounded and Ndebe Soft Bold exports use OS/2.fsType = 8. Compatible applications may embed the fonts in editable documents. Other distribution/licensing terms are unchanged.
+
+## High-tone U and N/M positions
+
+The unshifted P key enters U high tone (U+E268); unshifted L enters N/M high tone (U+E26B). This matches the desktop and mobile onscreen keyboard. Shift mappings are unchanged. Keyman package version 2.1 includes this swap; existing installations must update the package.
