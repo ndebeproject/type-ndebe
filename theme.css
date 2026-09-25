@@ -121,8 +121,37 @@ footer, .footer {
 .typing-page .input, .typing-page #math-tools input[data-ndebe] {
   background: var(--paper); color: var(--ink); border: 1px solid var(--line);
 }
-.typing-page .key-choices { background: var(--card); color: var(--ink); border-color: var(--warm); }
-.typing-page .key-choices button { background: var(--paper); color: var(--ink); }
+/* Long-press alternatives: quiet, compact controls with comfortable touch targets. */
+.typing-page .key-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px #0002;
+}
+.typing-page .key-choices[hidden] { display: none; }
+.typing-page .key-choices button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 14px;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: none;
+  font: 400 14px/1.4 var(--latin-font);
+  cursor: pointer;
+}
+.typing-page .key-choices button:hover { background: var(--hover); }
+.typing-page .key-choices .choice-glyph { font: 24px/1 var(--ndebe-font); }
+.typing-page .key-choices .choice-cancel { background: transparent; color: var(--muted); border-color: transparent; }
 .typing-page .extra-palette, .typing-page #math-tools { border-color: var(--line); }
 .typing-page .footer a { color: var(--link); }
 
@@ -168,3 +197,7 @@ footer, .footer {
 .typing-page .key-colour-list { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 8px 0; }
 .typing-page .key-colour-list span { display: inline-flex; align-items: center; gap: 6px; }
 .typing-page .key-colour-list i { width: 15px; height: 15px; border: 1px solid var(--line); border-radius: 4px; background: var(--key-bg); }
+
+/* Balance the two palette icons within their keys. */
+.typing-page .nd-key[data-token="{teaching}"] { font-size: 32px; }
+.typing-page .nd-key[data-token="{math}"] svg { width: 32px; height: 32px; }
