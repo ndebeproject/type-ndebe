@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Division — Arithmetic in Ńdẹ́bẹ́ Numerals | Type Ńdẹ́bẹ́</title>
+  <meta name="description" content="Division: how to do arithmetic in Ńdẹ́bẹ́ numerals, the base-20, sub-base-5 number system of the Ńdẹ́bẹ́ script for Igbo.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="math.css">
+  <script src="https://cdn.counter.dev/script.js" data-id="96841804-846b-4a15-87cf-813711dff1ba" data-utcoffset="-4"></script>
+
+  <link rel="stylesheet" href="../site-ads.css?v=3">
+  <script defer src="../ads-config.js"></script>
+  <script defer src="../site-ads.js"></script>
+  <link rel="stylesheet" href="../theme.css?v=4">
+</head>
+<body class="math-page">
+  <div class="topbar">
+    <div class="brand"><a href="../index.html">Type Ńdẹ́bẹ́</a><span class="nd-brand"></span></div>
+    <div class="ext"><a href="../index.html">Keyboard</a><a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">ndebe.org</a></div>
+  </div>
+  <nav class="pagenav"><a href="index.html">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html" class="current">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html">Divisibility</a></nav>
+  <div class="hero">
+    <p class="sub">Arithmetic in Ńdẹ́bẹ́ Numerals</p>
+    <h1>Division</h1>
+    <div class="nd-big"> ÷  = </div>
+    
+  </div>
+  <main>
+    <details class="tocbox" open><summary>On this page</summary><div class="toc">
+<ul>
+<li><a href="#9-division">9. Division</a><ul>
+<li><a href="#91-core-principles">9.1 Core Principles</a></li>
+<li><a href="#92-the-pattern-method-for-clean-cases">9.2 The Pattern Method — for clean cases</a></li>
+<li><a href="#93-worked-examples-pattern-method">9.3 Worked Examples — Pattern Method</a></li>
+<li><a href="#94-the-ladder-method-the-general-division-algorithm">9.4 The Ladder Method — the general division algorithm</a></li>
+<li><a href="#95-easy-divisors-the-shortcuts-a-native-reader-learns-first">9.5 Easy Divisors — the shortcuts a native reader learns first</a></li>
+<li><a href="#96-the-limit-of-stroke-cancellation-across-place-values">9.6 The Limit of Stroke Cancellation Across Place Values</a></li>
+<li><a href="#97-open-questions-status">9.7 Open Questions — Status</a></li>
+<li><a href="#98-short-division-by-flag-card-the-stubborn-primes-and-any-single-digit-divisor">9.8 Short Division by Flag Card — the stubborn primes, and any single-digit divisor</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+    <h2 id="9-division">9. Division</h2>
+<h3 id="91-core-principles">9.1 Core Principles</h3>
+<p><strong>The Zero Rule:</strong> any component with a zero value (<code>0F</code> or <code>0B</code>) is not operated on. Skip it entirely — there is nothing to count.</p>
+<p><strong>The Rotation Rule:</strong> a flag is worth five times a body. So when the divisor is found in the <strong>flag</strong> of the dividend, it contributes a <strong>flag value</strong> to the quotient; when it is found in a <strong>body</strong>, it contributes a <strong>body value</strong>. The quotient digit is assembled from the two, flag first.</p>
+<p><strong>Windows:</strong> As in any long division, you work through the dividend one window at a time. The window starts as the leading digit(s) — as many digits as the divisor has. If the window is smaller than the divisor (compare using <a class="xref" href="index.html#4-comparing-numbers">§4</a>), extend it by one more digit. After each quotient digit, the remainder plus the next dividend digit forms the next window.</p>
+<h3 id="92-the-pattern-method-for-clean-cases">9.2 The Pattern Method — for clean cases</h3>
+<p>When the dividend is visually an exact multiple of the divisor, the answer can be read straight off the layers: divisor flags into dividend flags, divisor bodies into dividend bodies.</p>
+<p><strong>18 ÷ 6:</strong> <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span> ÷ 5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> → flags 15F ÷ 5F = 3, bodies 3B ÷ 1B = 3. Both agree → <strong>3</strong>.</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 3 × 6 = 3 × 5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span> → 15F, 3B → <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> = 18 ✓</p>
+<p>This is the fast path a practised eye takes. It is a special case of the general method below, and it fails when the layers disagree (see <a class="xref" href="#96-the-limit-of-stroke-cancellation-across-place-values">§9.6</a>). When in doubt, use the ladder.</p>
+<h3 id="93-worked-examples-pattern-method">9.3 Worked Examples — Pattern Method</h3>
+<h4 id="short-division-1519-3">Short Division: 1519 ÷ 3</h4>
+<p><strong>Base 20:</strong> <code>[3, 15, 19]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 15"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span> ÷ [3]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span></span></code><br />
+<strong>Notation:</strong> <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span> ÷ 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code></p>
+<p><strong>Window 1: <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code></strong> — 3B ÷ 3B = 1, found in body → <code>1B</code>. Remainder 0.</p>
+<p><strong>Window 2: <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code></strong> — 3B into 15F five times, found in flag → <code>5F</code>. Remainder 0.</p>
+<p><strong>Window 3: <code>15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code></strong> — 3B into 15F five times → <code>5F</code>; 3B into 4B once → <code>1B</code>, remainder <code>1B</code>. Digit: <code>5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> = 6.</p>
+<p><strong>Answer: <code>[1, 5, 6]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 6"></span></span></code> remainder 1</strong> (= 506 r 1 ✓)</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> <code>[1,5,6]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 6"></span></span></code> × 3: 6×3 = <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code>, 5×3 = <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code>, 1×3 = <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> → <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code>; add remainder 1 → <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> = the dividend ✓</p>
+<h4 id="long-division-multi-place-divisor-30561-61">Long Division (multi-place divisor): 30,561 ÷ 61</h4>
+<p><strong>Base 20:</strong> <code>[3, 16, 8, 1]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 16"></span><span class="nd" title="Ńdẹ́bẹ́ 8"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span> ÷ [3, 1]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></code><br />
+<strong>Notation:</strong> <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span>, 5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span> ÷ 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code></p>
+<p>Divisor occupies 2 places → windows are 2 digits wide.</p>
+<p><strong>Window 1: <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code></strong> — 3B cancels 3B once; 1B cancels 1B once. Found once → <code>1B</code>. Remainder <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code>.</p>
+<p><strong>Window 2: <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span>, 5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code></strong> — 3B into 15F five times; 1B into 5F five times. Found five times, in flags → <code>5F</code>. Remainder <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code>.</p>
+<p><strong>Window 3: <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code> ÷ <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code></strong> — exact fit once → <code>1B</code>. Remainder nothing.</p>
+<p><strong>Answer: <code>[1, 5, 1]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></code></strong> (= 501 ✓)</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> <code>[1,5,1]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></code> × <code>[3,1]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></code>: by 1 → <code>[1,5,1]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></code>; by 3 (shifted) → <code>[3,15,3,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 15"></span><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span></code>; sum → <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span>, 5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span>, 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code> = the dividend ✓</p>
+<hr />
+<h3 id="94-the-ladder-method-the-general-division-algorithm">9.4 The Ladder Method — the general division algorithm</h3>
+<p>The pattern method breaks when the dividend's layers don't line up with the divisor's, or when a window spans two place values. The general method rests on one realisation:</p>
+<p><strong>The quotient digit should be assembled the same way a Ńdẹ́bẹ́ glyph is built — flag first, then body.</strong></p>
+<p>Every possible quotient digit <em>q</em> is <em>q</em> = 5<em>a</em> + <em>b</em>, where <em>a</em> is the flag level and <em>b</em> the body. Therefore <em>q</em> × <em>d</em> = (5<em>a</em>)<em>d</em> + <em>bd</em> = <strong>one flag multiple of d plus one body multiple of d.</strong> So instead of comparing dividend layers against divisor layers, compare the <strong>window as a whole</strong> against the divisor's seven-rung <strong>ladder</strong> — the same ladder multiplication uses (<a class="xref" href="multiplication.html#84-multiplying-by-a-single-digit-the-ladder-used-forwards">§8.4</a>).</p>
+<h4 id="building-the-ladder">Building the ladder</h4>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Rung</th>
+<th>How to build</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1d</td>
+<td>given</td>
+<td>body rung</td>
+</tr>
+<tr>
+<td>2d</td>
+<td>d + d</td>
+<td>body rung</td>
+</tr>
+<tr>
+<td>3d</td>
+<td>2d + d</td>
+<td>body rung</td>
+</tr>
+<tr>
+<td>4d</td>
+<td>2d + 2d</td>
+<td>body rung</td>
+</tr>
+<tr>
+<td>5d</td>
+<td>rotation of d (or 4d + d)</td>
+<td>flag rung</td>
+</tr>
+<tr>
+<td>10d</td>
+<td>5d + 5d</td>
+<td>flag rung</td>
+</tr>
+<tr>
+<td>15d</td>
+<td>10d + 5d</td>
+<td>flag rung</td>
+</tr>
+</tbody>
+</table></div>
+<p>Only addition (<a class="xref" href="addition.html#6-addition">§6</a>) and rotation (<a class="xref" href="multiplication.html#83-5-rotation">§8.3</a>) are used. The flag rungs are the rotations of the first three body rungs.</p>
+<h4 id="the-algorithm-three-moves">The algorithm — three moves</h4>
+<p>For each window W:</p>
+<ol>
+<li><strong>LOOK (flag stage):</strong> compare W against the flag rungs, largest first — 15d, 10d, 5d — using the comparison rule (<a class="xref" href="index.html#4-comparing-numbers">§4</a>: flags first, then bodies, leftmost digit first). The largest rung that fits gives the quotient digit's <strong>flag</strong>. If none fit, the flag is 0F.</li>
+<li><strong>REMOVE:</strong> subtract that rung from W using ordinary Ńdẹ́bẹ́ subtraction (<a class="xref" href="subtraction.html#7-subtraction">§7</a>), with Flag or Place Demotion as needed.</li>
+<li><strong>LOOK again (body stage):</strong> compare what remains against the body rungs, largest first — 4d, 3d, 2d, 1d. The largest that fits gives the quotient digit's <strong>body</strong>. If none fit, the body is 0B. <strong>REMOVE</strong> it.</li>
+</ol>
+<p>Whatever remains is the remainder, carried into the next window. The quotient digit is read directly as flag + body.</p>
+<p>Division never divides. It <strong>builds</strong> with addition, <strong>looks</strong> with comparison, and <strong>removes</strong> with subtraction. No guessing: at most 7 comparisons per digit.</p>
+<h4 id="worked-252-14">Worked: 252 ÷ 14</h4>
+<p><code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span> ÷ 10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code></p>
+<p>Ladder of 14 (from <a class="xref" href="multiplication.html#84-multiplying-by-a-single-digit-the-ladder-used-forwards">§8.4</a>): <code>1d = 10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code> · <code>2d = 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code> · <code>3d = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> · <code>4d = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> · <code>5d = 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> · <code>10d = 5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> · <code>15d = 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code></p>
+<ul>
+<li>Window: first digit 12 &lt; 14 → extend → W = <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code></li>
+<li><strong>Flag stage:</strong> 15d = <code>10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code>. Compare: flags 10F = 10F tie; bodies 2B &gt; 0B → <strong>fits.</strong> Quotient flag = <strong>15F</strong>.</li>
+<li><strong>Remove:</strong> <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> − <code>10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code></li>
+<li><strong>Body stage:</strong> 4d = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> — second digit 15F &gt; 0F → too big. 3d = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> → <strong>exact fit.</strong> Quotient body = <strong>3B</strong>. Remove → nothing left.</li>
+</ul>
+<p><strong>Answer: <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> = 18, remainder 0</strong> ✓</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 18 × 14 = 15d + 3d = <code>10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> + <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> = <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> = the dividend ✓ (worked in <a class="xref" href="multiplication.html#84-multiplying-by-a-single-digit-the-ladder-used-forwards">§8.4</a>)</p>
+<p>Historically this problem was first solved by decomposition — 252 = 280 − 28 = 14×20 − 14×2, giving 18 = 20 − 2. The ladder chooses instead the decomposition 18 = 15 + 3, and <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> <strong>is the glyph for 18</strong>. The flag/body anatomy of the answer is the anatomy of the division.</p>
+<h4 id="worked-the-window-that-defeated-stroke-cancellation-5-1220-14">Worked: the window that defeated stroke cancellation — [5, 12]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 12"></span></span> ÷ 14</h4>
+<p><code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span> ÷ 10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code> (112 ÷ 14)</p>
+<ul>
+<li><strong>Flag stage:</strong> 15d → leftmost flags 5F &lt; 10F, doesn't fit. 10d = <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> → flags tie, bodies 0B &lt; 2B, doesn't fit. 5d = <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> → flags 5F &gt; 0F → <strong>fits.</strong> Quotient flag = <strong>5F</strong>.</li>
+<li><strong>Remove:</strong> twenties: <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span> − 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> → body 0−3 impossible → Flag Demotion → <code>0F5B − 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span> = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>. Units: <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span> − 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span> = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>. Remainder <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>.</li>
+<li><strong>Body stage:</strong> 4d too big (second digit 15F &gt; 0F); 3d = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> → <strong>exact fit.</strong> Quotient body = <strong>3B</strong>. Remainder 0.</li>
+</ul>
+<p><strong>Answer: <code>5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code> = 8</strong> ✓ (stroke cancellation had produced 7 — see <a class="xref" href="#96-the-limit-of-stroke-cancellation-across-place-values">§9.6</a>)</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 8 × 14 = 5d + 3d = <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> + <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> = <code>0F5B, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> → promote 5B → <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> = the window ✓</p>
+<h4 id="worked-38-9">Worked: 38 ÷ 9</h4>
+<p><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span> ÷ 5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span></code></p>
+<p>Ladder of 9: <code>1d = 5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span></code> · <code>2d = 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> · <code>3d = 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> · <code>4d = 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> · <code>5d = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> …</p>
+<ul>
+<li>First digit 1 &lt; 9 → extend → W = <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code></li>
+<li><strong>Flag stage:</strong> 5d = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> → leftmost 1B &lt; 2B, too big. Flag = <strong>0F</strong>.</li>
+<li><strong>Body stage:</strong> 4d = <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> → leftmost tie; units 15F = 15F tie, bodies 3B &gt; 1B → <strong>fits.</strong> Body = <strong>4B</strong>. Remove: units <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span> − 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span> = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>; twenties 1B − 1B = 0.</li>
+</ul>
+<p><strong>Answer: 4 remainder 2</strong> ✓</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 4 × 9 = <code>4d</code> = <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code>; + 2 → <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> = the dividend ✓</p>
+<h4 id="re-verification-of-all-examples-by-ladder">Re-verification of all examples by ladder</h4>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Ladder steps</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18 ÷ 6</td>
+<td>5d = 30 too big → 0F; 3d = 18 fits → 3B</td>
+<td>3 ✓</td>
+</tr>
+<tr>
+<td>38 ÷ 9</td>
+<td>extend; 5d too big → 0F; 4d fits → 4B, rem 2</td>
+<td>4 r 2 ✓</td>
+</tr>
+<tr>
+<td>1519 ÷ 3</td>
+<td>W=3: 1d → 1B; W=15: 5d → 5F; W=19: 5d → 5F, 1d → 1B, rem 1</td>
+<td>[1,5,6]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 6"></span></span> r 1 ✓</td>
+</tr>
+<tr>
+<td>30,561 ÷ 61</td>
+<td>W=[3,16]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 16"></span></span>: 1d → 1B; W=[15,8]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 15"></span><span class="nd" title="Ńdẹ́bẹ́ 8"></span></span>: 5d → 5F; W=[3,1]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span>: 1d → 1B</td>
+<td>[1,5,1]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span> ✓</td>
+</tr>
+<tr>
+<td>252 ÷ 14</td>
+<td>15d → 15F; 3d → 3B</td>
+<td>18 ✓</td>
+</tr>
+</tbody>
+</table></div>
+<p>The pattern method (<a class="xref" href="#92-the-pattern-method-for-clean-cases">§9.2</a>) is the ladder at a glance: in clean cases the eye finds the rungs without writing them down.</p>
+<hr />
+<h3 id="95-easy-divisors-the-shortcuts-a-native-reader-learns-first">9.5 Easy Divisors — the shortcuts a native reader learns first</h3>
+<p>Because 20 = 4 × 5, base 20 has more "free" divisors than base 10 (which has only 2, 5, 10). These need no ladder.</p>
+<h4 id="tier-1-free-read-the-glyph">Tier 1 — Free: read the glyph</h4>
+<p><strong>÷5 — one glance.</strong> For a single digit: the flag level is the quotient, the body is the remainder.
+- <code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 5 → flag level 3, body 2 → <strong>3 remainder 2</strong> ✓ (17 ÷ 5)</p>
+<p>For a multi-digit dividend, each unit in the twenties place contributes <strong>4</strong> (a twenty holds four fives): quotient = 4 × (higher digits) + flag level of the units digit; remainder = the units body.
+- <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 5 → 4×3 = 12, + level 3 = 15 → <strong>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> remainder 2B</strong> ✓ (77 ÷ 5 = 15 r 2)</p>
+<p><strong>÷10.</strong> Each twenties-unit contributes <strong>2</strong> (a twenty holds two tens); add 1 if the units flag is 10F or 15F; the remainder is the units digit with that 10F taken out.
+- <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 10 → 3 doubled = 6; units flag 15F ≥ 10F → +1 = <strong>7</strong>; remainder <code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span> − 10F</code> = <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> = 7 → <strong>7 remainder 7</strong> ✓ (77 ÷ 10)
+- <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 10 → double <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> layer-wise: 10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span> = 14; +1 = <strong>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></strong>; remainder <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> → <strong>15 remainder 7</strong> ✓ (157 ÷ 10)</p>
+<p><strong>÷20.</strong> Drop the last digit; it is the remainder. <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 20 → <strong>3 remainder 17.</strong></p>
+<p><strong>÷2 — halve each layer.</strong> Halve the flag level and the body. If the flag level is odd (5F or 15F), demote one level into 5 bodies first. In a multi-digit number, an odd higher digit hands <strong>10F</strong> down to the quotient digit below (half of a twenty is ten).
+- <code>10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code> ÷ 2 → <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> = 7 ✓
+- <code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 2 → level 3 is odd → demote → <code>10F7B</code> → halve → <code>5F3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code> remainder 1 → <strong>8 r 1</strong> ✓
+- <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> ÷ 2 → twenties 3 → 1, odd → hands 10F down; units 17 ÷ 2 = 8 r 1; 8 + 10 = 18 → <strong><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> remainder 1</strong> ✓ (77 ÷ 2 = 38 r 1)</p>
+<p><strong>÷4.</strong> Halve twice.</p>
+<h4 id="tier-2-cheap-chains">Tier 2 — Cheap chains</h4>
+<ul>
+<li>÷8 = halve three times · ÷16 = halve four times</li>
+<li>÷6 = ÷2 then ÷3 · ÷12 = ÷4 then ÷3</li>
+<li>÷15 = ÷5 (one glance) then ÷3</li>
+<li>÷14 = ÷2 then ÷7 · ÷18 = ÷2 then ÷9 · ÷9 = ÷3 twice</li>
+</ul>
+<h4 id="tier-3-the-stubborn-primes-3-7-11-13-17-19">Tier 3 — The stubborn primes: 3, 7, 11, 13, 17, 19</h4>
+<p>These do not divide 20, so no one-glance rule exists — the same reason 7 is notorious in base 10. But they are not hard: for any single-digit divisor, <strong>short division by flag card</strong> (<a class="xref" href="#98-short-division-by-flag-card-the-stubborn-primes-and-any-single-digit-divisor">§9.8</a>) reads the answer off the flags with only a few small additions. For 3 and 7 the method is especially clean because 3 × 7 = 21 = one more than the base. The ladder (<a class="xref" href="#94-the-ladder-method-the-general-division-algorithm">§9.4</a>) remains the general fallback, and the divisibility tests (<a class="xref" href="divisibility.html#11-vigesimal-divisibility-tests">§11</a>) tell you in advance whether there will be a remainder.</p>
+<hr />
+<h3 id="96-the-limit-of-stroke-cancellation-across-place-values">9.6 The Limit of Stroke Cancellation Across Place Values</h3>
+<p>An attempt was made to solve <code>[5, 12]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="nd" title="Ńdẹ́bẹ́ 12"></span></span> ÷ 14</code> by visual stroke cancellation — matching the strokes of 14 against the strokes of the window. It produced <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> = 7, the wrong answer.</p>
+<p><strong>Why it fails:</strong> the flag stroke of the 5 in the twenties place carries a place-value weight of 100, while strokes in the units digit weigh 5 or 1. Stroke cancellation treats all strokes as equal, so it works only when every stroke lives in the <strong>same place value</strong>. The weight ladder of the system alternates ×5, ×4: body (1) → flag (5) → next-place body (20) → next-place flag (100). Within a digit the ratio is 5 (the rotation rule); across the place boundary it is 4. Naive cancellation ignores this. The Ladder Method never mixes weights, because comparison and subtraction happen digit by digit, each stroke staying in its own place.</p>
+<hr />
+<h3 id="97-open-questions-status">9.7 Open Questions — Status</h3>
+<ol>
+<li><s>When flags and bodies don't agree on how many times the divisor fits</s> — <strong>RESOLVED by the Ladder Method.</strong> Dividend layers are never compared to divisor layers; the whole window is compared to the divisor's ladder, flag first, then body.</li>
+<li><s>After Place Demotion produces multiple components, combine or separate?</s> — <strong>RESOLVED.</strong> Place Demotion is only ever used inside a subtraction (<a class="xref" href="index.html#54-place-demotion">§5.4</a>, <a class="xref" href="subtraction.html#7-subtraction">§7</a>), where the components combine immediately.</li>
+<li><s>Is a full base-20 multiplication table needed?</s> — <strong>RESOLVED, and improved upon.</strong> Only the ten-fact core table (<a class="xref" href="multiplication.html#81-the-core-table-the-only-facts-to-memorise">§8.1</a>) plus the divisor's seven-rung ladder, built by addition and rotation.</li>
+<li><s>A purely glyph-level shortcut for arbitrary divisors</s> — <strong>RESOLVED in the form that is actually possible.</strong> No layer-local rule can exist for general divisors in any base (base-10 long division is trial multiplication hidden behind memorised tables). What <em>does</em> exist: for the divisors of 20 (2, 4, 5, 10, 20), the one-glance methods of <a class="xref" href="#95-easy-divisors-the-shortcuts-a-native-reader-learns-first">§9.5</a>; and for every other single-digit divisor — including 3 and 7 — <strong>short division by flag card</strong> (<a class="xref" href="#98-short-division-by-flag-card-the-stubborn-primes-and-any-single-digit-divisor">§9.8</a>), which reads each flag straight off the glyph and needs only a four-line card. This is as visual as base-10 short division, and for 3 and 7 the carry rule collapses to a single line thanks to 21 = 3 × 7.</li>
+<li><s>The place-value multiplier problem</s> — <strong>RESOLVED.</strong> See <a class="xref" href="#96-the-limit-of-stroke-cancellation-across-place-values">§9.6</a>.</li>
+</ol>
+<hr />
+<h3 id="98-short-division-by-flag-card-the-stubborn-primes-and-any-single-digit-divisor">9.8 Short Division by Flag Card — the stubborn primes, and any single-digit divisor</h3>
+<p>The ladder (<a class="xref" href="#94-the-ladder-method-the-general-division-algorithm">§9.4</a>) works for everything, but for a <strong>single-digit divisor</strong> there is a faster method: <strong>short division</strong>, worked digit by digit from the left, in which every flag is read straight off the glyph. It needs two things: a <strong>flag card</strong> for the divisor, and a <strong>carry rule</strong>.</p>
+<h4 id="the-flag-card">The flag card</h4>
+<p>Three facts — how many times the divisor fits into each flag, and what is left — plus the bodies, which are too small to matter:</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>÷ 3</th>
+<th>÷ 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>5F</code></td>
+<td>1, leaves 2</td>
+<td>0, leaves 5</td>
+</tr>
+<tr>
+<td><code>10F</code></td>
+<td>3, leaves 1</td>
+<td>1, leaves 3</td>
+</tr>
+<tr>
+<td><code>15F</code></td>
+<td><strong>5, leaves 0</strong></td>
+<td>2, leaves 1</td>
+</tr>
+<tr>
+<td>body <code>1B</code>–<code>4B</code></td>
+<td>3B → 1; 4B → 1 leaves 1; else 0, leaves the body</td>
+<td>0, leaves the body</td>
+</tr>
+</tbody>
+</table></div>
+<p>For 3, the 15F line is the prize: a flag of 15 is <em>exactly</em> five threes. This is the pattern method of <a class="xref" href="#92-the-pattern-method-for-clean-cases">§9.2</a> in miniature.</p>
+<h4 id="the-carry-rule-the-21-trick">The carry rule — the 21 trick</h4>
+<p>A leftover <em>r</em> from one digit is carried into the next digit as <em>r</em> twenties. Because <strong>21 = 3 × 7 is one more than the base</strong>, a twenty is exactly one short of a clean multiple of both 3 and 7:</p>
+<ul>
+<li>20 = <strong>7 threes − 1</strong>, so <em>r</em> twenties = <strong>(7r − 1) threes, leaving 3 − r</strong></li>
+<li>20 = <strong>3 sevens − 1</strong>, so <em>r</em> twenties = <strong>(3r − 1) sevens, leaving 7 − r</strong></li>
+</ul>
+<p>Written out for ÷ 7 — the quotient climbs by 3 and the leftover falls by 1, so only the first line need be remembered:</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>carry r</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sevens</td>
+<td>2</td>
+<td>5</td>
+<td>8</td>
+<td>11</td>
+<td>14</td>
+<td>17</td>
+</tr>
+<tr>
+<td>leaves</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<p>For ÷ 3 there are only two lines: carry 1 → 6 threes, leaves 2; carry 2 → 13 threes, leaves 1.</p>
+<p>(This is the same fact — twenty is "minus one" to both 3 and 7 — that makes the alternating-sum divisibility tests of <a class="xref" href="divisibility.html#11-vigesimal-divisibility-tests">§11</a> work. The two tools are one idea.)</p>
+<h4 id="the-procedure">The procedure</h4>
+<p>For each digit of the dividend, left to right:</p>
+<ol>
+<li>Add up the quotient contributions: <strong>carry</strong> (from the table) + <strong>flag</strong> (from the card) + <strong>body</strong>.</li>
+<li>Add up the leftovers from the same three sources.</li>
+<li>If the leftovers reach the divisor, take out one more and reduce the leftover.</li>
+<li>Write the quotient digit. Carry the leftover into the next digit.</li>
+</ol>
+<h4 id="worked-252-7">Worked: 252 ÷ 7</h4>
+<p><code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span> ÷ 7</code></p>
+<p><strong>Twenties digit <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code>:</strong> 10F → 1, leaves 3. 2B → 0, leaves 2. Quotient <strong>1</strong>, leftover 5. Carry 5.</p>
+<p><strong>Units digit <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code>:</strong> carry 5 → 14, leaves 2. 10F → 1, leaves 3. 2B → 0, leaves 2. Quotient 14 + 1 = 15; leftovers 2 + 3 + 2 = 7 → one more seven → quotient <strong>16</strong>, leftover 0.</p>
+<p><strong>Answer: <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F1B<span class="nd" title="Ńdẹ́bẹ́ 16"></span></code> = [1, 16]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 16"></span></span>, remainder 0</strong> (= 36 ✓)</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 36 × 7 = [1,16]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 16"></span></span> × 7: by the ladder of 7, 16 × 7 = 15d + 1d = <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> + <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> = <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> (= 112); 1 × 7 shifted up = <code>5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code>; sum → <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span>, 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> = the dividend ✓</p>
+<h4 id="worked-59-3">Worked: 59 ÷ 3</h4>
+<p><code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span> ÷ 3</code></p>
+<p><strong>Twenties digit <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>:</strong> 2B → 0, leaves 2. Quotient <strong>0</strong>, carry 2.</p>
+<p><strong>Units digit <code>15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code>:</strong> carry 2 → 13, leaves 1. 15F → 5, leaves 0. 4B → 1, leaves 1. Quotient 13 + 5 + 1 = <strong>19</strong>; leftovers 1 + 0 + 1 = 2.</p>
+<p><strong>Answer: <code>15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> = 19, remainder 2</strong> ✓</p>
+<p><strong>Ńdẹ́bẹ́ check:</strong> 19 × 3 = 15d + 4d of the ladder of 3 = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> + <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code>; add remainder 2 → <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> = the dividend ✓</p>
+<h4 id="worked-38-7">Worked: 38 ÷ 7</h4>
+<p><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span> ÷ 7</code></p>
+<p><strong>Twenties <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code>:</strong> 1B → 0, leaves 1. Carry 1.</p>
+<p><strong>Units <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code>:</strong> carry 1 → 2, leaves 6. 15F → 2, leaves 1. 3B → 0, leaves 3. Quotient 4; leftovers 6 + 1 + 3 = 10 → one more seven → <strong>5</strong>, leftover 3.</p>
+<p><strong>Answer: 5 remainder 3</strong> ✓ (<strong>Ńdẹ́bẹ́ check:</strong> 5 × 7 = <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> = [1,15]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 15"></span></span>; + 3 → <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> ✓)</p>
+<h4 id="beyond-3-and-7">Beyond 3 and 7</h4>
+<p>The same card-and-carry method works for <strong>any</strong> single-digit divisor; only the carry rule is less tidy when the divisor lacks the 21 relationship. Two more worth knowing:</p>
+<ul>
+<li><strong>÷ 19:</strong> 20 = 19 + 1, so a carried <em>r</em> is <strong>r nineteens, leaving r</strong> — the mirror image of the 21 trick. (19 is to base 20 what 9 is to base 10.)</li>
+<li><strong>÷ 9, ÷ 11, ÷ 13, ÷ 17:</strong> build the carry table once (r twenties ÷ d for r = 1 … d−1) using the divisor's ladder. In practice these divisors are rare, and the ladder itself is quick enough.</li>
+</ul>
+<p><strong>Why this closes the question:</strong> base-10 short division is exactly this — a memorised table read against each digit — but its table has 9 entries per divisor. Ńdẹ́bẹ́'s has three flag lines plus a one-line carry rule. The flags are not a hindrance to division; they are the thing you read.</p>
+    <div class="prevnext"><a href="multiplication.html">← Multiplication</a><a href="fractions.html">Vigesimal Fractions →</a></div>
+  </main>
+
+<aside class="site-ad" data-site-ad aria-label="Advertisements" hidden>
+  <p class="site-ad-label">Advertisements</p>
+</aside>
+<div class="footer">
+    <p>Type Ńdẹ́bẹ́ and the Ńdẹ́bẹ́ Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ńdẹ́bẹ́ Project</a></p>
+  </div>
+</body>
+</html>

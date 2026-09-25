@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ńdẹ́bẹ́ Numerals & Foundations — Arithmetic in Ńdẹ́bẹ́ Numerals | Type Ńdẹ́bẹ́</title>
+  <meta name="description" content="Ńdẹ́bẹ́ Numerals & Foundations: how to do arithmetic in Ńdẹ́bẹ́ numerals, the base-20, sub-base-5 number system of the Ńdẹ́bẹ́ script for Igbo.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="math.css">
+  <script src="https://cdn.counter.dev/script.js" data-id="96841804-846b-4a15-87cf-813711dff1ba" data-utcoffset="-4"></script>
+
+  <link rel="stylesheet" href="../site-ads.css?v=3">
+  <script defer src="../ads-config.js"></script>
+  <script defer src="../site-ads.js"></script>
+  <link rel="stylesheet" href="../theme.css?v=4">
+</head>
+<body class="math-page">
+  <div class="topbar">
+    <div class="brand"><a href="../index.html">Type Ńdẹ́bẹ́</a><span class="nd-brand"></span></div>
+    <div class="ext"><a href="../index.html">Keyboard</a><a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">ndebe.org</a></div>
+  </div>
+  <nav class="pagenav"><a href="index.html" class="current">Numerals</a><a href="addition.html">Addition</a><a href="subtraction.html">Subtraction</a><a href="multiplication.html">Multiplication</a><a href="division.html">Division</a><a href="fractions.html">Fractions</a><a href="divisibility.html">Divisibility</a></nav>
+  <div class="hero">
+    <p class="sub">Arithmetic in Ńdẹ́bẹ́ Numerals</p>
+    <h1>Ńdẹ́bẹ́ Numerals & Foundations</h1>
+    <div class="nd-big"></div>
+    <p class="lead">Addition, subtraction, multiplication, division and fractions in a base-20, sub-base-5 numeral system — every procedure executable in Ńdẹ́bẹ́ alone, with base-10 notes alongside for readers who know it.</p>
+  </div>
+  <main>
+    <details class="tocbox" open><summary>On this page</summary><div class="toc">
+<ul>
+<li><a href="#how-to-read-this-guide-two-tracks">How to Read This Guide: Two Tracks</a></li>
+<li><a href="#1-the-ndebe-number-system-overview">1. The Ńdẹ́bẹ́ Number System: Overview</a></li>
+<li><a href="#2-ndebe-numeral-structure">2. Ńdẹ́bẹ́ Numeral Structure</a><ul>
+<li><a href="#the-20-numerals">The 20 Numerals</a></li>
+</ul>
+</li>
+<li><a href="#3-place-values-reading-and-writing-numbers">3. Place Values — Reading and Writing Numbers</a></li>
+<li><a href="#4-comparing-numbers">4. Comparing Numbers</a><ul>
+<li><a href="#the-rule">The rule</a></li>
+<li><a href="#why-flags-are-checked-first">Why flags are checked first</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a href="#5-promotion-and-demotion-rules">5. Promotion and Demotion Rules</a><ul>
+<li><a href="#51-flag-promotion">5.1 Flag Promotion</a></li>
+<li><a href="#52-flag-demotion">5.2 Flag Demotion</a></li>
+<li><a href="#53-place-promotion">5.3 Place Promotion</a></li>
+<li><a href="#54-place-demotion">5.4 Place Demotion</a></li>
+</ul>
+</li>
+<li><a href="#13-summary-the-four-operations-at-a-glance">13. Summary: The Four Operations at a Glance</a></li>
+</ul>
+</div>
+</details>
+    <h2 id="how-to-read-this-guide-two-tracks">How to Read This Guide: Two Tracks</h2>
+<p>Every worked example in this guide runs on two parallel tracks.</p>
+<p><strong>The procedure track</strong> is the actual mathematics. Every step is executable in Ńdẹ́bẹ́ alone — base 20, sub-base 5, nothing else. The design test throughout is this: <em>if an Ńdẹ́bẹ́-only society existed, one that had never heard of base 10, could its people do this step?</em> Every procedure here passes that test. Their arithmetic would have no deficiency.</p>
+<p><strong>The commentary track</strong> is the base-10 figures (like "= 252") and the <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> notation running alongside. These are an intellectual guide for readers who already know base 10 — a way to verify against what they know and understand faster. An Ńdẹ́bẹ́-only reader could ignore them entirely and lose nothing.</p>
+<p>Wherever an example includes a base-10 check, it also includes an <strong>Ńdẹ́bẹ́ check</strong> — a verification done entirely inside base 20 — so that both kinds of reader can confirm the result on their own terms.</p>
+<hr />
+<h2 class="pages-h">Pages</h2><div class="cards"><a class="card" href="addition.html"><div class="cn"> +  = </div><div class="ct">Addition</div><div class="cd">Flags + flags, bodies + bodies</div></a><a class="card" href="subtraction.html"><div class="cn"> −  = </div><div class="ct">Subtraction</div><div class="cd">Demotion when a body is too small</div></a><a class="card" href="multiplication.html"><div class="cn"> ×  = </div><div class="ct">Multiplication</div><div class="cd">Ten facts, rotation, and the ladder</div></a><a class="card" href="division.html"><div class="cn"> ÷  = </div><div class="ct">Division</div><div class="cd">The Ladder Method and the shortcuts</div></a><a class="card" href="fractions.html"><div class="cn">·</div><div class="ct">Vigesimal Fractions</div><div class="cd">Place value below the units</div></a><a class="card" href="divisibility.html"><div class="cn"></div><div class="ct">Divisibility Tests</div><div class="cd">Check without dividing</div></a></div><h2 id="1-the-ndebe-number-system-overview">1. The Ńdẹ́bẹ́ Number System: Overview</h2>
+<p><strong>Ńdẹ́bẹ́</strong> is a writing system for the Igbo language, created by Lotanna Igwe-Odunze. Its number system honours the traditional Igbo way of counting: it is <strong>base 20</strong> with a <strong>sub-base of 5</strong>, and every numeral from 0 to 19 is a single glyph composed of two visible layers.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Ńdẹ́bẹ́</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base</td>
+<td>20 (sub-base 5)</td>
+</tr>
+<tr>
+<td>Upper layer</td>
+<td>Flag — marks 0, 5, 10, or 15</td>
+</tr>
+<tr>
+<td>Lower layer</td>
+<td>Body — marks 0–4</td>
+</tr>
+<tr>
+<td>Zero</td>
+<td>The flag of 5 with no body</td>
+</tr>
+<tr>
+<td>Encoding</td>
+<td>Private Use Area (Unicode submission pending)</td>
+</tr>
+<tr>
+<td>Unique forms to learn</td>
+<td>8 — the bodies 0, 1, 2, 3, 4 and the three flags</td>
+</tr>
+</tbody>
+</table></div>
+<p>Because the flag and the body are visible separately, the arithmetic of the system can be seen in the glyphs themselves: adding, subtracting, multiplying and dividing all work layer by layer.</p>
+<hr />
+<h2 id="2-ndebe-numeral-structure">2. Ńdẹ́bẹ́ Numeral Structure</h2>
+<div class="keyfig"><div class="keyrow"><div class="kcell"><div class="kg"></div><div class="kl">0</div></div><div class="kcell"><div class="kg"></div><div class="kl">1</div></div><div class="kcell"><div class="kg"></div><div class="kl">2</div></div><div class="kcell"><div class="kg"></div><div class="kl">3</div></div><div class="kcell"><div class="kg"></div><div class="kl">4</div></div><div class="kcell"><div class="kg"></div><div class="kl">5</div></div><div class="kcell"><div class="kg"></div><div class="kl">6</div></div><div class="kcell"><div class="kg"></div><div class="kl">7</div></div><div class="kcell"><div class="kg"></div><div class="kl">8</div></div><div class="kcell"><div class="kg"></div><div class="kl">9</div></div><div class="kcell"><div class="kg"></div><div class="kl">10</div></div><div class="kcell"><div class="kg"></div><div class="kl">11</div></div><div class="kcell"><div class="kg"></div><div class="kl">12</div></div><div class="kcell"><div class="kg"></div><div class="kl">13</div></div><div class="kcell"><div class="kg"></div><div class="kl">14</div></div><div class="kcell"><div class="kg"></div><div class="kl">15</div></div><div class="kcell"><div class="kg"></div><div class="kl">16</div></div><div class="kcell"><div class="kg"></div><div class="kl">17</div></div><div class="kcell"><div class="kg"></div><div class="kl">18</div></div><div class="kcell"><div class="kg"></div><div class="kl">19</div></div></div><div class="keycap">The twenty Ńdẹ́bẹ́ numerals. Twenty itself is written <span class="nd"></span> — a 1 in the twenties place and a 0 in the units.</div></div>
+
+<p>Every Ńdẹ́bẹ́ numeral is expressed as <strong>Flag + Body</strong>:</p>
+<ul>
+<li><strong>Flag</strong> — the top marker, representing a multiple of 5. Only four flags exist: <code>0F</code>, <code>5F</code>, <code>10F</code>, <code>15F</code>. We also speak of a flag's <strong>level</strong>: 0F is level 0, 5F is level 1, 10F is level 2, 15F is level 3.</li>
+<li><strong>Body</strong> — the lower/main form, representing units 0–4: <code>0B</code>, <code>1B</code>, <code>2B</code>, <code>3B</code>, <code>4B</code>. The <code>0B</code> form — the simple stroke under the flags of 5, 10 and 15 — is the <strong>plain body</strong> (also called the bare body): a body that carries no value.</li>
+</ul>
+<h3 id="the-20-numerals">The 20 Numerals</h3>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th style="text-align: center;">Glyph</th>
+<th>Flag</th>
+<th>Body</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 0"></span></td>
+<td>0F</td>
+<td>0B</td>
+<td>Visually identical to the flag of 5 — no body</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 1"></span></td>
+<td>0F</td>
+<td>1B</td>
+<td>Unique body: single loop</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 2"></span></td>
+<td>0F</td>
+<td>2B</td>
+<td>Unique body</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 3"></span></td>
+<td>0F</td>
+<td>3B</td>
+<td>Unique body</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 4"></span></td>
+<td>0F</td>
+<td>4B</td>
+<td>Unique body: double opposite loop</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 5"></span></td>
+<td>5F</td>
+<td>0B</td>
+<td>Flag of 5 + plain body (0B)</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 6"></span></td>
+<td>5F</td>
+<td>1B</td>
+<td>Flag of 5 + body of 1</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 7"></span></td>
+<td>5F</td>
+<td>2B</td>
+<td>Flag of 5 + body of 2</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 8"></span></td>
+<td>5F</td>
+<td>3B</td>
+<td>Flag of 5 + body of 3</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 9"></span></td>
+<td>5F</td>
+<td>4B</td>
+<td>Flag of 5 + body of 4</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 10"></span></td>
+<td>10F</td>
+<td>0B</td>
+<td>Flag of 10 + plain body (0B)</td>
+</tr>
+<tr>
+<td>11</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 11"></span></td>
+<td>10F</td>
+<td>1B</td>
+<td>Flag of 10 + body of 1</td>
+</tr>
+<tr>
+<td>12</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 12"></span></td>
+<td>10F</td>
+<td>2B</td>
+<td>Flag of 10 + body of 2</td>
+</tr>
+<tr>
+<td>13</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 13"></span></td>
+<td>10F</td>
+<td>3B</td>
+<td>Flag of 10 + body of 3</td>
+</tr>
+<tr>
+<td>14</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 14"></span></td>
+<td>10F</td>
+<td>4B</td>
+<td>Flag of 10 + body of 4</td>
+</tr>
+<tr>
+<td>15</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 15"></span></td>
+<td>15F</td>
+<td>0B</td>
+<td>Flag of 15 + plain body (0B)</td>
+</tr>
+<tr>
+<td>16</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 16"></span></td>
+<td>15F</td>
+<td>1B</td>
+<td>Flag of 15 + body of 1</td>
+</tr>
+<tr>
+<td>17</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 17"></span></td>
+<td>15F</td>
+<td>2B</td>
+<td>Flag of 15 + body of 2</td>
+</tr>
+<tr>
+<td>18</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 18"></span></td>
+<td>15F</td>
+<td>3B</td>
+<td>Flag of 15 + body of 3</td>
+</tr>
+<tr>
+<td>19</td>
+<td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 19"></span></td>
+<td>15F</td>
+<td>4B</td>
+<td>Flag of 15 + body of 4</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Key insight:</strong> You only need to learn 8 unique forms — the bodies 0–4 and the three flags (5F, 10F, 15F) — to read the entire system.</p>
+<p><strong>The structural fact everything else rests on:</strong> a flag step is worth 5, and the largest possible body is 4. So the flag always outweighs the body. This single fact drives comparison, rounding, and the search order in division.</p>
+<hr />
+<h2 id="3-place-values-reading-and-writing-numbers">3. Place Values — Reading and Writing Numbers</h2>
+<p>Like all positional systems, Ńdẹ́bẹ́ uses place values. Each place is worth 20 times the place to its right.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Place</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Units</td>
+<td>1</td>
+<td><code>5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> = 6</td>
+</tr>
+<tr>
+<td>Twenties</td>
+<td>20</td>
+<td><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code> in twenties = 20</td>
+</tr>
+<tr>
+<td>Four-hundreds</td>
+<td>400</td>
+<td><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code> in four-hundreds = 400</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Writing 20:</strong> Since there is no single glyph for 20 in a base-20 system, 20 is written as <code>1</code> in the twenties place and <code>0</code> in the units place — just as 10 is written in base 10.</p>
+<p><strong>Notation used in this guide:</strong> a multi-digit number is written with its digits separated by commas, most significant first: <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> is a 3 in the twenties place and a 17 in the units place. In commentary, the same number appears as <code>[3, 17]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 17"></span></span></code> (= 77).</p>
+<hr />
+<h2 id="4-comparing-numbers">4. Comparing Numbers</h2>
+<p>Before subtraction and division can be taught, a reader must be able to answer: <em>which of two numbers is bigger?</em> Ńdẹ́bẹ́ makes this a visual skill.</p>
+<h3 id="the-rule">The rule</h3>
+<ol>
+<li><strong>Count the digits.</strong> The number with more digits is bigger. (Leading zeros don't count.)</li>
+<li><strong>Same number of digits:</strong> compare the leftmost digits. <strong>Look at the flags first.</strong> The higher flag wins. If the flags tie, the higher body wins.</li>
+<li><strong>If the whole digit ties,</strong> move one digit to the right and repeat.</li>
+<li>If every digit ties, the numbers are equal.</li>
+</ol>
+<h3 id="why-flags-are-checked-first">Why flags are checked first</h3>
+<p>A flag step is worth 5. The largest body is 4. So <strong>any</strong> flag advantage beats <strong>any</strong> body advantage — a number with a higher flag is bigger no matter what the bodies say. This is why a reader's eye should go to the top of the glyph first.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> vs <code>10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code> (17 vs 14): flags 15F &gt; 10F. <strong>First is bigger</strong> — the bodies (2B &lt; 4B) never needed checking.</li>
+<li><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> vs <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> ([1,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span> vs [2,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 2"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span>, i.e. 39 vs 40): leftmost digits 1 vs 2 → <strong>second is bigger</strong>, regardless of the 19.</li>
+<li><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> vs <code>15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> ([1,0,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span> vs [19,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 19"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span>, i.e. 400 vs 399): three digits vs two → <strong>first is bigger.</strong></li>
+</ul>
+<hr />
+<h2 id="5-promotion-and-demotion-rules">5. Promotion and Demotion Rules</h2>
+<p>These four rules govern how values move between layers and between place values.</p>
+<h3 id="51-flag-promotion">5.1 Flag Promotion</h3>
+<p><strong>Trigger:</strong> Body reaches 5B or more<br />
+<strong>Effect:</strong> Advance to the next flag level, subtract 5 from the body<br />
+<strong>Example:</strong> <code>0F + 7B</code> → promote → <code>5F + 2B</code></p>
+<h3 id="52-flag-demotion">5.2 Flag Demotion</h3>
+<p><strong>Trigger:</strong> Body subtraction is impossible (body being subtracted from is too small)<br />
+<strong>Effect:</strong> Drop one flag level, add 5 to the body<br />
+<strong>Example:</strong> <code>10F 2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> needing to subtract <code>4B</code> → demote → <code>5F 7B</code> → now subtract → <code>5F 3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code></p>
+<h3 id="53-place-promotion">5.3 Place Promotion</h3>
+<p><strong>Trigger:</strong> Flags would reach 20F (impossible)<br />
+<strong>Effect:</strong> Produce <code>1B</code> in the next place up; flags reset to <code>0F</code><br />
+<strong>Example:</strong> <code>15 + 7</code> → <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> → flags: <code>15F + 5F = 20F</code> → Place Promote → <code>1B</code> in twenties, <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> in units → <strong>22</strong></p>
+<h3 id="54-place-demotion">5.4 Place Demotion</h3>
+<p><strong>Trigger:</strong> Current place value is too small to subtract from or divide<br />
+<strong>Effect:</strong> <code>1B</code> from the place above becomes <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> in the place below (= 20 units)<br />
+<strong>Example:</strong> <code>1</code> in the twenties place demotes to <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> in units</p>
+<p><strong>Promotion and Demotion are exact inverses:</strong> 1 unit above = 20 units below, governed by multiplication and division by 20.</p>
+<hr />
+<h2 id="13-summary-the-four-operations-at-a-glance">13. Summary: The Four Operations at a Glance</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Core method</th>
+<th>Key rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compare</strong></td>
+<td>More digits wins; else leftmost digit, flag first, then body</td>
+<td>A flag step (5) always outweighs any body (≤ 4)</td>
+</tr>
+<tr>
+<td><strong>Addition</strong></td>
+<td>Flags + flags, bodies + bodies</td>
+<td>Flag Promote when body ≥ 5; Place Promote when flags = 20F</td>
+</tr>
+<tr>
+<td><strong>Subtraction</strong></td>
+<td>Flags − flags, bodies − bodies</td>
+<td>Flag Demote when body too small; Place Demote when flags exhausted</td>
+</tr>
+<tr>
+<td><strong>Multiplication</strong></td>
+<td>Ten-fact core table; ×5 = rotation; ×20 = shift; single-digit multiplier = flag rung + body rung of the ladder</td>
+<td>Multi-digit: partial products shifted by place, then added</td>
+</tr>
+<tr>
+<td><strong>Division</strong></td>
+<td>Single-digit divisor: short division by flag card (<a class="xref" href="division.html#98-short-division-by-flag-card-the-stubborn-primes-and-any-single-digit-divisor">§9.8</a>). Any divisor: build the 7-rung ladder, per window find the largest flag rung, then the largest body rung (<a class="xref" href="division.html#94-the-ladder-method-the-general-division-algorithm">§9.4</a>)</td>
+<td>Quotient digit = flag + body, assembled like the glyph itself; free shortcuts for 2, 4, 5, 10, 20; the 21 trick for 3 and 7</td>
+</tr>
+<tr>
+<td><strong>Fractions</strong></td>
+<td>Place value continues below the units; division keeps going by appending zeros</td>
+<td>Round up at a next digit of 10 or more — visible as a 10F/15F flag</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+    <div class="prevnext"><span></span><a href="addition.html">Addition →</a></div>
+  </main>
+
+<aside class="site-ad" data-site-ad aria-label="Advertisements" hidden>
+  <p class="site-ad-label">Advertisements</p>
+</aside>
+<div class="footer">
+    <p>Type Ńdẹ́bẹ́ and the Ńdẹ́bẹ́ Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ńdẹ́bẹ́ Project</a></p>
+  </div>
+</body>
+</html>

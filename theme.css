@@ -94,7 +94,7 @@ footer, .footer {
 }
 .typing-page .vowel-chart, .typing-page .consonant-chart,
 .typing-page #ndebe-h, .typing-page #ndebe-p {
-  font-family: var(--latin-font), 'NdebePlain-Regular';
+  font-family: var(--latin-font), var(--ndebe-font);
 }
 .typing-page #ndebe-h { color: var(--warm); }
 .typing-page .segment { border-color: var(--accent); }
@@ -201,3 +201,6 @@ footer, .footer {
 /* Balance the two palette icons within their keys. */
 .typing-page .nd-key[data-token="{teaching}"] { font-size: 32px; }
 .typing-page .nd-key[data-token="{math}"] svg { width: 32px; height: 32px; }
+
+.typing-page .segment a.seg { text-decoration: none; text-align: center; }
+.script-page .hero-art .script-name { display: block; width: 100%; text-align: center; font: 400 14px/1.5 var(--latin-font); color: var(--muted); margin-top: 8px; }

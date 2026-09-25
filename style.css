@@ -8,7 +8,7 @@
 
 body {
   background-color: black;
-  font-family: 'NdebePlain-Regular', sans-serif;
+  font-family: var(--ndebe-font), sans-serif;
 }
 
 .main-container {
@@ -86,14 +86,7 @@ th, td {
 
 /* Design Changes */
 
-@font-face {
-  font-family: 'NdebePlain-Regular';
-  src: local('NdebePlain-Regular'),
-    url('font/ndebeplain.woff2') format('woff2'),
-    url('font/ndebeplain.woff?v=symbols-5') format('woff'),
-    url('font/ndebeplain.otf') format('opentype');
-  font-display: block;
-}
+
 
 h1 {
   font-size: 2rem;
@@ -167,13 +160,13 @@ h1 {
 /* Custom theme for the on-screen keyboard */
 .input {
   border: none;
-  font-family: 'NdebePlain-Regular', sans-serif;
+  font-family: var(--ndebe-font), sans-serif;
   font-size: 3rem;
   color: black;
 }
 
 .simple-keyboard.hg-theme-default.ndebe-theme {
-  font-family: 'NdebePlain-Regular', sans-serif;
+  font-family: var(--ndebe-font), sans-serif;
 }
 
 .simple-keyboard.hg-layout-default.ndebe-theme .hg-button,
