@@ -31,4 +31,4 @@ Run placement checks with `node --test tests/ads.test.cjs`.
 
 ## Visual theme
 
-The site uses Olive & cherry with locally hosted Noto Sans for Latin text, including Igbo diacritics. Shared colours and typography are in `theme.css`; page-specific styles retain layout and Ndebe glyph font assignments. The Noto Sans licence is in `font/NotoSans-OFL.txt`.
+The site uses Plum & cherry with locally hosted Noto Sans for Latin text, including Igbo diacritics. The keyboard retains its approved category colours and olive utility keys. Shared colours and typography are in `theme.css`; page-specific styles retain layout and Ndebe glyph font assignments. The Noto Sans licence is in `font/NotoSans-OFL.txt`.

@@ -1,4 +1,4 @@
-/* Shared Olive & cherry theme. Noto Sans includes the Igbo proof characters. */
+/* Shared Plum & cherry theme. Noto Sans includes the Igbo proof characters. */
 @font-face {
   font-family: 'Noto Sans';
   src: url('font/NotoSans-Latin.woff2') format('woff2');
@@ -7,15 +7,15 @@
   font-display: swap;
 }
 :root {
-  --paper: #20261e;
-  --card: #2d3529;
-  --ink: #ebe8cf;
-  --muted: #bbc2aa;
-  --line: #49523e;
+  --paper: #241f2a;
+  --card: #322b3b;
+  --ink: #ece4dc;
+  --muted: #c3b7c8;
+  --line: #504556;
   --accent: #bb3349;
-  --warm: #c9b77b;
+  --warm: #deb36d;
   --link: #f08d99;
-  --hover: #35402f;
+  --hover: #403649;
   --latin-font: 'Noto Sans', sans-serif;
   color-scheme: dark;
 }
@@ -112,7 +112,17 @@ footer, .footer {
   border-color: var(--line);
   font-family: var(--latin-font);
 }
-.typing-page .simple-keyboard { background: var(--paper); }
+/* Preserve the approved keyboard palette independently of the site theme. */
+.typing-page .simple-keyboard {
+  --paper: #20261e;
+  --card: #2d3529;
+  --ink: #ebe8cf;
+  --muted: #bbc2aa;
+  --line: #49523e;
+  --warm: #c9b77b;
+  --hover: #35402f;
+  background: var(--paper);
+}
 .typing-page .nd-key, .typing-page .symbol-buttons button, .typing-page .flag-buttons button {
   background: var(--card);
   color: var(--ink);
