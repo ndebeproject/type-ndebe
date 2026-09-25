@@ -23,7 +23,7 @@ The complete reference page lives at [`/script/`](script/): searchable glyphs in
 
 ## Advertising placement
 
-Each public page has a labelled, responsive display-ad placement before its footer. The Script catalogue also has a placement immediately above its category filters; Teaching, Mathematics, Typing and Fonts have a second placement above their main section heading. Embedded arithmetic lessons suppress their own placement. The panel stays in normal page flow and uses smaller padding at phone widths.
+Each public page has a labelled, responsive display-ad placement before its footer. The Script catalogue also has a placement immediately above its collection heading; Teaching, Mathematics, Typing and Fonts have a second placement above their main section heading. Embedded arithmetic lessons suppress their own placement. The panel stays in normal page flow and uses smaller padding at phone widths.
 
 Ads are disabled in `ads-config.js`. Localhost shows an inert placeholder; the public site hides the placement until enabled with a valid publisher ID and display-unit slot ID. Local previews never request real ads. To activate later, add the AdSense IDs and complete the account/site and applicable consent setup before setting `enabled: true`. Keep AdSense Auto ads disabled if you want only these manual placements. The frame is themed; Google controls the ad artwork.
 
