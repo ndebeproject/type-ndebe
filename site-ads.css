@@ -49,3 +49,23 @@
     margin-block: 36px;
   }
 }
+
+/* Avoid adding the section's generous heading space to the banner margin. */
+section.ad-led:not(.hero) {
+  padding-top: 24px;
+}
+section.ad-led > .site-ad:first-child {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Footer banners own the gap; do not add a second section-sized gap. */
+body > .site-ad {
+  margin-block: 32px;
+}
+main:has(+ .site-ad:not([hidden])) {
+  padding-bottom: 0;
+}
+main:has(+ .site-ad:not([hidden])) > section:last-child {
+  padding-bottom: 0;
+}
