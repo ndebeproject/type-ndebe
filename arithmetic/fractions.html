@@ -17,7 +17,7 @@
   <script defer src="../ads-config.js"></script>
   <script defer src="../site-ads.js"></script>
   <link rel="stylesheet" href="../theme.css?v=11">
-  <link rel="stylesheet" href="arithmetic.css">
+  <link rel="stylesheet" href="arithmetic.css?v=components-6">
   <script defer src="../script/shared.js?v=specimen-2"></script>
 </head>
 <body class="math-page script-page">
@@ -29,7 +29,7 @@
     <div class="nd-big">·</div>
     
   </div>
-  <main id="lesson">
+  <main id="lesson"><p class="body-legend"><span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span> <strong>0B: no body contribution.</strong> The dotted rectangle marks a zero body contribution; the dotted square <span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution">&#xE140;</span> marks a zero flag contribution. Square brackets group the parts of one numeral. These placeholders are teaching aids, not the numeral zero or characters to insert into the final answer. Bare flags show flag contributions; complete numbers keep their normal bodies.</p>
     <details class="tocbox" open><summary>On this page</summary><div class="toc">
 <ul>
 <li><a href="#10-vigesimal-fractions">10. Vigesimal Fractions</a><ul>
@@ -63,15 +63,15 @@
 </tr>
 <tr>
 <td><strong>Twentieths</strong></td>
-<td>1/20</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 20">⁄</span> <small class="decimal-note">1/20</small></td>
 </tr>
 <tr>
 <td><strong>Four-hundredths</strong></td>
-<td>1/400</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 400">⁄</span> <small class="decimal-note">1/400</small></td>
 </tr>
 <tr>
 <td>Eight-thousandths</td>
-<td>1/8000</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 8000">⁄</span> <small class="decimal-note">1/8000</small></td>
 </tr>
 </tbody>
 </table></div>
@@ -79,32 +79,32 @@
 <p><strong>Commentary for base-10 readers:</strong> this is the same idea as a decimal point, with twentieths where you are used to tenths. <code>0.1</code> in vigesimal means 1/20 (= 0.05 in base 10); <code>0.(10)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 10"></span></span></code> in vigesimal means 10/20 = one half.</p>
 <h3 id="102-division-simply-keeps-going">10.2 Division simply keeps going</h3>
 <p>When a division leaves a remainder and the dividend's digits are exhausted, <strong>append a 0 digit in the next place down</strong> and keep forming windows. This is Place Demotion: the remainder moves down one place, gaining twenty-fold room, and the ladder continues to apply. Every digit produced after the vigesimal point is a fractional digit.</p>
-<h4 id="worked-entirely-in-ndebe-17-3">Worked entirely in Ńdẹ́bẹ́: 17 ÷ 3</h4>
-<p>Ladder of 3: <code>1d = 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> · <code>2d = 5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> · <code>3d = 5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span></code> · <code>4d = 10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> · <code>5d = 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> · <code>10d = 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> · <code>15d = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code></p>
-<p><strong>Units window: <code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code></strong>
-- Flag stage: 5d = <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> → flags tie, body 2B &gt; 0B → fits → <strong>5F</strong>. Remove → <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>.
-- Body stage: 1d = <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> &gt; <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> → no fit → <strong>0B</strong>.
-- Digit <strong>5</strong>, remainder <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>. Digits exhausted → place the vigesimal point and continue.</p>
-<p><strong>Twentieths window: append 0 → <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code></strong>
-- Flag stage: 15d = <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> → leftmost tie; units 0F &lt; 5F → too big. 10d = <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> → leftmost 2B &gt; 1B → <strong>fits</strong> → <strong>10F</strong>.
-- Remove: <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span> − 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code> → units need Place Demotion (worked in <a class="xref" href="subtraction.html#7-subtraction">§7</a>) → remainder <code>10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span></code>.
-- Body stage: 4d = <code>10F2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> → flags tie, 0B &lt; 2B → too big. 3d = <code>5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span></code> → 10F &gt; 5F → <strong>fits</strong> → <strong>3B</strong>. Remove: <code>10F0B<span class="nd" title="Ńdẹ́bẹ́ 10"></span> − 5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span></code> → Flag Demotion → <code>5F5B − 5F4B<span class="nd" title="Ńdẹ́bẹ́ 9"></span> = 0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code>.
-- Digit <strong><code>10F3B<span class="nd" title="Ńdẹ́bẹ́ 13"></span></code> = 13</strong>, remainder <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span></code>.</p>
-<p><strong>Four-hundredths window: append 0 → <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code></strong>
-- Flag stage: 15d, 10d too big (leftmost 1B &lt; 2B; then units 0F &lt; 10F). 5d = <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> (one digit) → the window has two digits → <strong>fits</strong> → <strong>5F</strong>.
-- Remove: <code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span> − 15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span></code> → Place Demotion → units <code>15F + 5F − 15F = 5F</code> → remainder <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code>.
-- Body stage: 2d = <code>5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> → flags tie, 0B &lt; 1B → too big. 1d = <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> → 5F &gt; 0F → <strong>fits</strong> → <strong>1B</strong>. Remove: <code>5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span> − 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span></code> → Flag Demotion → <code>0F5B − 0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span> = 0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>.
-- Digit <strong><code>5F1B<span class="nd" title="Ńdẹ́bẹ́ 6"></span></code> = 6</strong>, remainder <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code>.</p>
-<p>The remainder <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> has appeared before (after the units window) — the sequence now repeats.</p>
+<h4 id="worked-entirely-in-ndebe-17-3">Worked entirely in Ńdẹ́bẹ́: 17 ÷ 3</h4><figure class="flag-example"><div class="flag-equation"><span class="nd math-expression" role="img" aria-label="17"></span> <span class="nd math-expression">÷</span> <span class="nd math-expression" role="img" aria-label="3"></span> <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="5 point 13 6 recurring, base twenty">…</span></div><figcaption>The vigesimal point separates the whole-number part from the repeating fractional digits 13, 6.</figcaption></figure><figure class="flag-example"><div class="flag-equation"><span class="nd math-expression">[</span><span class="nd flag-glyph" role="img" aria-label="Flag of 5">&#xE120;</span> <span class="nd math-expression">+</span> <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd" role="img" aria-label="Numeral 5">&#xE105;</span></div><figcaption>In the first window, the flag contribution is 5F and the body contribution is 0B, giving the complete quotient digit 5.</figcaption></figure>
+<p>Ladder of 3: <code class="component-notation">1d = 0F3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="1"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="3"></span></span> · <code class="component-notation">2d = 5F1B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="6"></span></span> · <code class="component-notation">3d = 5F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="3"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="9"></span></span> · <code class="component-notation">4d = 10F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="4"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="12"></span></span> · <code class="component-notation">5d = 15F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="5"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="15"></span></span> · <code class="component-notation">10d = 0F1B, 10F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="10"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="30"></span></span> · <code class="component-notation">15d = 0F2B, 5F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span><span class="nd math-expression">×</span> d <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="45"></span></span></p>
+<p><strong>Units window: <code class="component-notation">15F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="17"></span></span></strong>
+- Flag stage: 5d = <code class="component-notation">15F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span></span> → flags tie, body 2B &gt; 0B → fits → <strong><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</strong>. Remove → <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span>.
+- Body stage: 1d = <code class="component-notation">0F3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="3"></span></span> &gt; <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span> → no fit → <strong>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></strong>.
+- Digit <strong><span class="result-assembly"><span class="nd math-expression">[</span><span class="nd math-expression" role="img" aria-label="Flag of 5"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="Zero body contribution">◌</span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="5"></span></span> (5)</strong>, remainder <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span>. Digits exhausted → place the vigesimal point and continue.</p>
+<p><strong>Twentieths window: append 0 → <code class="component-notation">0F2B, 0F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="40"></span></span></strong>
+- Flag stage: 15d = <code class="component-notation">0F2B, 5F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="45"></span></span> → leftmost tie; units 0F &lt; 5F → too big. 10d = <code class="component-notation">0F1B, 10F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="30"></span></span> → leftmost 2B &gt; 1B → <strong>fits</strong> → <strong><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</strong>.
+- Remove: <code class="component-notation">0F2B, 0F0B − 0F1B, 10F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="40"></span> <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="30"></span></span> → units need Place Demotion (worked in <a class="xref" href="subtraction.html#7-subtraction">§7</a>) → remainder <code class="component-notation">10F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="10"></span></span>.
+- Body stage: 4d = <code class="component-notation">10F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="12"></span></span> → flags tie, 0B &lt; 2B → too big. 3d = <code class="component-notation">5F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="9"></span></span> → 10F &gt; 5F → <strong>fits</strong> → <strong>3B</strong>. Remove: <code class="component-notation">10F0B − 5F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="10"></span> <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="9"></span></span> → Flag Demotion → <code class="component-notation">5F5B − 5F4B = 0F1B</code> <span class="native-calculation">(<span class="nd math-expression" role="img" aria-label="Flag of 5"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="5"></span>) <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="9"></span> <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="1"></span></span>.
+- Digit <strong><code class="component-notation">10F3B</code> <span class="result-assembly"><span class="nd math-expression">[</span><span class="nd math-expression" role="img" aria-label="Flag of 10"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="3"></span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="13"></span></span> = 13</strong>, remainder <code class="component-notation">0F1B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="1"></span></span>.</p><figure class="flag-example component-transition"><div class="flag-equation"><span class="component-change"><span class="math-note">Flag</span> <span class="nd math-expression" role="img" aria-label="Flag of 10"></span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="Flag of 5"></span></span><span class="component-change"><span class="math-note">Body</span> <span class="nd math-expression" role="img" aria-label="Zero body contribution">◌</span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="5"></span></span></div><figcaption>In the twentieths window, subtracting 9 from 10 needs this demotion first: the 10-flag becomes a 5-flag, and the zero body gains five units. Then subtract the 5-flag and four body units of 9, leaving 1.</figcaption></figure>
+<p><strong>Four-hundredths window: append 0 → <code class="component-notation">0F1B, 0F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="20"></span></span></strong>
+- Flag stage: 15d, 10d too big (leftmost 1B &lt; 2B; then units 0F &lt; 10F). 5d = <code class="component-notation">15F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span></span> (one digit) → the window has two digits → <strong>fits</strong> → <strong><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</strong>.
+- Remove: <code class="component-notation">0F1B, 0F0B − 15F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="20"></span> <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="15"></span></span> → Place Demotion → units <code>15F + 5F − 15F = 5F</code> → remainder <code class="component-notation">5F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="5"></span></span>.
+- Body stage: 2d = <code class="component-notation">5F1B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="6"></span></span> → flags tie, 0B &lt; 1B → too big. 1d = <code class="component-notation">0F3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="3"></span></span> → 5F &gt; 0F → <strong>fits</strong> → <strong>1B</strong>. Remove: <code class="component-notation">5F0B − 0F3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="5"></span> <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="3"></span></span> → Flag Demotion → <code class="component-notation">0F5B − 0F3B = 0F2B</code> <span class="native-calculation">(<span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="5"></span>) <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="3"></span> <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="2"></span></span>.
+- Digit <strong><code class="component-notation">5F1B</code> <span class="result-assembly"><span class="nd math-expression">[</span><span class="nd math-expression" role="img" aria-label="Flag of 5"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="1"></span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="6"></span></span> = 6</strong>, remainder <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span>.</p>
+<p>The remainder <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span> has appeared before (after the units window) — the sequence now repeats.</p>
 <p><strong>Answer: 5 . (13) (6) (13) (6) …</strong> — the block (13)(6) recurs forever. (Base-10 check: 17 ÷ 3 = 5.666…, and 13/20 + 6/400 + 13/8000 + … = 0.666… ✓)</p>
-<h3 id="103-rounding">10.3 Rounding</h3>
+<h3 id="103-rounding">10.3 Rounding</h3><p>For the nonnegative values here, use round-half-up. Add one to the last retained digit when rounding up; if that digit is 19, write 0 and carry to the left, repeating through any further 19s.</p><figure class="flag-example"><div class="flag-equation"><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> <span>or</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> <span class="nd math-expression">→</span> <span>round up</span></div><figcaption>Read the flag of the next digit. A 10-flag or 15-flag means at least half of twenty; a 5-flag or no flag means less than half.</figcaption></figure>
 <p>Round up if the next vigesimal digit is <strong>10 or above</strong>; round down if it is <strong>9 or below</strong>. Ten is half the base, so this is the exact midpoint — and since 10 has its own distinct flag, the threshold is <strong>visible in the glyph</strong>: a next digit carrying 10F or 15F rounds up; one carrying 0F or 5F rounds down.</p>
 <ul>
 <li>17 ÷ 3 to one vigesimal place: next digit is 6 (flag 5F) → round down → <strong>5.(13)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 13"></span></span></strong></li>
 <li>To two places: next digit is 13 (flag 10F) → round up → <strong>5.(13)(7)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 5"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 13"></span><span class="nd" title="Ńdẹ́bẹ́ 7"></span></span></strong></li>
 </ul>
 <h3 id="104-fractions-a-base-20-society-finds-clean">10.4 Fractions a base-20 society finds clean</h3>
-<p>A fraction terminates in vigesimal exactly when its denominator divides a power of 20 — that is, when it is built only from 2s and 5s. This gives base 20 more clean fractions than base 10:</p>
+<p>A fraction terminates in vigesimal exactly when its denominator, after reducing the fraction to lowest terms, divides a power of 20 — that is, when it is built only from 2s and 5s. The same fractions terminate in base 10, but several need fewer fractional digits in base 20:</p>
 <div class="scroll"><table>
 <thead>
 <tr>
@@ -115,47 +115,47 @@
 </thead>
 <tbody>
 <tr>
-<td>1/2</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 2">⁄</span> <small class="decimal-note">1/2</small></td>
 <td>0.(10)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 10"></span></span></td>
 <td>one digit</td>
 </tr>
 <tr>
-<td>1/4</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 4">⁄</span> <small class="decimal-note">1/4</small></td>
 <td>0.5<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span></span></td>
 <td>one digit — 1/4 = 0.25 in base 10 needs two</td>
 </tr>
 <tr>
-<td>1/5</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 5">⁄</span> <small class="decimal-note">1/5</small></td>
 <td>0.4<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 4"></span></span></td>
 <td>one digit</td>
 </tr>
 <tr>
-<td>1/8</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 8">⁄</span> <small class="decimal-note">1/8</small></td>
 <td>0.(2)(10)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 2"></span><span class="nd" title="Ńdẹ́bẹ́ 10"></span></span></td>
 <td>two digits — needs three in base 10</td>
 </tr>
 <tr>
-<td>1/10</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 10">⁄</span> <small class="decimal-note">1/10</small></td>
 <td>0.2<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 2"></span></span></td>
 <td>one digit</td>
 </tr>
 <tr>
-<td>1/16</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 16">⁄</span> <small class="decimal-note">1/16</small></td>
 <td>0.(1)(5)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 5"></span></span></td>
 <td>two digits — needs four in base 10</td>
 </tr>
 <tr>
-<td>1/20</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 20">⁄</span> <small class="decimal-note">1/20</small></td>
 <td>0.1<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 1"></span></span></td>
 <td>one digit</td>
 </tr>
 <tr>
-<td>3/4</td>
+<td><span class="nd math-expression" role="img" aria-label="3 divided by 4">⁄</span> <small class="decimal-note">3/4</small></td>
 <td>0.(15)<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 15"></span></span></td>
 <td>one digit</td>
 </tr>
 <tr>
-<td>1/3</td>
+<td><span class="nd math-expression" role="img" aria-label="1 divided by 3">⁄</span> <small class="decimal-note">1/3</small></td>
 <td>0.(6)(13)(6)(13)…<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="vp"></span><span class="nd" title="Ńdẹ́bẹ́ 6"></span><span class="nd" title="Ńdẹ́bẹ́ 13"></span><span class="nd" title="Ńdẹ́bẹ́ 6"></span><span class="nd" title="Ńdẹ́bẹ́ 13"></span><span class="vp">…</span></span></td>
 <td>recurring, as in every base without a factor of 3</td>
 </tr>

@@ -68,3 +68,53 @@
   .math-page th, .math-page td { padding: 8px; }
   .math-page .prevnext { flex-wrap: wrap; }
 }
+
+/* Isolate flag components without making them look like complete digit strings. */
+.math-page .flag-example {
+  margin: 20px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+.math-page .flag-equation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 54px;
+  font-size: 18px;
+}
+.math-page .flag-equation .nd { font-size: 42px; }
+.math-page .flag-example figcaption { max-width: 760px; margin-top: 12px; font-size: 14px; color: var(--muted); }
+.math-page .flag-glyph { display: inline-block; margin-inline: 4px; }
+.math-page .flag-zero { font: 14px var(--latin-font); color: var(--muted); }
+@media (max-width: 600px) {
+  .math-page .flag-example { padding: 16px; }
+  .math-page .flag-equation { font-size: 16px; gap: 8px; }
+}
+.math-page .body-legend { color: var(--muted); font-size: 14px; margin: 20px 0; }
+.math-page .body-legend .body-placeholder { font-size: 32px; vertical-align: middle; }
+.math-page .body-placeholder { margin-inline: 6px; }
+
+/* Equations retain their operators; commentary and body counts remain in Noto Sans. */
+.math-page .math-expression { display: inline-block; white-space: nowrap; font-size: 32px; line-height: 1.6; vertical-align: middle; }
+.math-page .native-calculation { display: inline; }
+.math-page .native-calculation .math-expression { font-size: 28px; }
+.math-page .math-note, .math-page .body-count { font: 14px var(--latin-font); white-space: normal; }
+.math-page .decimal-note { color: var(--muted); font: 12px var(--latin-font); }
+.math-page .codeblock .g { min-width: 240px; white-space: normal; }
+.math-page .codeblock .c { white-space: normal; overflow-wrap: anywhere; }
+.math-page .codeblock hr { border: 0; border-top: 1px solid var(--line); }
+@media (max-width: 600px) {
+  .math-page .codeblock, .math-page .codeblock tbody, .math-page .codeblock tr, .math-page .codeblock td { display: block; width: auto; }
+  .math-page .codeblock .g { min-width: 0; border-left: 0; padding-top: 0; }
+  .math-page .codeblock tr { border-bottom: 1px solid var(--line); }
+  .math-page .codeblock td { border: 0; }
+}
+
+.math-page .component-breakdown { display: inline-flex; align-items: center; gap: 8px; margin-inline-start: 12px; flex-wrap: wrap; }
+.math-page .component-change { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.math-page .component-transition .flag-equation { column-gap: 32px; }
+
+.math-page .flag-placeholder { font-size: 32px; vertical-align: middle; }

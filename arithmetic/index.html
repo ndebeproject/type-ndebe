@@ -17,7 +17,7 @@
   <script defer src="../ads-config.js"></script>
   <script defer src="../site-ads.js"></script>
   <link rel="stylesheet" href="../theme.css?v=11">
-  <link rel="stylesheet" href="arithmetic.css">
+  <link rel="stylesheet" href="arithmetic.css?v=components-6">
   <script defer src="../script/shared.js?v=specimen-2"></script>
 </head>
 <body class="math-page script-page">
@@ -55,11 +55,11 @@
 </details>
     <h2 id="how-to-read-this-guide-two-tracks">How to Read This Guide: Two Tracks</h2>
 <p>Every worked example in this guide runs on two parallel tracks.</p>
-<p><strong>The procedure track</strong> is the actual mathematics. Every step is executable in Ńdẹ́bẹ́ alone — base 20, sub-base 5, nothing else. The design test throughout is this: <em>if an Ńdẹ́bẹ́-only society existed, one that had never heard of base 10, could its people do this step?</em> Every procedure here passes that test. Their arithmetic would have no deficiency.</p>
-<p><strong>The commentary track</strong> is the base-10 figures (like "= 252") and the <code>15F3B<span class="nd" title="Ńdẹ́bẹ́ 18"></span></code> notation running alongside. These are an intellectual guide for readers who already know base 10 — a way to verify against what they know and understand faster. An Ńdẹ́bẹ́-only reader could ignore them entirely and lose nothing.</p>
+<p><strong>The procedure track</strong> is the actual mathematics. Every step is executable in Ńdẹ́bẹ́ alone — base 20, sub-base 5, nothing else. The design test throughout is this: <em>if an Ńdẹ́bẹ́-only society existed, one that had never heard of base 10, could its people do this step?</em> The worked procedures use base-20 digits, component exchanges and the stated arithmetic rules.</p>
+<p><strong>The commentary track</strong> is the base-10 figures (like "= 252") and the <code class="component-notation">15F3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="18"></span></span> notation running alongside. These are an intellectual guide for readers who already know base 10 — a way to verify against what they know and understand faster. The script expressions accompany these explanations; Latin variables and component labels are teaching notation.</p>
 <p>Wherever an example includes a base-10 check, it also includes an <strong>Ńdẹ́bẹ́ check</strong> — a verification done entirely inside base 20 — so that both kinds of reader can confirm the result on their own terms.</p>
 <hr />
-<h2 class="pages-h">Pages</h2><div class="cards"><a class="card" href="addition.html"><div class="cn"> +  = </div><div class="ct">Addition</div><div class="cd">Flags + flags, bodies + bodies</div></a><a class="card" href="subtraction.html"><div class="cn"> −  = </div><div class="ct">Subtraction</div><div class="cd">Demotion when a body is too small</div></a><a class="card" href="multiplication.html"><div class="cn"> ×  = </div><div class="ct">Multiplication</div><div class="cd">Ten facts, rotation, and the ladder</div></a><a class="card" href="division.html"><div class="cn"> ÷  = </div><div class="ct">Division</div><div class="cd">The Ladder Method and the shortcuts</div></a><a class="card" href="fractions.html"><div class="cn">·</div><div class="ct">Vigesimal Fractions</div><div class="cd">Place value below the units</div></a><a class="card" href="divisibility.html"><div class="cn"></div><div class="ct">Divisibility Tests</div><div class="cd">Check without dividing</div></a></div><h2 id="1-the-ndebe-number-system-overview">1. The Ńdẹ́bẹ́ Number System: Overview</h2>
+<h2 class="pages-h">Pages</h2><div class="cards"><a class="card" href="addition.html"><div class="cn"> +  = </div><div class="ct">Addition</div><div class="cd">Flags + flags, bodies + bodies</div></a><a class="card" href="subtraction.html"><div class="cn"> −  = </div><div class="ct">Subtraction</div><div class="cd">Demotion when a body is too small</div></a><a class="card" href="multiplication.html"><div class="cn"> ×  = </div><div class="ct">Multiplication</div><div class="cd">Ten facts, rotation, and the ladder</div></a><a class="card" href="division.html"><div class="cn"> ÷  = </div><div class="ct">Division</div><div class="cd">The Ladder Method and the shortcuts</div></a><a class="card" href="fractions.html"><div class="cn"></div><div class="ct">Vigesimal Fractions</div><div class="cd">Place value below the units</div></a><a class="card" href="divisibility.html"><div class="cn"></div><div class="ct">Divisibility Tests</div><div class="cd">Check without dividing</div></a></div><h2 id="1-the-ndebe-number-system-overview">1. The Ńdẹ́bẹ́ Number System: Overview</h2>
 <p><strong>Ńdẹ́bẹ́</strong> is a writing system for the Igbo language, created by Lotanna Igwe-Odunze. Its number system honours the traditional Igbo way of counting: it is <strong>base 20</strong> with a <strong>sub-base of 5</strong>, and every numeral from 0 to 19 is a single glyph composed of two visible layers.</p>
 <div class="scroll"><table>
 <thead>
@@ -83,27 +83,27 @@
 </tr>
 <tr>
 <td>Zero</td>
-<td>The flag of 5 with no body</td>
+<td>A dedicated zero sign; distinct from a flag contribution</td>
 </tr>
 <tr>
 <td>Encoding</td>
 <td>Private Use Area (Unicode submission pending)</td>
 </tr>
 <tr>
-<td>Unique forms to learn</td>
-<td>8 — the bodies 0, 1, 2, 3, 4 and the three flags</td>
+<td>Components to recognise</td>
+<td>Body values 0–4, three nonzero flags, and the separate zero sign</td>
 </tr>
 </tbody>
 </table></div>
-<p>Because the flag and the body are visible separately, the arithmetic of the system can be seen in the glyphs themselves: adding, subtracting, multiplying and dividing all work layer by layer.</p>
+<p>Because the flag and the body are visible separately, the arithmetic of the system can be seen in the glyphs themselves: addition and subtraction can exchange values between layers; multiplication and division use those components together with place value.</p>
 <hr />
-<h2 id="2-ndebe-numeral-structure">2. Flags and bodies in calculations</h2>
-<p>Every Ńdẹ́bẹ́ numeral is expressed as <strong>Flag + Body</strong>:</p>
+<h2 id="2-ndebe-numeral-structure">2. Flags and bodies in calculations</h2><p class="body-legend"><span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span> <strong>0B: no body contribution.</strong> The dotted rectangle marks a zero body contribution; the dotted square <span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution">&#xE140;</span> marks a zero flag contribution. Square brackets group the parts of one numeral. These placeholders are teaching aids, not the numeral zero or characters to insert into the final answer. Bare flags show flag contributions; complete numbers keep their normal bodies.</p><figure class="flag-example"><div class="flag-equation"><span class="nd" role="img" aria-label="4 body units">&#xE104;</span> <span class="nd math-expression">+</span> <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span> <span class="nd math-expression">=</span> <span class="nd" role="img" aria-label="4 body units">&#xE104;</span></div><figcaption>4B + 0B = 4B. The rectangle shows that the missing contribution is deliberate; the result still has four body units.</figcaption></figure>
+<p class="flag-note">The isolated signs below show flag components, not complete numerals. <code><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</code> means no flag; it is not the zero numeral. Full numerals keep their bodies, including the plain body of 5, 10, and 15.</p><p>Every Ńdẹ́bẹ́ numeral is expressed as <strong>Flag + Body</strong>:</p>
 <ul>
-<li><strong>Flag</strong> — the top marker, representing a multiple of 5. Only four flags exist: <code>0F</code>, <code>5F</code>, <code>10F</code>, <code>15F</code>. We also speak of a flag's <strong>level</strong>: 0F is level 0, 5F is level 1, 10F is level 2, 15F is level 3.</li>
-<li><strong>Body</strong> — the lower/main form, representing units 0–4: <code>0B</code>, <code>1B</code>, <code>2B</code>, <code>3B</code>, <code>4B</code>. The <code>0B</code> form — the simple stroke under the flags of 5, 10 and 15 — is the <strong>plain body</strong> (also called the bare body): a body that carries no value.</li>
+<li><strong>Flag</strong> — the top marker, representing a multiple of 5. There are four flag values (0F means no flag): <code><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</code>, <code><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</code>, <code><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</code>, <code><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</code>. We also speak of a flag's <strong>level</strong>: 0F is level 0, 5F is level 1, 10F is level 2, 15F is level 3.</li>
+<li><strong>Body</strong> — the lower/main form, representing units 0–4: <code>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></code>, <code>1B</code>, <code>2B</code>, <code>3B</code>, <code>4B</code>. In complete numerals 5, 10 and 15, the simple stroke beneath the flag is the <strong>plain body</strong> (also called the bare body), which adds no value. The dotted rectangle only makes that zero contribution explicit in a teaching breakdown.</li>
 </ul>
-<h3 id="the-20-numerals">The 20 Numerals</h3>
+<figure class="flag-example"><div class="flag-equation"><span class="nd math-expression">[</span><span class="nd flag-glyph" role="img" aria-label="Flag of 5">&#xE120;</span> <span class="nd math-expression">+</span> <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd" role="img" aria-label="Numeral 5">&#xE105;</span> · <span class="nd math-expression">[</span><span class="nd flag-glyph" role="img" aria-label="Flag of 10">&#xE121;</span> <span class="nd math-expression">+</span> <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd" role="img" aria-label="Numeral 10">&#xE10A;</span> · <span class="nd math-expression">[</span><span class="nd flag-glyph" role="img" aria-label="Flag of 15">&#xE122;</span> <span class="nd math-expression">+</span> <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span><span class="nd math-expression">]</span> <span class="nd math-expression">→</span> <span class="nd" role="img" aria-label="Numeral 15">&#xE10F;</span></div><figcaption>Component assembly: 5F + 0B → 5, 10F + 0B → 10, and 15F + 0B → 15. Each complete numeral has its real plain body; the dotted rectangle is only the explanation of its zero contribution.</figcaption></figure><h3 id="the-20-numerals">The 20 Numerals</h3>
 <div class="scroll"><table>
 <thead>
 <tr>
@@ -118,146 +118,146 @@
 <tr>
 <td>0</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 0"></span></td>
-<td>0F</td>
-<td>0B</td>
-<td>Visually identical to the flag of 5 — no body</td>
+<td><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</td>
+<td>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></td>
+<td>Dedicated zero numeral; 0F and 0B describe its value</td>
 </tr>
 <tr>
 <td>1</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 1"></span></td>
-<td>0F</td>
+<td><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</td>
 <td>1B</td>
 <td>Unique body: single loop</td>
 </tr>
 <tr>
 <td>2</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 2"></span></td>
-<td>0F</td>
+<td><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</td>
 <td>2B</td>
-<td>Unique body</td>
+<td>Unique body: single loop with bend</td>
 </tr>
 <tr>
 <td>3</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 3"></span></td>
-<td>0F</td>
+<td><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</td>
 <td>3B</td>
-<td>Unique body</td>
+<td>Unique body: single loop with bent hook</td>
 </tr>
 <tr>
 <td>4</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 4"></span></td>
-<td>0F</td>
+<td><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</td>
 <td>4B</td>
 <td>Unique body: double opposite loop</td>
 </tr>
 <tr>
 <td>5</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 5"></span></td>
-<td>5F</td>
-<td>0B</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</td>
+<td>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></td>
 <td>Flag of 5 + plain body (0B)</td>
 </tr>
 <tr>
 <td>6</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 6"></span></td>
-<td>5F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</td>
 <td>1B</td>
 <td>Flag of 5 + body of 1</td>
 </tr>
 <tr>
 <td>7</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 7"></span></td>
-<td>5F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</td>
 <td>2B</td>
 <td>Flag of 5 + body of 2</td>
 </tr>
 <tr>
 <td>8</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 8"></span></td>
-<td>5F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</td>
 <td>3B</td>
 <td>Flag of 5 + body of 3</td>
 </tr>
 <tr>
 <td>9</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 9"></span></td>
-<td>5F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> 5F</td>
 <td>4B</td>
 <td>Flag of 5 + body of 4</td>
 </tr>
 <tr>
 <td>10</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 10"></span></td>
-<td>10F</td>
-<td>0B</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</td>
+<td>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></td>
 <td>Flag of 10 + plain body (0B)</td>
 </tr>
 <tr>
 <td>11</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 11"></span></td>
-<td>10F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</td>
 <td>1B</td>
 <td>Flag of 10 + body of 1</td>
 </tr>
 <tr>
 <td>12</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 12"></span></td>
-<td>10F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</td>
 <td>2B</td>
 <td>Flag of 10 + body of 2</td>
 </tr>
 <tr>
 <td>13</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 13"></span></td>
-<td>10F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</td>
 <td>3B</td>
 <td>Flag of 10 + body of 3</td>
 </tr>
 <tr>
 <td>14</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 14"></span></td>
-<td>10F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> 10F</td>
 <td>4B</td>
 <td>Flag of 10 + body of 4</td>
 </tr>
 <tr>
 <td>15</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 15"></span></td>
-<td>15F</td>
-<td>0B</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</td>
+<td>0B <span class="nd body-placeholder" role="img" aria-label="No body contribution, 0B" title="No body contribution (0B)">&#x25CC;</span></td>
 <td>Flag of 15 + plain body (0B)</td>
 </tr>
 <tr>
 <td>16</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 16"></span></td>
-<td>15F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</td>
 <td>1B</td>
 <td>Flag of 15 + body of 1</td>
 </tr>
 <tr>
 <td>17</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 17"></span></td>
-<td>15F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</td>
 <td>2B</td>
 <td>Flag of 15 + body of 2</td>
 </tr>
 <tr>
 <td>18</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 18"></span></td>
-<td>15F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</td>
 <td>3B</td>
 <td>Flag of 15 + body of 3</td>
 </tr>
 <tr>
 <td>19</td>
 <td style="text-align: center;"><span class="nd" title="Ńdẹ́bẹ́ 19"></span></td>
-<td>15F</td>
+<td><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> 15F</td>
 <td>4B</td>
 <td>Flag of 15 + body of 4</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Key insight:</strong> You only need to learn 8 unique forms — the bodies 0–4 and the three flags (5F, 10F, 15F) — to read the entire system.</p>
+<p><strong>Key insight:</strong> Learn the body forms, the three nonzero flags (5F, 10F, 15F), and the separate zero sign. Their values and positions let you read every numeral.</p>
 <p><strong>The structural fact everything else rests on:</strong> a flag step is worth 5, and the largest possible body is 4. So the flag always outweighs the body. This single fact drives comparison, rounding, and the search order in division.</p>
 <hr />
 <p>Explore the numeral forms in different fonts on the <a href="../script/numerals/">Numerals page</a>.</p>
@@ -274,7 +274,7 @@
 <tr><td>Three-million-two-hundred-thousands</td><td>3,200,000 <small>(20<sup>5</sup>)</small></td><td><span class="nd" aria-label="3,200,000 in base twenty"></span> = 3,200,000<br><small>1 in this place; 5 trailing zeroes.</small></td></tr>
 </tbody></table></div>
 <p><strong>Writing 20:</strong> Since there is no single glyph for 20 in a base-20 system, 20 is written as <code>1</code> in the twenties place and <code>0</code> in the units place — just as 10 is written in base 10.</p>
-<p><strong>Notation used in this guide:</strong> a multi-digit number is written with its digits separated by commas, most significant first: <code>0F3B<span class="nd" title="Ńdẹ́bẹ́ 3"></span>, 15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> is a 3 in the twenties place and a 17 in the units place. In commentary, the same number appears as <code>[3, 17]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 17"></span></span></code> (= 77).</p>
+<p><strong>Notation used in this guide:</strong> a multi-digit number is written with its digits separated by commas, most significant first: <code class="component-notation">0F3B, 15F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="77"></span></span> is a 3 in the twenties place and a 17 in the units place. In commentary, the same number appears as <code>[3, 17]₂₀<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 3"></span><span class="nd" title="Ńdẹ́bẹ́ 17"></span></span></code> (= 77).</p>
 <hr />
 <h2 id="4-comparing-numbers">4. Comparing Numbers</h2>
 <p>Before subtraction and division can be taught, a reader must be able to answer: <em>which of two numbers is bigger?</em> Ńdẹ́bẹ́ makes this a visual skill.</p>
@@ -287,31 +287,31 @@
 </ol>
 <h3 id="why-flags-are-checked-first">Why flags are checked first</h3>
 <p>A flag step is worth 5. The largest body is 4. So <strong>any</strong> flag advantage beats <strong>any</strong> body advantage — a number with a higher flag is bigger no matter what the bodies say. This is why a reader's eye should go to the top of the glyph first.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples</h3><figure class="flag-example"><div class="flag-equation"><span class="nd math-expression" role="img" aria-label="17"></span> <span class="nd math-expression">&gt;</span> <span class="nd math-expression" role="img" aria-label="14"></span> <br> <span class="nd math-expression" role="img" aria-label="39"></span> <span class="nd math-expression">&lt;</span> <span class="nd math-expression" role="img" aria-label="40"></span> <br> <span class="nd math-expression" role="img" aria-label="400"></span> <span class="nd math-expression">&gt;</span> <span class="nd math-expression" role="img" aria-label="399"></span></div><figcaption>Compare complete numbers: 17 > 14; 39 < 40; 400 > 399.</figcaption></figure>
 <ul>
-<li><code>15F2B<span class="nd" title="Ńdẹ́bẹ́ 17"></span></code> vs <code>10F4B<span class="nd" title="Ńdẹ́bẹ́ 14"></span></code> (17 vs 14): flags 15F &gt; 10F. <strong>First is bigger</strong> — the bodies (2B &lt; 4B) never needed checking.</li>
-<li><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> vs <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> ([1,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span> vs [2,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 2"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span>, i.e. 39 vs 40): leftmost digits 1 vs 2 → <strong>second is bigger</strong>, regardless of the 19.</li>
-<li><code>0F1B<span class="nd" title="Ńdẹ́bẹ́ 1"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span>, 0F0B<span class="nd" title="Ńdẹ́bẹ́ 0"></span></code> vs <code>15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span>, 15F4B<span class="nd" title="Ńdẹ́bẹ́ 19"></span></code> ([1,0,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span> vs [19,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 19"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span>, i.e. 400 vs 399): three digits vs two → <strong>first is bigger.</strong></li>
+<li><code class="component-notation">15F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="17"></span></span> vs <code class="component-notation">10F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="14"></span></span> (17 vs 14): flags 15F &gt; 10F. <strong>First is bigger</strong> — the bodies (2B &lt; 4B) never needed checking.</li>
+<li><code class="component-notation">0F1B, 15F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="39"></span></span> vs <code class="component-notation">0F2B, 0F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="40"></span></span> ([1,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span> vs [2,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 2"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span>, i.e. 39 vs 40): leftmost digits 1 vs 2 → <strong>second is bigger</strong>, regardless of the 19.</li>
+<li><code class="component-notation">0F1B, 0F0B, 0F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="400"></span></span> vs <code class="component-notation">15F4B, 15F4B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="399"></span></span> ([1,0,0]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 1"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span><span class="nd" title="Ńdẹ́bẹ́ 0"></span></span> vs [19,19]<span class="ndg"><span class="nd" title="Ńdẹ́bẹ́ 19"></span><span class="nd" title="Ńdẹ́bẹ́ 19"></span></span>, i.e. 400 vs 399): three digits vs two → <strong>first is bigger.</strong></li>
 </ul>
 <hr />
 <h2 id="5-promotion-and-demotion-rules">5. Promotion and Demotion Rules</h2>
 <p>These four rules govern how values move between layers and between place values.</p>
-<h3 id="51-flag-promotion">5.1 Flag Promotion</h3>
+<h3 id="51-flag-promotion">5.1 Flag Promotion</h3><figure class="flag-example"><div class="flag-equation"><span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> <span class="nd math-expression">+</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> <span class="nd math-expression">=</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span></div><figcaption>A body reaching five contributes one additional 5-flag. Here an existing 5-flag advances to a 10-flag; any remaining body units stay below it.</figcaption></figure>
 <p><strong>Trigger:</strong> Body reaches 5B or more<br />
 <strong>Effect:</strong> Advance to the next flag level, subtract 5 from the body<br />
 <strong>Example:</strong> <code>0F + 7B</code> → promote → <code>5F + 2B</code></p>
-<h3 id="52-flag-demotion">5.2 Flag Demotion</h3>
+<h3 id="52-flag-demotion">5.2 Flag Demotion</h3><figure class="flag-example component-transition"><div class="flag-equation"><span class="component-change"><span class="math-note">Flag</span> <span class="nd math-expression" role="img" aria-label="Flag of 15"></span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="Flag of 10"></span></span><span class="component-change"><span class="math-note">Body</span> <span class="nd math-expression" role="img" aria-label="2"></span> <span class="nd math-expression">→</span> <span class="nd math-expression" role="img" aria-label="7"></span></span></div><figcaption>One flag level is exchanged for five body units. Both sides of the change still represent 17. Counts above four are temporary body counts, not a new single body character.</figcaption></figure><figure class="flag-example"><div class="flag-equation"><span class="nd flag-glyph" role="img" aria-label="Flag of 10" title="Flag of 10">&#xE121;</span> <span class="nd math-expression">↔</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="5"></span></div><figcaption>Trade one flag level for five body units. The total value is unchanged; these are components, not a string of digits.</figcaption></figure>
 <p><strong>Trigger:</strong> Body subtraction is impossible (body being subtracted from is too small)<br />
 <strong>Effect:</strong> Drop one flag level, add 5 to the body<br />
-<strong>Example:</strong> <code>10F 2B<span class="nd" title="Ńdẹ́bẹ́ 12"></span></code> needing to subtract <code>4B</code> → demote → <code>5F 7B</code> → now subtract → <code>5F 3B<span class="nd" title="Ńdẹ́bẹ́ 8"></span></code></p>
-<h3 id="53-place-promotion">5.3 Place Promotion</h3>
+<strong>Example:</strong> <code class="component-notation">10F 2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="12"></span></span> needing to subtract <code>4B</code> → demote → <code class="component-notation">5F 7B</code> <span class="native-calculation">[<span class="nd math-expression" role="img" aria-label="Flag of 5"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="7"></span>]</span> → now subtract → <code class="component-notation">5F 3B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="8"></span></span></p>
+<h3 id="53-place-promotion">5.3 Place Promotion</h3><figure class="flag-example"><div class="flag-equation"><span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> <span class="nd math-expression">+</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span> <span class="nd math-expression">↔</span> <span>1 unit in the next place</span></div><figcaption>Four flag levels total twenty. There is no 20-flag: carry one unit to the place on the left.</figcaption></figure>
 <p><strong>Trigger:</strong> Flags would reach 20F (impossible)<br />
-<strong>Effect:</strong> Produce <code>1B</code> in the next place up; flags reset to <code>0F</code><br />
-<strong>Example:</strong> <code>15 + 7</code> → <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F2B<span class="nd" title="Ńdẹ́bẹ́ 7"></span></code> → flags: <code>15F + 5F = 20F</code> → Place Promote → <code>1B</code> in twenties, <code>0F2B<span class="nd" title="Ńdẹ́bẹ́ 2"></span></code> in units → <strong>22</strong></p>
-<h3 id="54-place-demotion">5.4 Place Demotion</h3>
+<strong>Effect:</strong> Produce <code>1B</code> in the next place up; flags reset to <code><span class="nd flag-placeholder" role="img" aria-label="Zero flag contribution" title="Zero flag contribution (0F)">&#xE140;</span> 0F</code><br />
+<strong>Example:</strong> <code>15 + 7</code> → <code class="component-notation">15F0B + 5F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="7"></span></span> → flags: <code>15F + 5F = 20F</code> → Place Promote → <code>1B</code> in twenties, <code class="component-notation">0F2B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="2"></span></span> in units → <strong>22</strong></p>
+<h3 id="54-place-demotion">5.4 Place Demotion</h3><figure class="flag-example"><div class="flag-equation"><span>1 unit from the next place</span> <span class="nd math-expression">↔</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 15" title="Flag of 15">&#xE122;</span> <span class="nd math-expression">+</span> <span class="nd flag-glyph" role="img" aria-label="Flag of 5" title="Flag of 5">&#xE120;</span></div><figcaption>Reverse the exchange: one unit from the place on the left supplies twenty here, shown as two flag components worth fifteen and five.</figcaption></figure>
 <p><strong>Trigger:</strong> Current place value is too small to subtract from or divide<br />
-<strong>Effect:</strong> <code>1B</code> from the place above becomes <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> in the place below (= 20 units)<br />
-<strong>Example:</strong> <code>1</code> in the twenties place demotes to <code>15F0B<span class="nd" title="Ńdẹ́bẹ́ 15"></span> + 5F0B<span class="nd" title="Ńdẹ́bẹ́ 5"></span></code> in units</p>
+<strong>Effect:</strong> <code>1B</code> from the place above becomes <code class="component-notation">15F0B + 5F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="5"></span></span> in the place below (= 20 units)<br />
+<strong>Example:</strong> <code>1</code> in the twenties place demotes to <code class="component-notation">15F0B + 5F0B</code> <span class="native-calculation"><span class="nd math-expression" role="img" aria-label="15"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="5"></span></span> in units</p>
 <p><strong>Promotion and Demotion are exact inverses:</strong> 1 unit above = 20 units below, governed by multiplication and division by 20.</p>
 <hr />
 <h2 id="13-summary-the-four-operations-at-a-glance">13. Summary: The Four Operations at a Glance</h2>

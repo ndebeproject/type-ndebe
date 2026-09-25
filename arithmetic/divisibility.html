@@ -17,7 +17,7 @@
   <script defer src="../ads-config.js"></script>
   <script defer src="../site-ads.js"></script>
   <link rel="stylesheet" href="../theme.css?v=11">
-  <link rel="stylesheet" href="arithmetic.css">
+  <link rel="stylesheet" href="arithmetic.css?v=components-6">
   <script defer src="../script/shared.js?v=specimen-2"></script>
 </head>
 <body class="math-page script-page">
@@ -43,60 +43,60 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>2</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="2"></span> <small class="decimal-note">2</small></td>
 <td>Units digit is even (0, 2, 4, 6, 8, 10, 12, 14, 16, 18) — its body is 0B, 2B or 4B with an even flag level, or 1B/3B with an odd one</td>
 <td>Last-digit test</td>
 </tr>
 <tr>
-<td><strong>3</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="3"></span> <small class="decimal-note">3</small></td>
 <td>Alternating digit sum is divisible by 3</td>
 <td>Alternating-sum test</td>
 </tr>
 <tr>
-<td><strong>4</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="4"></span> <small class="decimal-note">4</small></td>
 <td>Units digit is one of {0, 4, 8, 12, 16}</td>
 <td>Last-digit test</td>
 </tr>
 <tr>
-<td><strong>5</strong></td>
-<td>Units digit has <strong>no body</strong> (0B) — the flag alone decides</td>
+<td><span class="nd math-expression" role="img" aria-label="5"></span> <small class="decimal-note">5</small></td>
+<td>Units digit is 0, 5, 10, or 15 — its body contribution is zero (0B)</td>
 <td>Last-digit test</td>
 </tr>
 <tr>
-<td><strong>6</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="6"></span> <small class="decimal-note">6</small></td>
 <td>Divisible by both 2 and 3</td>
 <td>Composite</td>
 </tr>
 <tr>
-<td><strong>7</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="7"></span> <small class="decimal-note">7</small></td>
 <td>Alternating digit sum is divisible by 7</td>
 <td>Alternating-sum test</td>
 </tr>
 <tr>
-<td><strong>10</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="10"></span> <small class="decimal-note">10</small></td>
 <td>Units digit is 0 or 10</td>
 <td>Last-digit test</td>
 </tr>
 <tr>
-<td><strong>11</strong></td>
-<td>Alternating digit sum is divisible by 11</td>
-<td>Alternating-sum test</td>
+<td><span class="nd math-expression" role="img" aria-label="11"></span> <small class="decimal-note">11</small></td>
+<td>From right to left, multiply digits by repeating weights 1, −2, 4, 3, 5, 1, … and add. The sum must be divisible by 11.</td>
+<td>Weighted-sum test</td>
 </tr>
 <tr>
-<td><strong>19</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="19"></span> <small class="decimal-note">19</small></td>
 <td>Digital root (repeated digit sum) is divisible by 19</td>
 <td>Digit-sum test</td>
 </tr>
 <tr>
-<td><strong>20</strong></td>
+<td><span class="nd math-expression" role="img" aria-label="20"></span> <small class="decimal-note">20</small></td>
 <td>Units digit is 0</td>
 <td>Last-digit test</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Notes:</strong>
-- The <strong>÷5 test is visually immediate in Ńdẹ́bẹ́</strong>: look at the units glyph — no body means divisible by 5.
-- The alternating-sum tests for 3, 7, and 11 work because 3 × 7 = 21 = one more than the base (as 11 in base 10).
+<figure class="flag-example"><div class="flag-equation"><span class="nd math-expression" role="img" aria-label="1"></span> <span class="nd math-expression">−</span> <span class="nd math-expression" role="img" aria-label="2"></span> <span class="nd math-expression">+</span> <span class="nd math-expression" role="img" aria-label="1"></span> <span class="nd math-expression">=</span> <span class="nd math-expression" role="img" aria-label="0"></span></div><figcaption>For 3 and 7: 441 is [1, 2, 1] in base 20; 1 − 2 + 1 = 0, so it is divisible by both. For 11, use the weighted rule: 22 is [1, 2], and 2 − 2 × 1 = 0.</figcaption></figure><p><strong>Notes:</strong>
+- The <strong>÷5 test is visually immediate in Ńdẹ́bẹ́</strong>: look at the units glyph — a zero-valued body means divisible by 5. The complete numerals 5, 10, and 15 retain their plain bodies; do not replace them with isolated flags.
+- The alternating-sum tests for 3 and 7 work because 3 × 7 = 21 = one more than the base (as 11 in base 10).
 - The digital-root test for 19 works because 19 = one less than the base (as 9 in base 10).</p>
     <div class="prevnext"><a href="fractions.html">← Vigesimal Fractions</a><span></span></div>
   </main>
