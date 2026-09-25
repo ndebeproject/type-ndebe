@@ -20,3 +20,11 @@ The fonts do not contain an OpenType MATH table; stretchable equation layout dep
 ## Ndebe Script Codex
 
 The complete reference page lives at [`/script/`](script/): searchable glyphs in both font families, teaching composition, numeral forms, input conventions and downloads. Serve the repository with a static HTTP server to preview it. Catalogue implementation notes are in [script/README.md](script/README.md).
+
+## Advertising placement
+
+Each public page has one labelled, responsive display-ad placement before its footer. Embedded arithmetic lessons suppress their own placement so the typing page still has only one. The panel stays in normal page flow and uses smaller padding at phone widths.
+
+Ads are disabled in `ads-config.js`. Localhost shows an inert placeholder; the public site hides the placement until enabled with a valid publisher ID and display-unit slot ID. Local previews never request real ads. To activate later, add the AdSense IDs and complete the account/site and applicable consent setup before setting `enabled: true`. Keep AdSense Auto ads disabled if you want only this single manual placement. The frame is themed; Google controls the ad artwork.
+
+Run placement checks with `node --test tests/ads.test.cjs`.
