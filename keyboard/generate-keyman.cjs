@@ -1,7 +1,7 @@
 const fs=require('node:fs');const path=require('node:path');require('../input-data.js');const I=require('../input-core.js');
 const output=__dirname;fs.mkdirSync(output,{recursive:true});
 const u=n=>'U+'+n.toString(16).toUpperCase().padStart(4,'0');
-const lines=[`c Rebuilt from the current Type Ndebe mapping. Hardware candidate: test before distribution.`, `store(&VERSION) '10.0'`, `store(&NAME) 'Ndebe 2026 Input Candidate'`, `store(&KEYBOARDVERSION) '2.1'`, `store(&TARGETS) 'windows macosx linux'`, `store(digits) ${Array.from({length:20},(_,n)=>u(0xE100+n)).join(' ')}`,`store(singleQuotes) U+E135 U+E136`,`store(doubleQuotes) U+E130 U+E131`,`begin Unicode > use(main)`, `group(main) using keys`];
+const lines=[`c Rebuilt from the current Type Ndebe mapping. Hardware candidate: test before distribution.`, `store(&VERSION) '10.0'`, `store(&NAME) 'Ńdẹ́bẹ́ Script Keyboard'`, `store(&KEYBOARDVERSION) '2.2'`, `store(&TARGETS) 'windows macosx linux'`, `store(digits) ${Array.from({length:20},(_,n)=>u(0xE100+n)).join(' ')}`,`store(singleQuotes) U+E135 U+E136`,`store(doubleQuotes) U+E130 U+E131`,`begin Unicode > use(main)`, `group(main) using keys`];
 for(const [modifier,map] of [['',I.lower],['SHIFT ',I.upper]])for(const [key,cp]of Object.entries(map))lines.push(`+ [${modifier}K_${key.toUpperCase()}] > ${u(cp)}`);
 for(let n=0;n<10;n++){lines.push(`+ [K_${n}] > ${u(0xE100+n)}`);for(const alt of ['ALT','CTRL ALT'])lines.push(`+ [${alt} K_${n}] > ${u(0xE10A+n)}`);lines.push(`+ [SHIFT K_${n}] > ${u(')!@#$%^&*('[n].charCodeAt(0))}`);}
 lines.push('+ [K_BKQUOTE] > U+E138','+ [SHIFT K_SPACE] > U+00B7',"any(digits) + [K_PERIOD] > context U+E137","+ [K_PERIOD] > U+002E");

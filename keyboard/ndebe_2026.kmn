@@ -1,7 +1,7 @@
 c Rebuilt from the current Type Ndebe mapping. Hardware candidate: test before distribution.
 store(&VERSION) '10.0'
-store(&NAME) 'Ndebe 2026 Input Candidate'
-store(&KEYBOARDVERSION) '2.1'
+store(&NAME) 'Ńdẹ́bẹ́ Script Keyboard'
+store(&KEYBOARDVERSION) '2.2'
 store(&TARGETS) 'windows macosx linux'
 store(digits) U+E100 U+E101 U+E102 U+E103 U+E104 U+E105 U+E106 U+E107 U+E108 U+E109 U+E10A U+E10B U+E10C U+E10D U+E10E U+E10F U+E110 U+E111 U+E112 U+E113
 store(singleQuotes) U+E135 U+E136
