@@ -1,4 +1,5 @@
 'use strict';
-for(let i=0;i<20;i++){const d=document.createElement('div');d.className='digit';const s=document.createElement('span'),label=document.createElement('small');s.className='ndebe';s.textContent=String.fromCodePoint(0xE100+i);label.textContent=i;d.append(s,label);$('numerals').append(d);}
+const numeralNames=['ncha','ofu','ibuo','ito','ino','ise','isi','isa','isato','isano','ili','mofu','mibuo','mito','mino','mise','misi','misa','misato','misano'];
+for(let i=0;i<20;i++){const d=document.createElement('div');d.className='digit';const s=document.createElement('span'),label=document.createElement('small');s.className='ndebe';s.textContent=String.fromCodePoint(0xE100+i);label.textContent=i+' · '+numeralNames[i];d.append(s,label);$('numerals').append(d);}
 for(const [i,name] of ['okoloto.ise','okoloto.ili','okoloto.mise'].entries()){const a=document.createElement('article'),s=document.createElement('span'),p=document.createElement('p');s.className='ndebe';s.textContent=String.fromCodePoint(0xE120+i);p.textContent=name;a.append(s,p);$('flags').append(a);}
 $('number-form').onchange=()=>{const feature=$('number-form').value;for(const el of document.querySelectorAll('#numerals .ndebe,#flags .ndebe'))el.style.fontFeatureSettings=feature?`"${feature}" 1`:'normal';};

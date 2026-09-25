@@ -7,7 +7,7 @@
   function node(tag,...children){const n=document.createElementNS(ns,tag);for(const c of children)n.append(typeof c==='string'?document.createTextNode(c):c);return n;}
   // Match the accepted root proof; native MathML remains available for export.
   function rootPreview(){
-    const soft=document.documentElement.dataset.font==='soft', family=soft?'NdebeSoftBold2026':'NdebeRounded2026';
+    const soft=document.getElementById('font-choice').value==='soft', family=soft?'NdebeSoftBold2026':'NdebeRounded2026';
     const context=document.createElement('canvas').getContext('2d');context.font=`1000px ${family}`;
     const width=Math.max(300,context.measureText(value.value).width), svgNS='http://www.w3.org/2000/svg';
     const make=(tag,attrs)=>{const n=document.createElementNS(svgNS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
@@ -20,7 +20,7 @@
     svg.append(group,text);return svg;
   }
   function render(){
-    const a=node('mn',value.value),b=node('mn',other.value),math=node('math');math.setAttribute('display','block');math.style.fontFamily=document.documentElement.dataset.font==='soft'?'NdebeSoftBold2026, "NdebeSoftBold Input 2026 Study"':'NdebeRounded2026, "NdebeRounded Input 2026 Study"';
+    const a=node('mn',value.value),b=node('mn',other.value),math=node('math');math.setAttribute('display','block');math.style.fontFamily=document.getElementById('font-choice').value==='soft'?'NdebeSoftBold2026, "NdebeSoftBold Input 2026 Study"':'NdebeRounded2026, "NdebeRounded Input 2026 Study"';
     const role=form.value;if(type.value==='normal'&&role!=='normal')a.style.fontFeatureSettings=`"${role}" 1`;
     const kinds={root:()=>node('msqrt',a),cube:()=>node('mroot',a,node('mn','\uE103')),fraction:()=>node('mfrac',a,b),power:()=>node('msup',a,b),subscript:()=>node('msub',a,b),normal:()=>a};
     math.append(kinds[type.value]());exportMath=math;preview.replaceChildren(['root','cube'].includes(type.value)?rootPreview():math);

@@ -102,56 +102,6 @@ h1 {
   font-size: 2rem;
 }
 
-/* Typing | Arithmetic segmented control */
-
-.segment {
-  display: inline-flex;
-  border: 2px solid #BB3E03;
-  border-radius: 999px;
-  overflow: hidden;
-  font-family: sans-serif;
-  margin: 14px 0 6px;
-}
-
-.segment .seg {
-  background: transparent;
-  color: white;
-  border: none;
-  padding: 8px 22px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: sans-serif;
-}
-
-.segment .seg.active {
-  background: #BB3E03;
-  color: white;
-}
-
-.typing .segment .seg {
-  color: black;
-}
-
-.typing .segment .seg.active {
-  color: white;
-}
-
-.segment-mobile {
-  display: none;
-}
-
-.segment-wrap {
-  text-align: center;
-}
-
-#view-arithmetic iframe {
-  display: block;
-  width: 100%;
-  height: calc(100vh - 40px);
-  border: 0;
-}
-
 .input,
 .simple-keyboard {
   width: 100%;
@@ -298,18 +248,8 @@ h1 {
     width: 100%;
   }
 
-  .segment-desktop {
-    display: none;
-  }
 
-  .segment-mobile {
-    display: inline-flex;
-    margin-top: 4px;
-  }
 
-  #view-arithmetic iframe {
-    height: 85vh;
-  }
 }
 
 /* Accepted 2026 font and input conventions. */

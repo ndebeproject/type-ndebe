@@ -83,8 +83,8 @@ footer, .footer {
 /* Typing page: Latin UI and Ndebe glyphs keep separate font families. */
 .typing-page .info, .typing-page .typing { background: var(--paper); color: var(--ink); }
 .typing-page .typing { background: var(--card); }
-.typing-page h1, .typing-page .footer, .typing-page .segment,
-.typing-page .seg, .typing-page .typing-controls, .typing-page .input-label,
+.typing-page h1, .typing-page .footer,
+.typing-page .typing-controls, .typing-page .input-label,
 .typing-page .input-help, .typing-page #typing-help, .typing-page #input-status,
 .typing-page .extra-palette, .typing-page .extra-palette p,
 .typing-page #math-tools > p, .typing-page #math-tools > summary,
@@ -96,10 +96,14 @@ footer, .footer {
 .typing-page #ndebe-h, .typing-page #ndebe-p {
   font-family: var(--latin-font), var(--ndebe-font);
 }
-.typing-page #ndebe-h { color: var(--warm); }
-.typing-page .segment { border-color: var(--accent); }
-.typing-page .segment .seg { color: var(--ink); }
-.typing-page .segment .seg.active { background: var(--accent); color: #fff; }
+.typing-page #ndebe-h {
+  color: var(--warm);
+  font-family: NdebeRounded2026, sans-serif;
+  font-size: clamp(2.25rem, 3vw, 2.5rem);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+}
 .typing-page .typing-controls button, .typing-page .typing-controls select,
 .typing-page .math-controls select, .typing-page .upload-label,
 .typing-page .palette-nav button, .typing-page .support-buttons button {
@@ -202,5 +206,15 @@ footer, .footer {
 .typing-page .nd-key[data-token="{teaching}"] { font-size: 32px; }
 .typing-page .nd-key[data-token="{math}"] svg { width: 32px; height: 32px; }
 
-.typing-page .segment a.seg { text-decoration: none; text-align: center; }
 .script-page .hero-art .script-name { display: block; width: 100%; text-align: center; font: 400 14px/1.5 var(--latin-font); color: var(--muted); margin-top: 8px; }
+
+/* Numeral anatomy is a reference; procedures live in Arithmetic. */
+.script-page .numeral-structure { margin-top: 40px; }
+.script-page .numeral-structure h3 { margin: 24px 0 16px; }
+.script-page .numeral-structure ul { padding-left: 24px; }
+.script-page .numeral-structure li { margin: 12px 0; }
+.script-page .numeral-table { overflow-x: auto; margin: 24px 0; }
+.script-page .numeral-table table { width: 100%; border-collapse: collapse; }
+.script-page .numeral-table th, .script-page .numeral-table td { padding: 12px 16px; border: 1px solid var(--line); text-align: left; }
+.script-page .numeral-table th { background: var(--card); }
+.script-page .numeral-table .ndebe { font-size: 36px; }

@@ -153,7 +153,7 @@ const ndebeMobileLayout = {
   editor.addEventListener('input',()=>{undoStack.push(lastSnapshot);redoStack=[];changed();});
   document.getElementById('flip-quote').onclick=()=>{const r=I.flipAt(editor.value,editor.selectionStart,editor.selectionEnd);if(!r){status.textContent='Place the caret beside a quotation mark, or select one.';return;}remember();restore(r);status.textContent='Quotation direction reversed.';};
   document.getElementById('migrate-text').onclick=()=>{const r=I.migrateLegacy(editor.value);if(r.count){remember();editor.value=r.text;changed();}status.textContent=`Migrated ${r.count} older elision sequence(s).`;};
-  document.getElementById('font-choice').onchange=e=>{document.documentElement.dataset.font=e.target.value;};
+  document.getElementById('font-choice').onchange=e=>{document.getElementById('view-typing').style.setProperty('--ndebe-font',e.target.value==='soft'?'NdebeSoftBold2026':'NdebeRounded2026');};
   document.getElementById('copy-text').onclick=async()=>{try{await navigator.clipboard.writeText(editor.value);status.textContent='Copied text.';}catch{editor.focus();editor.select();status.textContent='Text selected. Use your device’s Copy command.';}};
   for(const b of document.querySelectorAll('[data-insert]')){b.addEventListener('pointerdown',e=>e.preventDefault());b.onclick=()=>insert(b.dataset.insert,editor);}
   document.getElementById('download-text').onclick=()=>{const url=URL.createObjectURL(new Blob([editor.value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='ndebe.txt';a.click();URL.revokeObjectURL(url);};

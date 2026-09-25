@@ -1,6 +1,6 @@
 # Ndebe Script Codex
 
-Separate static pages: `/script/` (catalogue), `/script/teaching/`, `/script/mathematics/`, `/script/typing/`, and `/script/fonts/`. Each uses shared navigation with the active page marked. Linked from the typing homepage. No build service or third-party JavaScript is required.
+Separate static pages: `/script/` (catalogue), `/script/teaching/`, `/script/numerals/`, `/script/typing/`, `/script/fonts/`, and `/arithmetic/`. Each uses shared navigation with the active page marked. Linked from the typing homepage. No build service or third-party JavaScript is required.
 
 The catalogue contains all 6,709 glyphs from each approved 1.000 RC1 font. `data/catalog.json` holds metadata and input sequences; `rounded-N.json` and `soft-N.json` contain batches of 64 outlines, requested as needed. The SVG outlines are font exports, not editable Glyphs source files. Unencoded glyphs may have input sequences or OpenType feature variants; internal glyphs without direct input cannot be copied.
 

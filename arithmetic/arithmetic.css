@@ -1,0 +1,70 @@
+/* Shared Script shell, with a reading layout for arithmetic lessons. */
+.math-page .top { max-width: 1440px; }
+.math-page .top .brand { font-size: 23px; white-space: nowrap; }
+.math-page .pagenav {
+  max-width: 1296px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  gap: 8px;
+  position: static;
+  background: transparent;
+  border: 0;
+}
+.math-page .pagenav a {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  color: var(--muted);
+  font-weight: 400;
+}
+.math-page .pagenav a.current {
+  color: var(--ink);
+  background: var(--card);
+  border-color: var(--warm);
+}
+.math-page .hero {
+  display: block;
+  max-width: 1248px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  text-align: left;
+  background: transparent;
+}
+.math-page .hero .sub {
+  margin-bottom: 16px;
+  color: var(--warm);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  opacity: 1;
+}
+.math-page .hero h1 { font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -.04em; }
+.math-page .hero .lead { margin: 20px 0 0; max-width: 760px; color: var(--muted); font-size: 18px; }
+.math-page main { max-width: 1248px; padding: 0 24px 40px; }
+.math-page main > p, .math-page main > ul, .math-page main > ol { max-width: 850px; }
+.math-page main h2 { margin-top: 48px; padding-bottom: 14px; border-bottom: 1px solid var(--line); font-size: clamp(23px, 3vw, 30px); letter-spacing: -.02em; }
+.math-page main h3 { color: var(--ink); }
+.math-page .tocbox, .math-page .keyfig, .math-page .card { border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.math-page .tocbox { margin-top: 24px; }
+.math-page .card .ct { color: var(--ink); }
+.math-page .nd, .math-page .vp, .math-page .kg, .math-page .cn,
+.math-page .nd-big, .math-page .ndebe {
+  font-family: var(--face);
+  font-weight: var(--weight);
+  font-synthesis: none;
+}
+.math-page .hero .nd-big { margin: 24px 0; color: var(--warm); }
+.math-page .scroll { max-width: 100%; }
+.math-page table { min-width: 0; width: 100%; }
+.math-page th, .math-page td { padding: 12px 14px; }
+.math-page .equations { margin: 24px 0; }
+.math-page footer { background: var(--paper); }
+@media (max-width: 600px) {
+  .math-page .hero { padding: 32px 20px 24px; }
+  .math-page main { padding-inline: 20px; }
+  .math-page .pagenav { padding-inline: 20px; gap: 6px; }
+  .math-page .pagenav a { font-size: 13px; padding: 7px 12px; }
+  .math-page th, .math-page td { padding: 8px; }
+  .math-page .prevnext { flex-wrap: wrap; }
+}
