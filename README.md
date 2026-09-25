@@ -1,1 +1,18 @@
 # type-ndebe
+
+## Native font and input verification
+
+Both Ndebe Rounded and Ndebe Soft Bold passed visual TextEdit checks on macOS. Physical Keyman typing was confirmed for ordinary and nzobe combinations, numerals 0–19, vigesimal punctuation, quotations and interpunct. RTF and TXT save/reopen tests were also confirmed. These are native application checks, not a claim that every browser or device has been tested.
+
+Pages was tested on macOS on 2026-09-25 with both Ndebe Rounded and Ndebe Soft Bold. Representative combined glyphs, nzobe forms, teaching placeholders, numerals, currencies, arithmetic, symbols and quotations rendered correctly. The specimen was saved as a native `.pages` document, closed and reopened successfully; representative Ndebe sequences and visual formatting were retained.
+
+**RTF retains font formatting; TXT retains characters only.** Select a Ndebe font again after reopening plain text if the application shows missing-character boxes.
+
+Still unverified:
+
+- Physical Keyman typing inside Pages.
+- Windows desktop behavior.
+- Physical phone/tablet input, including long presses and editing.
+- Embedded-font portability to a computer without the fonts installed.
+
+The fonts do not contain an OpenType MATH table; stretchable equation layout depends on the receiving application.
