@@ -320,8 +320,8 @@ h1 {
 }
 
 /* Accepted 2026 font and input conventions. */
-@font-face{font-family:NdebeRounded2026;src:url('font/NdebeRounded.woff?v=1ba351fdcbad') format('woff');font-display:swap}
-@font-face{font-family:NdebeSoftBold2026;src:url('font/NdebeSoftBold.woff?v=832411553847') format('woff');font-display:swap}
+@font-face{font-family:NdebeRounded2026;src:url('font/NdebeRounded.woff?v=e438003eafc8') format('woff');font-display:swap}
+@font-face{font-family:NdebeSoftBold2026;src:url('font/NdebeSoftBold.woff?v=71185ae49160') format('woff');font-display:swap}
 :root{--ndebe-font:NdebeRounded2026}html[data-font="soft"]{--ndebe-font:NdebeSoftBold2026}
 body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;width:100%;min-height:180px;resize:vertical;font:42px/1.65 var(--ndebe-font),sans-serif;padding:14px;white-space:pre-wrap}
 .input-label,.typing-controls,.input-help,#typing-help,#input-status,#math-tools>p,#math-tools>summary,.math-controls,#math-status,.math-note{font-family:system-ui,sans-serif}
