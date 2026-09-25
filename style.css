@@ -90,7 +90,7 @@ th, td {
   font-family: 'NdebePlain-Regular';
   src: local('NdebePlain-Regular'),
     url('font/ndebeplain.woff2') format('woff2'),
-    url('font/ndebeplain.woff') format('woff'),
+    url('font/ndebeplain.woff?v=symbols-5') format('woff'),
     url('font/ndebeplain.otf') format('opentype');
   font-display: block;
 }
@@ -318,3 +318,19 @@ h1 {
     height: 85vh;
   }
 }
+
+/* Accepted 2026 font and input conventions. */
+@font-face{font-family:NdebeRounded2026;src:url('font/NdebeRounded.woff?v=1ba351fdcbad') format('woff');font-display:swap}
+@font-face{font-family:NdebeSoftBold2026;src:url('font/NdebeSoftBold.woff?v=832411553847') format('woff');font-display:swap}
+:root{--ndebe-font:NdebeRounded2026}html[data-font="soft"]{--ndebe-font:NdebeSoftBold2026}
+body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;width:100%;min-height:180px;resize:vertical;font:42px/1.65 var(--ndebe-font),sans-serif;padding:14px;white-space:pre-wrap}
+.input-label,.typing-controls,.input-help,#typing-help,#input-status,#math-tools>p,#math-tools>summary,.math-controls,#math-status,.math-note{font-family:system-ui,sans-serif}
+.typing-controls,.math-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.typing-controls button,.typing-controls select,.math-controls select,.upload-label{font:14px system-ui;padding:8px;border:1px solid #bbb;border-radius:6px;background:#fafafa;color:#111}.typing-controls label{font-size:14px}#typing-help,.input-help p,.math-note{font-size:13px;line-height:1.6;margin:8px 0}#input-status,#math-status{font-size:13px;min-height:20px}.upload-label input{max-width:160px;font-size:12px}.input-help summary,#math-tools summary{cursor:pointer;padding:12px 0}.simple-keyboard{padding:6px;background:#eee;border-radius:10px}.key-row{display:flex;gap:4px;margin:5px 0}.nd-key{flex:1;min-width:0;height:55px;border:1px solid #ccc;border-radius:6px;background:white;color:#111;font:28px var(--ndebe-font),sans-serif;touch-action:manipulation;user-select:none;-webkit-user-select:none}.nd-key.utility-key{font:12px system-ui}.nd-key:active,.shifted .nd-key[data-token="{shift}"]{background:#ddd}.space-key{flex:5}.key-choices{position:sticky;bottom:10px;z-index:4;background:#fff4de;border:2px solid #333;border-radius:10px;padding:14px;box-shadow:0 3px 14px #0003}.key-choices button{font:20px var(--ndebe-font),system-ui;margin:4px;padding:12px}.key-choices[hidden]{display:none}#math-tools{margin-top:20px;border-top:1px solid #bbb}#math-tools>label{display:inline-block;margin:8px;font:14px system-ui}#math-tools input[data-ndebe]{display:block;width:100%;font:32px var(--ndebe-font),sans-serif;padding:8px;border:1px solid #aaa;border-radius:6px}#math-other-label[hidden]{display:none}.symbol-buttons,.flag-buttons{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.symbol-buttons button,.flag-buttons button{font:27px var(--ndebe-font),sans-serif;min-width:44px;min-height:48px;padding:5px;border:1px solid #ccc;background:#fafafa;border-radius:5px}.flag-buttons button{font-size:36px;min-width:75px}#math-preview{font:50px var(--ndebe-font),sans-serif;padding:20px;min-height:120px;overflow-x:auto}#math-preview math{font-family:var(--ndebe-font),math}#math-export{width:100%;font:13px monospace;min-height:90px}.input-label{display:block;text-align:left}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #b44b16;outline-offset:2px}
+@media(max-width:768px){.nd-key{height:51px;font-size:25px}.typing{padding:12px}.input{font-size:34px}.symbol-buttons button{min-width:43px}}
+@media(max-width:768px){.main-container{flex-wrap:nowrap}.section{width:100%}#math-tools>label{max-width:calc(100% - 16px)}.typing-controls>*{max-width:100%}}
+
+.nd-key{background:#000;color:#fff}.nd-key.vowel-0{background:#FF9F1C;color:#000}.nd-key.vowel-1{background:#CA6702}.nd-key.vowel-2{background:#BB3E03}.nd-key.nasal-0{background:#FFA5AB;color:#000}.nd-key.nasal-1{background:#DA627D}.nd-key.nasal-2{background:#A53860}.nd-key:active,.shifted .nd-key[data-token="{shift}"]{background:#555}.nd-key:disabled{opacity:.5}
+
+.support-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.support-buttons button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:8px 12px;border:1px solid #ccc;border-radius:6px;background:#fafafa;color:#111;font:14px system-ui,sans-serif}.support-glyph{font:30px var(--ndebe-font),sans-serif}#math-tools h3{font:600 17px system-ui,sans-serif}
+/* Palettes keep ordinary input and teaching controls separate. */
+.palette-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.palette-nav button{font:15px system-ui;padding:10px 14px;border:1px solid #bbb;border-radius:8px;background:#fafafa;color:#111}.extra-palette{border-top:1px solid #bbb;margin-top:12px;font:15px/1.5 system-ui}.extra-palette summary{cursor:pointer;padding:12px 0;font-weight:600}.extra-palette p{font:14px/1.5 system-ui}#teach-preview{font:88px var(--ndebe-font),sans-serif;min-height:140px;padding:12px;overflow-x:auto}#teaching-status{min-height:24px}.extra-palette select{max-width:220px}

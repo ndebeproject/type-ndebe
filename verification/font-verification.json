@@ -1,0 +1,186 @@
+{
+  "NdebeRounded": {
+    "unchanged_visible_outlines_and_metrics": 2581,
+    "resized_and_new_symbols": {
+      "uni0040": {
+        "character": "@",
+        "scale": 0.68,
+        "target_stroke": 60,
+        "vertical_center": 350,
+        "uniform_centerline_stroke": true
+      },
+      "uni0023": {
+        "character": "#",
+        "scale": 0.73,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni0026": {
+        "character": "&",
+        "scale": 0.73,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni002A": {
+        "character": "*",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni0025": {
+        "character": "%",
+        "scale": 0.83,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni2030": {
+        "character": "\u2030",
+        "scale": 0.83,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni20A6": {
+        "character": "\u20a6",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni0024": {
+        "character": "$",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni00A3": {
+        "character": "\u00a3",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni20AC": {
+        "character": "\u20ac",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni00A5": {
+        "character": "\u00a5",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "uni20A9": {
+        "character": "\u20a9",
+        "scale": 0.75,
+        "target_stroke": 64,
+        "vertical_center": 350
+      },
+      "asciicircum": {
+        "character": "^",
+        "new_rounded_design": true
+      },
+      "asciitilde": {
+        "character": "~",
+        "new_rounded_design": true
+      }
+    },
+    "renamed_variants": 1134,
+    "standalone_nzobe_removed": true,
+    "trigger_blank_and_zero_width": true,
+    "new_elision_sequences_verified": 1134,
+    "old_apostrophe_no_longer_elision": true,
+    "proof_renderer": "HarfBuzz shaping followed by glyph-positioned rasterization"
+  },
+  "NdebeSoftBold": {
+    "unchanged_visible_outlines_and_metrics": 2581,
+    "resized_and_new_symbols": {
+      "uni0040": {
+        "character": "@",
+        "scale": 0.68,
+        "target_stroke": 72,
+        "vertical_center": 350,
+        "uniform_centerline_stroke": true
+      },
+      "uni0023": {
+        "character": "#",
+        "scale": 0.73,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni0026": {
+        "character": "&",
+        "scale": 0.73,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni002A": {
+        "character": "*",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni0025": {
+        "character": "%",
+        "scale": 0.83,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni2030": {
+        "character": "\u2030",
+        "scale": 0.83,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni20A6": {
+        "character": "\u20a6",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni0024": {
+        "character": "$",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni00A3": {
+        "character": "\u00a3",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni20AC": {
+        "character": "\u20ac",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni00A5": {
+        "character": "\u00a5",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "uni20A9": {
+        "character": "\u20a9",
+        "scale": 0.75,
+        "vertical_center": 350,
+        "previous_weight_preserved": true
+      },
+      "asciicircum": {
+        "character": "^",
+        "new_rounded_design": true
+      },
+      "asciitilde": {
+        "character": "~",
+        "new_rounded_design": true
+      }
+    },
+    "renamed_variants": 1134,
+    "standalone_nzobe_removed": true,
+    "trigger_blank_and_zero_width": true,
+    "new_elision_sequences_verified": 1134,
+    "old_apostrophe_no_longer_elision": true,
+    "proof_renderer": "HarfBuzz shaping followed by glyph-positioned rasterization"
+  }
+}
