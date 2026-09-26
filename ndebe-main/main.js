@@ -15,3 +15,10 @@ if (form && confirmation) {
   // Keep the preview inert if JavaScript cannot initialise.
   document.getElementById('preview-fields').disabled = false;
 }
+
+const dialectFont = document.getElementById('dialect-font');
+if (dialectFont) {
+  dialectFont.addEventListener('change', () => {
+    document.getElementById('dialect-forms').classList.toggle('dialect-soft', dialectFont.value === 'soft');
+  });
+}

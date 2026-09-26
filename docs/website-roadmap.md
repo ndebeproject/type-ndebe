@@ -116,7 +116,7 @@ Review `/ndebe-main/` with Lotanna: settle layout and navigation, then reconcile
 
 Development now covers 2020, 2023, 2024–2025 and the current 2026 work, preserving historical illustrations. Homepage syllable wording now distinguishes consonant–vowel construction from standalone vowels and N/M. Shared copyright range updated to 2026. Press expanded to nine entries. Browser responsive checks and any limitations are recorded in docs/preview-review.md.
 
-Next owner decision: navigation for the eventual combined ndebe.org. Contact delivery, production metadata, deployment and physical-device input checks remain pending. The book and clothing relaunch are separate later work.
+Navigation for the eventual combined ndebe.org is approved below. Contact delivery, production metadata, deployment and physical-device input checks remain pending. The book and clothing relaunch are separate later work.
 
 ## Navigation approved — 26 September 2026
 
@@ -150,3 +150,44 @@ Status: agreed follow-up work, not completed verification. Use these questions t
 - [ ] Keep structural memorisation counts separate from demonstrated reading/writing competence. Record learner evidence before claiming superiority, universal coverage or adoption advantages.
 
 Priority: first produce the practical digital demonstration, dialect-choice lesson and checked coverage examples. Comparative studies are evidence work to undertake before making such claims, not an automatic blocker for the website preview or the book/clothing projects.
+
+## Execution queue — 26 September 2026
+
+### Agent can complete without further design decisions
+
+- Completed: add page descriptions and basic Open Graph titles/descriptions to all six preview pages; retain noindex. Canonical URLs, absolute sharing-image URLs and sitemap await the final production route/host plan.
+- Completed: reconcile stale source-inventory notes, audit preview assets/internal links/section anchors and CSS font references, and save a verified local repository snapshot. See docs/launch-readiness.md.
+- Prepared: repeatable font/input demonstration, UTF-8 specimen, codepoint/font manifest and application/device evidence matrix in [writing-demo/README.md](writing-demo/README.md). Automated fixture checks are recorded separately from the manual clipboard/native/device runs still required.
+- Drafted: [dialect-choice lesson and coverage worksheet](dialect-coverage.md), now updated with Lotanna’s shared/static selection rule, dictionary-lookup fallback and five real correspondence examples. Initial dictionary candidates are in [dictionary-candidates.md](dictionary-candidates.md). Tone/source comparison and dialect attribution remain; the lesson is not yet published.
+
+### Requires owner input or external access
+
+- Hosting/deployment destination and access: needed to implement production configuration and final routes. No domain or hosting changes until authorised.
+- Contact delivery: confirm recipient mailbox, whether to retain a form or use an email link, and provide access to the selected delivery service if a form is retained.
+- Dialect review: the shared/static rule and fallback are confirmed by Lotanna. Additional dictionary candidates need her clarification; relevant speakers/sources can establish dialect labels and tone where uncertain.
+- Physical Windows/phone/tablet verification: requires those devices and someone to perform the hardware checks; the agent can supply the checklist and record results.
+- Final editorial acceptance and explicit launch instruction: required before replacing the live site. Book rewrite and clothing relaunch remain later projects, not site-launch prerequisites.
+
+## Creator clarification and later dictionary project — 26 September 2026
+
+Use shared consonant forms for known same-meaning dialect correspondences; use static forms for invariant consonants. When comparison across dictionaries does not resolve a correspondence, use the static form matching the writer’s pronunciation. Examples and exact mappings are recorded in docs/dialect-coverage.md.
+
+For current lessons, determine tone through comparison of documented sources, using the best-supported approximation and recording unresolved uncertainty. Do not treat a consonant example as a complete tone-correct spelling.
+
+Later, build a dictionary database aiming to catalogue Igbo words and their tones, potentially hosted separately. Preserve source, dialect, meaning/context, original notation, normalised spelling and review status. Comprehensive tone cataloguing is out of scope for this website lesson and is not a launch prerequisite.
+
+### Dictionary follow-up: confirmed forms and provisional tones
+
+Lotanna confirmed afa/aha (F/H), mili/miri (L/R, always single M), and ani with ala/ana (N/L; use ani as project headword). Source-supported working tones and provisional transfers are recorded in docs/dictionary-candidates.md. When reliable tone evidence is unavailable, a clearly labelled assumed tone is allowed for the working lesson and can be corrected later. Incomplete tone research does not block preparing examples; do not present assumptions as sourced facts.
+
+Lotanna confirms: map dictionary **step tone to Ndebe Mid tone**. This mapping is settled; source-specific word-tone uncertainty remains separately tracked.
+
+Implemented locally: How it works shared/static lesson with nine live-text cards, font comparison and lookup fallback. Exact sequences and source/assumption notes: docs/dialect-lesson-examples.json. Pending: creator review of the complete examples; no deployment performed.
+
+Evidence checkpoint added: docs/coverage-evidence.md separates demonstrated coverage from unresolved questions. Second dictionary pass records GH/Y and GH/W candidates C04–C06 with tone evidence; these await creator confirmation before adding website cards. Next independent research: verify a same-segment/different-tone example set and collect a real nzobe phrase and syllabic N/M example.
+
+Next lesson batch implemented: GH/Y and GH/W cards, four akwa tone contrasts, real syllabic-nasal nsi and a working n’àni nzobe diagram. Remaining owner review: nzobe application and provisional spellings. Independent queue: broaden source coverage for vowel sequences/nasalisation, check remaining reference-page terminology, then complete the browser save/clipboard verification and launch readiness work. Hardware tests, contact delivery and deployment still need owner/device/access decisions.
+
+## Nzobe and vowel correction confirmed — 26 September 2026
+
+Lotanna confirms **nà + ànị̀ → n’ànị̀**. The surviving second a takes the elision form to show it hides the first a, which was swallowed. The final vowel in the headword is dot-below **ị**, with low tone: U+E258, not undotted low i U+E264. Both the Earth card and expanded/contracted nzobe sequences are corrected. This supersedes earlier notes calling the nzobe application unconfirmed or retaining undotted ani in project examples; historical source transcriptions remain evidence records.

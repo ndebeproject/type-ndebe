@@ -1,0 +1,179 @@
+[
+  {
+    "id": "house",
+    "headword": "ụnọ",
+    "variants": "ụnọ / ụlọ / ụyọ",
+    "body": "N/L/Y",
+    "tone": "High–Low",
+    "text": "",
+    "codepoints": [
+      "U+E25C",
+      "U+E301",
+      "U+E352",
+      "U+E25B"
+    ],
+    "source_pdf_page": 394,
+    "note": "Tone supported by the ụnọ entry; dialect variants are shown for comparison."
+  },
+  {
+    "id": "face",
+    "headword": "iru",
+    "variants": "iru / ihu",
+    "body": "R/H",
+    "tone": "High–High",
+    "text": "",
+    "codepoints": [
+      "U+E262",
+      "U+E302",
+      "U+E350",
+      "U+E268"
+    ],
+    "source_pdf_page": 159,
+    "note": "Tone supported by the iru entry."
+  },
+  {
+    "id": "market",
+    "headword": "afịa",
+    "variants": "afịa / ahịa",
+    "body": "F/H/SH",
+    "tone": "High throughout",
+    "text": "",
+    "codepoints": [
+      "U+E250",
+      "U+E303",
+      "U+E350",
+      "U+E256",
+      "U+E250"
+    ],
+    "source_pdf_page": 39,
+    "note": "Tone supported by the afịa entry."
+  },
+  {
+    "id": "bush",
+    "headword": "ọfịa",
+    "variants": "ọfịa / ọhịa / ọshịa",
+    "body": "F/H/SH",
+    "tone": "High throughout",
+    "text": "",
+    "codepoints": [
+      "U+E259",
+      "U+E303",
+      "U+E350",
+      "U+E256",
+      "U+E250"
+    ],
+    "source_pdf_page": 307,
+    "note": "Tone supported by the ọfịa entry."
+  },
+  {
+    "id": "head",
+    "headword": "ịsị",
+    "variants": "ịsị / ịshị",
+    "body": "S/SH",
+    "tone": "High–High",
+    "text": "",
+    "codepoints": [
+      "U+E256",
+      "U+E303",
+      "U+E354",
+      "U+E256"
+    ],
+    "source_pdf_page": 161,
+    "note": "Working tone transferred from the source’s isi entry to the creator’s ịsị form; provisional."
+  },
+  {
+    "id": "name",
+    "headword": "afa",
+    "variants": "afa / aha",
+    "body": "F/H/SH",
+    "tone": "High–Low",
+    "text": "",
+    "codepoints": [
+      "U+E250",
+      "U+E303",
+      "U+E350",
+      "U+E252"
+    ],
+    "source_pdf_page": 38,
+    "note": "Tone supported by afà and the source tone key."
+  },
+  {
+    "id": "water",
+    "headword": "mili",
+    "variants": "mili / miri",
+    "body": "L/R",
+    "tone": "High–Mid",
+    "text": "",
+    "codepoints": [
+      "U+E300",
+      "U+E356",
+      "U+E262",
+      "U+E302",
+      "U+E352",
+      "U+E263"
+    ],
+    "source_pdf_page": 229,
+    "note": "Single M required by creator. Source milī is high–step; step maps to Ndebe Mid."
+  },
+  {
+    "id": "earth",
+    "headword": "anị",
+    "variants": "anị / ala / ana",
+    "body": "N/L/Y",
+    "tone": "Low–Low",
+    "text": "",
+    "codepoints": [
+      "U+E252",
+      "U+E301",
+      "U+E352",
+      "U+E258"
+    ],
+    "source_pdf_page": 63,
+    "note": "Creator confirmed the final dot-below ị, low tone, on 26 September 2026. Use anị as headword with N/L/Y body; related ala/ana forms remain."
+  },
+  {
+    "id": "walk",
+    "headword": "ga",
+    "variants": "ga",
+    "body": "Static G",
+    "tone": "High",
+    "text": "",
+    "codepoints": [
+      "U+E301",
+      "U+E351",
+      "U+E250"
+    ],
+    "source_pdf_page": 120,
+    "note": "Creator’s static-G example; source -ga has high tone and gloss go/pass/move."
+  },
+  {
+    "id": "war",
+    "headword": "agha",
+    "variants": "agha / aya",
+    "body": "Y/GH",
+    "tone": "High–High",
+    "text": "",
+    "source_pdf_page": 44,
+    "note": "Creator approved GH correspondence; final static L in aghala uses fallback."
+  },
+  {
+    "id": "confusion",
+    "headword": "aghala",
+    "variants": "àghalā / àyalā",
+    "body": "Y/GH",
+    "tone": "Low–High–Mid",
+    "text": "",
+    "source_pdf_page": 45,
+    "note": "Creator approved GH correspondence; final static L in aghala uses fallback."
+  },
+  {
+    "id": "deceit",
+    "headword": "aghụghọ",
+    "variants": "aghụ̀ghọ̀ / awụ̀wọ̀",
+    "body": "W/GH",
+    "tone": "High–Low–Low",
+    "text": "",
+    "source_pdf_page": 45,
+    "note": "Creator approved GH correspondence; final static L in aghala uses fallback."
+  }
+]
