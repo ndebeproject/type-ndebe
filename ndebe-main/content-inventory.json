@@ -107,5 +107,20 @@
     "Form is local preview only; no Carrd scripts or endpoint copied.",
     "Original success screens represented on Contact.",
     "Header graphic image08 retained among assets."
-  ]
+  ],
+  "retired_sections": {
+    "date": "2026-09-26",
+    "sections": [
+      "resources (original book offer)",
+      "shop",
+      "purchase confirmation"
+    ],
+    "status": "Archived outside served website; book replaced with Script Codex link",
+    "archive": "/Users/lotanna/Codex/Ndebe/Website Archive/2026-09-26-ndebe-retired-sections/"
+  },
+  "how_it_works_review": {
+    "date": "2026-09-26",
+    "status": "Replaced image06/image07 diagrams with current font teaching sequences; revised syllables, N/M, base-20 numerals and punctuation copy",
+    "historical_page": "/Users/lotanna/Codex/Ndebe/Website Archive/2026-09-26-ndebe-retired-sections/how-it-works-before-live-diagrams.html"
+  }
 }

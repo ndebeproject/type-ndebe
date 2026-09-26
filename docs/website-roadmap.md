@@ -22,7 +22,8 @@ This roadmap records direction; it does not authorize deployment, DNS changes, r
 | Font and keyboard downloads, installation guides and compatibility information | ndebe.org/fonts/ or a dedicated downloads area; exact route to settle |
 | Typing documentation and keyboard reference | ndebe.org; short contextual help remains beside the editor |
 | Text editor, software/hardware input, copy, save, open and practical math/placeholder palettes | typendebe.com |
-| Existing book, shop and social destinations | Preserve working links from ndebe.org; decide separately whether any should move |
+| Syllabary book and clothing | Online Script Codex for now; archive old sales sections until the rewritten book and new clothing line are ready |
+| Press and dissemination | Curated coverage on ndebe.org, previewed at /ndebe-main/press.html |
 
 These destination paths are proposals, not deployed routes. Both sites should link clearly to each other. Teaching explanations move; controls needed to write text stay with the editor. Keep essential font/input assets available on Type Ńdẹ́bẹ́ so typing does not depend on an extra cross-site request.
 
@@ -103,3 +104,10 @@ Review `/ndebe-main/` with Lotanna: settle layout and navigation, then reconcile
 - docs/arithmetic-notation.md: arithmetic notation and audit notes.
 - Local Type Ńdẹ́bẹ́ visual archive: /Users/lotanna/Codex/Ndebe/Website Archive/2026-09-25-before-launch/.
 - Palette decisions: /Users/lotanna/Codex/Ndebe/Theme Studies/2026-09-25/THEME-DECISION.md.
+
+## Confirmed work — book, clothing and press (26 September 2026)
+
+- Rewrite the outdated syllabary book using the current fonts, character catalogue, teaching placeholders and numeral system. Typeset examples as font text, proofread the lessons and counts, and check both screen and print output before release. Restore the book offer only when the new edition and its purchase destination are ready. Until then, Get the Syllabary links to the online Script Codex.
+- Design and launch a new clothing line. Prepare current artwork, review product samples and set up the new shop before restoring the T-shirt section. The former shop is defunct.
+- Preserve the exact retired book, T-shirt and purchase-confirmation sections and their artwork outside the public site: `/Users/lotanna/Codex/Ndebe/Website Archive/2026-09-26-ndebe-retired-sections/`.
+- Maintain the Press page and Dissemination list with substantive coverage from 2020 onwards. Record title, outlet, date, URL and whether an item is a feature, interview mention or research reference. Exclude routine social posts; add a social discussion only if its significance warrants inclusion. Continue checking the leads in docs/press-research.md.
