@@ -301,3 +301,10 @@ body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;wid
   font-size: 12px;
   padding: 8px 10px;
 }
+
+/* Use the Currency heading typography consistently across typing dropdowns. */
+.typing-page #view-typing details > summary {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+}
