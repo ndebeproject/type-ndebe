@@ -121,3 +121,32 @@ Next owner decision: navigation for the eventual combined ndebe.org. Contact del
 ## Navigation approved — 26 September 2026
 
 Two visible navigation rows: Script, Numerals, Arithmetic, Teaching, Fonts; then How it works, Development, Press, Contact. Keep the label “How it works”. The wordmark returns home. A prominent “Type Ńdébé” header button opens the dedicated editor in the same tab. Applied across all six Ndebe Main preview pages. Relative links currently target the existing reference pages and editor; switch destinations with the eventual domain migration.
+
+## Demonstrations and coverage checks — insights from the Musa review (26 September 2026)
+
+Status: agreed follow-up work, not completed verification. Use these questions to strengthen teaching and evidence; the comparison page is not an authority on Ńdébé or a requirement to redesign it. Preserve Lotanna’s authorship and existing design decisions. Source reviewed: https://musa.bet/igbo_en.htm (English counterpart of https://musa.bet/igbo.htm).
+
+### Practical digital demonstration
+
+- [ ] Prepare a short, reproducible type → copy → paste → save → close → reopen demonstration using current fonts and input tools. Include ordinary syllables, standalone vowels and N/M, tone, nzobe, numerals and punctuation.
+- [ ] Demonstrate mixed Ńdébé and Latin/English text and switching input on the same hardware keyboard. Explain physical keys, modifiers and input sequences separately from the number of available characters.
+- [ ] Extend the existing compatibility record with receiving application, operating system, font/input version and observed result. Reuse the macOS evidence already recorded; complete the outstanding Windows and physical phone/tablet checks rather than repeating successful checks unnecessarily.
+- [ ] Show what happens with and without the required font, including RTF versus plain text and the recovery steps. State actual portability limits alongside the demonstration.
+
+### Dialect correspondence and phonological coverage
+
+- [ ] Write a worked lesson explaining when to choose a fixed consonant versus a dialect-corresponding form, how a writer makes that choice using their own dialect, and what to do when unsure. Identify any word correspondences that must be learned rather than implying they are automatic.
+- [ ] Build a coverage checklist with example word, dialect, intended pronunciation/meaning, Ńdébé spelling, explanation and verification source. Review examples with relevant speakers and linguistic sources; distinguish confirmed support, unresolved analysis and genuine gaps.
+- [ ] Include standalone vowels and syllabic N/M; phonemic and predictable nasalisation; vowel length versus separate vowel syllables; elision and the surviving vowel; high/low tone, downstep and any relevant contour or contextual tone changes. Explain how current Ńdébé conventions represent each case rather than assuming another system’s categories map directly onto them.
+- [ ] Check less-common dialect vowels and consonants, including relevant aspiration/breathy voice, labialisation and palatalisation, with concrete examples. Check names and loanwords too. Do not claim complete dialect coverage until the scope and evidence support it.
+- [ ] Explain the intended balance between recording pronunciation detail and preserving readable word forms across dialects. Make clear which distinctions everyday spelling requires and which belong in specialist phonetic transcription.
+
+### Encoding and honest comparisons
+
+- [ ] Publish a concise explanation of the current private-use assignments, component sequences and font shaping. Distinguish working text implementation from standard Unicode script encoding; distinguish missing precomposed letters from combining-sequence/rendering support. Document dependencies and known limitations without implying Unicode endorsement.
+- [ ] Validate that teaching examples, downloadable fonts, input mappings and saved/copied text agree. Extend existing checks where gaps are found rather than duplicating the current audit.
+- [ ] Before making comparative typing claims, measure equivalent tasks: keystrokes per syllable, modifier use, learning time, speed and error rate. Count physical keys, characters and learned rules separately.
+- [ ] Before making handwriting-speed or learnability claims, test representative words and passages with learners and practised writers. Consider pen lifts, stroke complexity, legibility, reading accuracy and retention; a single word’s stroke count is not sufficient evidence.
+- [ ] Keep structural memorisation counts separate from demonstrated reading/writing competence. Record learner evidence before claiming superiority, universal coverage or adoption advantages.
+
+Priority: first produce the practical digital demonstration, dialect-choice lesson and checked coverage examples. Comparative studies are evidence work to undertake before making such claims, not an automatic blocker for the website preview or the book/clothing projects.
