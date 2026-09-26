@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=rounded-2">
+  <link rel="stylesheet" href="style.css?v=typing-spacing-9">
 
   <script src="https://cdn.counter.dev/script.js" data-id="96841804-846b-4a15-87cf-813711dff1ba" data-utcoffset="-4"></script>
 
@@ -24,9 +24,7 @@
       <div align="center">
         <h1>Type Ńdẹ́bẹ́</h1>
         <p>Ńdẹ́bẹ́ is a modern writing system for the Ìgbò language.</p>
-        <p>Invented in 2009 by Lotanna Igwe-Odunze.</p>
-        <p><a href="script/">Explore Ńdẹ́bẹ́ Script →</a></p>
-        <p><a href="https://sexyigbo.com/learn/ndebe/" target="_blank" rel="noopener">Learn to read Ìgbò in Ńdẹ́bẹ́ at Sexy Igbo →</a></p>
+        <p class="inventor-credit">Invented in 2009 by Lotanna Igwe-Odunze.</p>
         <p id="ndebe-p">····</p>
         <p id="ndebe-p">- ··</p>
       </div>
@@ -171,6 +169,10 @@
         <!--End of Reference Chart-->
         <!--Image of Script Key-->
       </div><!--End of Center Container-->
+      <nav class="chart-links" aria-label="Learn more">
+        <p><a href="script/">Explore Ńdẹ́bẹ́ Script →</a></p>
+        <p><a href="https://sexyigbo.com/learn/ndebe/" target="_blank" rel="noopener">Learn to read Ìgbò in Ńdẹ́bẹ́ at Sexy Igbo →</a></p>
+      </nav>
     </div>
 
     <div class="section typing">
@@ -181,30 +183,16 @@
       </div>
 
       <div>
-        <label for="ndebe-input" class="input-label">Your text</label>
-        <div class="typing-controls"><label>Font <select id="font-choice"><option value="rounded">Rounded</option><option value="soft">Soft Bold</option></select></label><label><input type="checkbox" id="latin-input"> Latin hardware input</label><button id="copy-text" type="button">Copy text</button><button id="download-text" type="button">Save text</button></div>
+        <div class="typing-controls"><label for="ndebe-input" class="input-label">Your text</label><button id="copy-text" type="button">Copy text</button><button id="download-text" type="button">Save text</button></div>
+        <div class="typing-controls"><label>Font <select id="font-choice"><option value="rounded">Rounded</option><option value="soft">Soft Bold</option></select></label><label><input type="checkbox" id="latin-input"> Latin hardware input</label></div>
         <textarea id="ndebe-input" class="input" rows="4" spellcheck="false" autocapitalize="off" autocorrect="off" aria-describedby="typing-help" placeholder="..."></textarea>
+        <p id="charactersRemaining">0 characters</p>
         <div class="simple-keyboard"></div>
-        <div id="key-choices" class="key-choices" role="group" aria-label="Key alternatives" hidden></div>
-        <p id="charactersRemaining" align="left" style="font-size: small;">0 characters</p>
-        <div class="typing-controls"><label class="upload-label">Open old text<input id="upload-text" type="file" accept=".txt,text/plain"></label></div>
-        <p id="typing-help">Backtick: elision · Apostrophe: single quotes · Shift+apostrophe: double quotes · Shift+Space: word separator. Alt/Option+0–9: digits 10–19. Shift+number keeps symbols.</p>
-        <details class="input-help"><summary>Period, touch keys and older text</summary><p>Period after a numeral inserts the vigesimal marker; elsewhere it inserts the full stop. Alt/Option+Period inserts the decimal marker; add Shift for a full stop. Hold an onscreen digit for 10–19; hold Period for alternatives. You can also use the labelled buttons below.</p><p>Paste or open older text to migrate elision automatically. All character changes can be undone with Ctrl/Command+Z. Caps Lock is unassigned. On hardware, Shift+Period still produces &gt;.</p></details>
-        <div class="typing-controls punctuation-controls"><button type="button" data-insert="&#xE138;">Elision</button><button type="button" data-insert="&#xB7;">Word separator</button><button type="button" data-insert="&#xE132;">Decimal</button><button type="button" data-insert="&#xE137;">Vigesimal</button><button type="button" data-insert=".">Full stop</button><button type="button" id="flip-quote">Flip quotation</button><button type="button" id="migrate-text">Migrate older elision</button></div>
-        <p id="input-status" role="status" aria-live="polite"></p>
-      </div>
-
-      <details class="key-colours"><summary>Key colours</summary><div class="key-colour-list"><span class="vowel-0"><i aria-hidden="true"></i>Vowel · high</span><span class="vowel-1"><i aria-hidden="true"></i>Vowel · mid</span><span class="vowel-2"><i aria-hidden="true"></i>Vowel · low</span><span class="nasal-0"><i aria-hidden="true"></i>N/M · high</span><span class="nasal-1"><i aria-hidden="true"></i>N/M · mid</span><span class="nasal-2"><i aria-hidden="true"></i>N/M · low</span><span class="stem-key"><i aria-hidden="true"></i>Stem</span><span class="radical-key"><i aria-hidden="true"></i>Radical</span><span class="number-key"><i aria-hidden="true"></i>Numeral</span></div></details>
+        <details class="key-colours" open><summary>Key colours</summary><div class="key-colour-list"><span class="vowel-0"><i aria-hidden="true"></i>Vowel · high</span><span class="vowel-1"><i aria-hidden="true"></i>Vowel · mid</span><span class="vowel-2"><i aria-hidden="true"></i>Vowel · low</span><span class="nasal-0"><i aria-hidden="true"></i>N/M · high</span><span class="nasal-1"><i aria-hidden="true"></i>N/M · mid</span><span class="nasal-2"><i aria-hidden="true"></i>N/M · low</span><span class="stem-key"><i aria-hidden="true"></i>Stem</span><span class="radical-key"><i aria-hidden="true"></i>Radical</span><span class="number-key"><i aria-hidden="true"></i>Numeral</span></div></details>
       <nav class="palette-nav" aria-label="Palettes"><button type="button" data-palette="math-tools">Math</button><button type="button" data-palette="currency-tools">₦ Currency</button><button type="button" data-palette="teaching-tools">Teaching</button><button type="button" data-palette="other-tools">Symbols and spacing</button></nav>
       <details id="currency-tools" class="extra-palette"><summary>₦ Currency</summary><div id="currency-buttons" class="symbol-buttons"></div></details>
       <details id="other-tools" class="extra-palette"><summary>Symbols and spacing</summary><div id="other-symbol-buttons" class="symbol-buttons"></div><div id="support-buttons" class="support-buttons" role="group" aria-label="Spacing"></div></details>
-      <details id="teaching-tools" class="extra-palette"><summary>Teaching</summary>
-      <p>Choose components or dotted placeholders. These teaching sequences leave ordinary typing unchanged.</p>
-      <div class="math-controls"><label>Stem <select id="teach-stem"></select></label><label>Fruit radical <select id="teach-radical"></select></label><label>Vowel <select id="teach-vowel"></select></label><label><input type="checkbox" id="teach-branch" checked> Branch (bar)</label><label><input type="checkbox" id="teach-nzobe"> Nzobe</label></div>
-      <p id="teach-hint"></p><div id="teach-preview" aria-label="Teaching preview"></div>
-      <div class="typing-controls"><button type="button" id="insert-teaching">Insert teaching form</button></div>
-      <div id="placeholder-buttons" class="support-buttons"></div><p id="teaching-status" role="status"></p>
-      </details>
+
       <details id="math-tools"><summary>Math</summary>
       <p>Insert symbols into your text, or compose an equation below.</p><div id="symbol-buttons" class="symbol-buttons"></div>
       <h3>Number flags · okoloto</h3><div id="flag-buttons" class="flag-buttons"></div>
@@ -214,6 +202,24 @@
       <div id="math-preview" aria-label="Equation preview"></div><div class="typing-controls"><button id="insert-math-value" type="button">Insert plain value</button><button id="copy-math" type="button">Copy formatted</button><button id="download-math" type="button">Save MathML</button></div>
       <p class="math-note">Roots use the approved Ńdẹ́bẹ́ layout. Other structures use your browser’s math layout; exported roots may also be laid out differently by the receiving app. Small forms and structured equations need a compatible receiving app; plain text retains characters only.</p><p id="math-status" role="status"></p><textarea id="math-export" readonly hidden aria-label="MathML to copy"></textarea>
       </details>
+      <details id="teaching-tools" class="extra-palette"><summary>Teaching</summary>
+      <div id="placeholder-buttons" class="support-buttons"></div>
+      <p>Choose components or dotted placeholders. These teaching sequences leave ordinary typing unchanged.</p>
+      <div class="math-controls"><label>Stem <select id="teach-stem"></select></label><label>Fruit radical <select id="teach-radical"></select></label><label>Vowel <select id="teach-vowel"></select></label><label><input type="checkbox" id="teach-branch" checked> Branch (bar)</label><label><input type="checkbox" id="teach-nzobe"> Nzobe</label></div>
+      <p id="teach-hint"></p><div id="teach-preview" aria-label="Teaching preview"></div>
+      <div class="typing-controls"><button type="button" id="insert-teaching">Insert teaching form</button></div>
+      <p id="teaching-status" role="status"></p>
+      </details>
+        <div id="key-choices" class="key-choices" role="group" aria-label="Key alternatives" hidden></div>
+        <hr class="old-text-separator">
+        <details class="input-help"><summary>Period, touch keys and older text</summary><p id="typing-help">Backtick: elision · Apostrophe: single quotes · Shift+apostrophe: double quotes · Shift+Space: word separator. Alt/Option+0–9: digits 10–19. Shift+number keeps symbols.</p><div class="typing-controls punctuation-controls"><button type="button" data-insert="&#xE138;">Elision</button><button type="button" id="flip-quote">Flip quotation</button><button type="button" data-insert="&#xB7;">Word separator</button></div><p>Period after a numeral inserts the vigesimal marker; elsewhere it inserts the full stop. Alt/Option+Period inserts the decimal marker; add Shift for a full stop. Hold an onscreen digit for 10–19; hold Period for alternatives. You can also use the labelled buttons below.</p><div class="typing-controls punctuation-controls"><button type="button" data-insert="&#xE132;">Decimal</button><button type="button" data-insert="&#xE137;">Vigesimal</button><button type="button" data-insert=".">Full stop</button></div></details>
+        <hr class="old-text-separator">
+        <p class="math-note">Paste or open older text to migrate elision automatically. All character changes can be undone with Ctrl/Command+Z. Caps Lock is unassigned. On hardware, Shift+Period still produces &gt;.</p>
+        <div class="typing-controls"><label class="upload-label">Open old text<input id="upload-text" type="file" accept=".txt,text/plain"></label></div>
+        <div class="typing-controls"><button type="button" id="migrate-text">Migrate older elision</button></div>
+        <p id="input-status" role="status" aria-live="polite"></p>
+      </div>
+
       </div><!--End of view-typing-->
     </div>
 

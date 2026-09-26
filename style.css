@@ -267,3 +267,37 @@ body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;wid
 .support-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.support-buttons button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:8px 12px;border:1px solid #ccc;border-radius:6px;background:#fafafa;color:#111;font:14px system-ui,sans-serif}.support-glyph{font:30px var(--ndebe-font),sans-serif}#math-tools h3{font:600 17px system-ui,sans-serif}
 /* Palettes keep ordinary input and teaching controls separate. */
 .palette-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.palette-nav button{font:15px system-ui;padding:10px 14px;border:1px solid #bbb;border-radius:8px;background:#fafafa;color:#111}.extra-palette{border-top:1px solid #bbb;margin-top:12px;font:15px/1.5 system-ui}.extra-palette summary{cursor:pointer;padding:12px 0;font-weight:600}.extra-palette p{font:14px/1.5 system-ui}#teach-preview{font:88px var(--ndebe-font),sans-serif;min-height:140px;padding:12px;overflow-x:auto}#teaching-status{min-height:24px}.extra-palette select{max-width:220px}
+
+/* Keep the count close to the editor, with breathing room before the keyboard. */
+#charactersRemaining {
+  margin: 14px 0 24px;
+  font-size: small;
+  text-align: left;
+}
+
+.chart-links {
+  margin-top: 24px;
+  text-align: center;
+}
+.chart-links p + p { margin-top: 8px; }
+
+.typing-page .inventor-credit { margin-bottom: 16px; }
+
+.typing-page .key-colours + .palette-nav { margin-top: 24px; }
+
+.typing-page .old-text-separator {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 24px 0 16px;
+}
+
+.typing-page #placeholder-buttons button {
+  font-size: 12px;
+  min-height: 40px;
+  padding: 6px 10px;
+}
+
+.typing-page .palette-nav button {
+  font-size: 12px;
+  padding: 8px 10px;
+}
