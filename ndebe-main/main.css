@@ -63,3 +63,20 @@
 #numbers .numeral-grid + h3 { margin-top: 40px; }
 
 .numeral-divider { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+/* Review pass: keyboard-visible chart focus and comfortable navigation targets. */
+.chart-scroll:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.chart-help{color:var(--muted);font-size:14px}
+.masthead nav a,.contents a,.resource-links a,footer a{min-height:44px;display:inline-flex;align-items:center}
+footer a{display:flex;width:fit-content;max-width:100%;overflow-wrap:anywhere}
+@media(max-width:600px){.lesson-steps{gap:8px}.lesson-steps p{margin:4px 0 12px}.lesson-glyph{line-height:1.5}.teaching-card{padding:22px 14px}}
+
+@media(min-width:601px){.lesson-steps{flex-wrap:nowrap;gap:12px}.lesson-steps>div{flex:1 1 0}.lesson-arrow,.lesson-operator{flex-shrink:0}}
+
+/* Approved navigation: two visible rows and a dedicated editor action. */
+.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;padding-bottom:20px}
+.masthead .type-link{justify-self:end;white-space:nowrap}
+.navigation-rows{grid-column:1/-1;display:grid;gap:4px;min-width:0}
+.navigation-rows nav{gap:8px 28px}
+.navigation-rows nav+nav{border-top:1px solid var(--line);padding-top:4px}
+@media(max-width:520px){.masthead{gap:20px 12px}.masthead .wordmark{font-size:28px}.masthead .wordmark span{white-space:normal;letter-spacing:0;font-size:10px}.masthead .type-link{font-size:13px;padding:12px}.navigation-rows nav{gap:4px 18px}}

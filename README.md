@@ -6,7 +6,7 @@
 
 ## Ndebe Main design preview
 
-[`/ndebe-main/`](ndebe-main/) rebuilds the current ndebe.org content inside Type Ndebe for design review. It includes the main page, How it works, Development, Terms and a contact/confirmation preview. The contact form does not send or save messages. Original public illustrations are stored locally; source coverage is recorded in `ndebe-main/content-inventory.json`. The syllabary section now links to the online Script Codex; obsolete book/shop offers and purchase confirmation are archived outside the served site. A Press page collects dated coverage since 2020. These preview pages are marked noindex and do not change Carrd or domain configuration.
+[`/ndebe-main/`](ndebe-main/) rebuilds the current ndebe.org content inside Type Ndebe for design review. It includes the main page, How it works, Development, Press, Terms and a contact/confirmation preview. The contact form does not send or save messages. Original public illustrations are stored locally; source coverage is recorded in `ndebe-main/content-inventory.json`. The syllabary section now links to the online Script Codex; obsolete book/shop offers and purchase confirmation are archived outside the served site. A Press page collects dated coverage since 2020. These preview pages are marked noindex and do not change Carrd or domain configuration.
 
 ## Native font and input verification
 
@@ -40,3 +40,7 @@ Run placement checks with `node --test tests/ads.test.cjs`.
 ## Visual theme
 
 The site uses Plum & cherry with locally hosted Noto Sans for Latin text, including Igbo diacritics. The keyboard retains its approved category colours and olive utility keys. Shared colours and typography are in `theme.css`; page-specific styles retain layout and Ndebe glyph font assignments. The Noto Sans licence is in `font/NotoSans-OFL.txt`.
+
+## Ndebe Main review checkpoint
+
+See [the preview review record](docs/preview-review.md) for the September 2026 content, responsive-layout and local contact-flow checks, and remaining launch limitations.

@@ -44,11 +44,11 @@ Exit: known limits documented, essential writing/download flows verified, and co
 
 ## Phase 2 — inventory and reconcile ndebe.org
 
-Status: original copy and 23 illustrations inventoried and rebuilt in the design preview on 26 September 2026. Editorial reconciliation remains.
+Status: source inventory complete; instructional diagrams, numeral explanations and character counts reconciled in preview. Development now extends to 2026; Press has nine entries. Final owner review remains.
 
 - Archive Carrd pages, section states, images and copy before replacing the site. The existing Type Ńdẹ́bẹ́ archive is a separate archive, not a backup of ndebe.org.
 - Make a section-by-section keep/update/move/archive inventory, including history, introductory material, book/shop links, contact flow, terms and development content.
-- Reconcile historical explanations with current script rules. The live page currently contains both a base-20 summary and an older Numbers explanation using decimal-style standalone values and number diacritics. Present current instruction consistently; retain superseded material only as clearly dated history when useful.
+- Completed in preview: replaced the older decimal-style Numbers explanation with current base-20 instruction, and instructional images with live font forms. Superseded How it works copy and diagrams are archived outside the served site.
 - Review legacy character counts, punctuation descriptions, illustrations, terminology and release claims. Distinguish glyph counts, encoded characters and forms a learner needs to memorise; do not substitute one count for another.
 - Preserve Lotanna's authorship, historical material and voice. Propose substantive editorial changes for review rather than silently rewriting them.
 - Agree a sitemap and a beginner path: understand the script → learn components and tones → read examples → type → install tools if wanted.
@@ -57,7 +57,7 @@ Exit: an approved content inventory and sitemap, with a clear destination for ev
 
 ## Phase 3 — build the replacement ndebe.org in preview
 
-Status: design preview started within Type Ńdẹ́bẹ́ at `/ndebe-main/`; no provider chosen.
+Status: six-page design preview implemented at `/ndebe-main/`; content and responsive review in progress. No provider chosen.
 
 Lotanna confirmed on 26 September 2026 that the replacement should first be rebuilt as an area inside Type Ńdẹ́bẹ́. Use this area to review the full Carrd content, direct design choices and finalise the new website. Only after that approval should work begin on reconfiguring the real ndebe.org. Existing script, numeral, arithmetic, teaching and download tools remain linked rather than duplicated.
 
@@ -111,3 +111,13 @@ Review `/ndebe-main/` with Lotanna: settle layout and navigation, then reconcile
 - Design and launch a new clothing line. Prepare current artwork, review product samples and set up the new shop before restoring the T-shirt section. The former shop is defunct.
 - Preserve the exact retired book, T-shirt and purchase-confirmation sections and their artwork outside the public site: `/Users/lotanna/Codex/Ndebe/Website Archive/2026-09-26-ndebe-retired-sections/`.
 - Maintain the Press page and Dissemination list with substantive coverage from 2020 onwards. Record title, outlet, date, URL and whether an item is a feature, interview mention or research reference. Exclude routine social posts; add a social discussion only if its significance warrants inclusion. Continue checking the leads in docs/press-research.md.
+
+## Review checkpoint — 26 September 2026
+
+Development now covers 2020, 2023, 2024–2025 and the current 2026 work, preserving historical illustrations. Homepage syllable wording now distinguishes consonant–vowel construction from standalone vowels and N/M. Shared copyright range updated to 2026. Press expanded to nine entries. Browser responsive checks and any limitations are recorded in docs/preview-review.md.
+
+Next owner decision: navigation for the eventual combined ndebe.org. Contact delivery, production metadata, deployment and physical-device input checks remain pending. The book and clothing relaunch are separate later work.
+
+## Navigation approved — 26 September 2026
+
+Two visible navigation rows: Script, Numerals, Arithmetic, Teaching, Fonts; then How it works, Development, Press, Contact. Keep the label “How it works”. The wordmark returns home. A prominent “Type Ńdébé” header button opens the dedicated editor in the same tab. Applied across all six Ndebe Main preview pages. Relative links currently target the existing reference pages and editor; switch destinations with the eventual domain migration.

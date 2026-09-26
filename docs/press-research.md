@@ -13,7 +13,13 @@ Checked 26 September 2026. Initial curated collection, not an exhaustive bibliog
 ## Editorial notes
 The Guardian interview is a mention, not a profile of Lotanna. Unicode L2/23-203 is a historical research document, not an encoding approval or an endorsement. Several sources carry old counts or descriptions; link to their coverage without importing those claims into learning material. Routine social posts excluded.
 
-## Further leads to verify before adding
+## Second research pass — 26 September 2026
+- Verified and added: [Inventing Ńdébé, an Indigenous Script for the Igbo Language](https://opencountrymag.com/folio-nigeria/inventing-ndebe-an-indigenous-script-for-the-igbo-language/), Otosirieze, Open Country Mag, 1 March 2024. Publisher explicitly says first published in 2020 by Folio Nigeria. Kept both dates; no invented original day/month.
+- Verified and added: [Named entity recognition for African languages: a focus on the Igbo language](https://eprints.lancs.ac.uk/id/eprint/230132/), Lancaster PhD thesis, 2025. Repository metadata and publisher-indexed PDF contents confirm section 2.1.1.2 NDÉBÉ, p.15. This is a background reference, not an NLP system for Ndebe. PDF endpoint timed out; no claims beyond verified scope.
+- Current Press collection: nine entries. Routine social posts and duplicate syndication remain excluded.
+- DiVA record and PDF both timed out during follow-up; bibliographic identity remains unverified, so not published.
+
+## Research log (original leads retained for traceability)
 - Folio: “The Making of Ńdébé, an Indigenous Script for the Igbo Language”, Otosirieze, reported date 24 July 2020. Locate the original or an archived publisher page.
 - Lancaster thesis: https://eprints.lancs.ac.uk/230132/1/2025Chiamakaphd.pdf — verify full author/title and scope of Ndebe discussion.
 - DiVA thesis: https://www.diva-portal.org/smash/get/diva2%3A1792208/FULLTEXT01.pdf — verify bibliographic details and interview context.
