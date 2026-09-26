@@ -26,7 +26,7 @@ These are bounded additions to the teaching materials. Comprehensive tone catalo
 
 ## Implemented follow-up
 
-GH candidates C04–C06 accepted for the preview by Lotanna and added to the live cards. Final L in aghala uses the approved fallback. The tone contrast set from D2 PDF p.14, nsi from its syllabic-nasal section on PDF p.16, and the nà contraction from PDF p.235 were visually checked and added. Exact sequences and assumptions are in docs/tone-nasal-elision-examples.json. The n’àni construction remains labelled working spelling: attested Latin contraction is distinct from approval of its Ndebe application. Static KW/S/N choices use the fallback where a correspondence has not been established.
+GH candidates C04–C06 accepted for the preview by Lotanna and added to the live cards. Final L in aghala uses the approved fallback. The tone contrast set from D2 PDF p.14, nsi from its syllabic-nasal section on PDF p.16, and the nà contraction from PDF p.235 were visually checked and added. Exact sequences and assumptions are in docs/tone-nasal-elision-examples.json. The n’ànị̀ construction is now confirmed by Lotanna, including the dot-below final vowel and the surviving a carrying nzobe. Static KW/S/N choices use the fallback where a correspondence has not been established.
 
 ## Nzobe and vowel correction confirmed — 26 September 2026
 

@@ -191,3 +191,5 @@ Next lesson batch implemented: GH/Y and GH/W cards, four akwa tone contrasts, re
 ## Nzobe and vowel correction confirmed — 26 September 2026
 
 Lotanna confirms **nà + ànị̀ → n’ànị̀**. The surviving second a takes the elision form to show it hides the first a, which was swallowed. The final vowel in the headword is dot-below **ị**, with low tone: U+E258, not undotted low i U+E264. Both the Earth card and expanded/contracted nzobe sequences are corrected. This supersedes earlier notes calling the nzobe application unconfirmed or retaining undotted ani in project examples; historical source transcriptions remain evidence records.
+
+Reference reconciliation completed: typing guide now says stem + radical, explains the confirmed nzobe function, and distinguishes the website TXT export from receiving-application RTF. Teaching reference uses consistent syllabic N/M wording. New source candidate C07 records a labelled Ọnịcha/Ẹhụgbo R/H correspondence for community; creator confirmation pending.

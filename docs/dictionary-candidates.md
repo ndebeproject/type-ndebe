@@ -63,3 +63,11 @@ D2 printed p.10 / PDF p.44 pairs àgbọọ̀ and àgbọghọ̀ for a young gir
 ## Nzobe and vowel correction confirmed — 26 September 2026
 
 Lotanna confirms **nà + ànị̀ → n’ànị̀**. The surviving second a takes the elision form to show it hides the first a, which was swallowed. The final vowel in the headword is dot-below **ị**, with low tone: U+E258, not undotted low i U+E264. Both the Earth card and expanded/contracted nzobe sequences are corrected. This supersedes earlier notes calling the nzobe application unconfirmed or retaining undotted ani in project examples; historical source transcriptions remain evidence records.
+
+## Comparative evidence candidate C07: community
+
+Source: *Comparative Igboid*, Williamson, Blench and Ohiri-Aniche, circulation draft dated 13 August 2013. PDF p.19 / printed p.15, Table 24, visually checked against the rendered page. The numbered lect names can be resolved from Table 1 on PDF pp.5–6: row 12 Onc is Ọnịcha, row 8 Ehg is Ẹhụgbo.
+
+Under “crowd, community,” row 12 has ɔ̀rà and row 8 has ɔ̀hà. This supports a specific **R/H candidate** with low–low tone. Preserve IPA source vowels; provisional Latin rendering would be ọ̀rà / ọ̀hà, pending creator confirmation of the preferred spelling and meaning. Other rows have nasalisation and other reflexes: do not erase those details or fold every form into an identical spelling. No new website card is added yet.
+
+The draft introduction (PDF p.5) explicitly warns that duplicate lexical items can differ because reconstructions and transcription practices changed. Treat its tables as attributed evidence to compare, not a final spelling authority.

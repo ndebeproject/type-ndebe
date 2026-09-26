@@ -17,4 +17,8 @@ This is a backup of the current Type Ndebe working files, not a backup of Carrd 
 - Review final content, preserve Carrd/domain configuration for rollback, and explicitly authorise launch.
 
 ## Next independent work
-Prepare the reproducible input/export demonstration and a draft dialect-choice/coverage worksheet. Claims requiring linguistic decisions or physical devices remain labelled unverified until reviewed.
+The input/export demonstration pack and coverage worksheet are prepared; the dialect, tone, nasal and confirmed nzobe lessons are implemented locally. Next: complete the browser clipboard/export round trip, resolve any remaining reference inconsistencies, and continue source-backed coverage research. Physical-device verification remains separate.
+
+## Follow-up verification
+
+After the lesson expansion and reference reconciliation: eight pages (six Main preview pages plus Typing and Teaching references), 241 local references checked. No missing local files, missing static anchors or duplicate IDs found. Main JavaScript syntax and diff whitespace checks passed. This does not validate external links, screen-reader behaviour or the pending native/device flows.
