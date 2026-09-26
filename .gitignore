@@ -35,3 +35,11 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
+
+# Internal working documents belong in the private local project.
+/docs/
+/verification/
+/INPUT-CONVENTIONS.md
+/keyboard/BUILD.md
+/script/README.md
+/ndebe-main/content-inventory.json
