@@ -1,5 +1,13 @@
 # type-ndebe
 
+## Website roadmap
+
+[The shared roadmap for Type Ńdẹ́bẹ́ and ndebe.org](docs/website-roadmap.md) records the intended split: ndebe.org will host the project, script reference, numerals, arithmetic, teaching and downloads; typendebe.com will focus on writing text. The current reference pages are an interim home while content is refined before rebuilding the Carrd site.
+
+## Ndebe Main design preview
+
+[`/ndebe-main/`](ndebe-main/) rebuilds the current ndebe.org content inside Type Ndebe for design review. It includes the main page, How it works, Development, Terms and a contact/confirmation preview. The contact form does not send or save messages. Original public illustrations are stored locally; source coverage is recorded in `ndebe-main/content-inventory.json`. Existing shop links still lead to the live shop. These preview pages are marked noindex and do not change Carrd or domain configuration.
+
 ## Native font and input verification
 
 Both Ndebe Rounded and Ndebe Soft Bold passed visual TextEdit checks on macOS. Physical Keyman typing was confirmed for ordinary and nzobe combinations, numerals 0–19, vigesimal punctuation, quotations and interpunct. RTF and TXT save/reopen tests were also confirmed. These are native application checks, not a claim that every browser or device has been tested.

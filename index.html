@@ -182,17 +182,19 @@
 
       <div>
         <label for="ndebe-input" class="input-label">Your text</label>
+        <div class="typing-controls"><label>Font <select id="font-choice"><option value="rounded">Rounded</option><option value="soft">Soft Bold</option></select></label><label><input type="checkbox" id="latin-input"> Latin hardware input</label><button id="copy-text" type="button">Copy text</button><button id="download-text" type="button">Save text</button></div>
         <textarea id="ndebe-input" class="input" rows="4" spellcheck="false" autocapitalize="off" autocorrect="off" aria-describedby="typing-help" placeholder="..."></textarea>
-        <div class="typing-controls"><label>Font <select id="font-choice"><option value="rounded">Rounded</option><option value="soft">Soft Bold</option></select></label><label><input type="checkbox" id="latin-input"> Latin hardware input</label><button id="copy-text" type="button">Copy text</button><button id="download-text" type="button">Save text</button><label class="upload-label">Open old text<input id="upload-text" type="file" accept=".txt,text/plain"></label></div>
+        <div class="simple-keyboard"></div>
+        <div id="key-choices" class="key-choices" role="group" aria-label="Key alternatives" hidden></div>
+        <p id="charactersRemaining" align="left" style="font-size: small;">0 characters</p>
+        <div class="typing-controls"><label class="upload-label">Open old text<input id="upload-text" type="file" accept=".txt,text/plain"></label></div>
         <p id="typing-help">Backtick: elision · Apostrophe: single quotes · Shift+apostrophe: double quotes · Shift+Space: word separator. Alt/Option+0–9: digits 10–19. Shift+number keeps symbols.</p>
         <details class="input-help"><summary>Period, touch keys and older text</summary><p>Period after a numeral inserts the vigesimal marker; elsewhere it inserts the full stop. Alt/Option+Period inserts the decimal marker; add Shift for a full stop. Hold an onscreen digit for 10–19; hold Period for alternatives. You can also use the labelled buttons below.</p><p>Paste or open older text to migrate elision automatically. All character changes can be undone with Ctrl/Command+Z. Caps Lock is unassigned. On hardware, Shift+Period still produces &gt;.</p></details>
         <div class="typing-controls punctuation-controls"><button type="button" data-insert="&#xE138;">Elision</button><button type="button" data-insert="&#xB7;">Word separator</button><button type="button" data-insert="&#xE132;">Decimal</button><button type="button" data-insert="&#xE137;">Vigesimal</button><button type="button" data-insert=".">Full stop</button><button type="button" id="flip-quote">Flip quotation</button><button type="button" id="migrate-text">Migrate older elision</button></div>
         <p id="input-status" role="status" aria-live="polite"></p>
-        <div id="key-choices" class="key-choices" role="group" aria-label="Key alternatives" hidden></div>
-        <p id="charactersRemaining" align="left" style="font-size: small;">0 characters</p>
       </div>
 
-      <div class="simple-keyboard"></div><details class="key-colours"><summary>Key colours</summary><div class="key-colour-list"><span class="vowel-0"><i aria-hidden="true"></i>Vowel · high</span><span class="vowel-1"><i aria-hidden="true"></i>Vowel · mid</span><span class="vowel-2"><i aria-hidden="true"></i>Vowel · low</span><span class="nasal-0"><i aria-hidden="true"></i>N/M · high</span><span class="nasal-1"><i aria-hidden="true"></i>N/M · mid</span><span class="nasal-2"><i aria-hidden="true"></i>N/M · low</span><span class="stem-key"><i aria-hidden="true"></i>Stem</span><span class="radical-key"><i aria-hidden="true"></i>Radical</span><span class="number-key"><i aria-hidden="true"></i>Numeral</span></div></details>
+      <details class="key-colours"><summary>Key colours</summary><div class="key-colour-list"><span class="vowel-0"><i aria-hidden="true"></i>Vowel · high</span><span class="vowel-1"><i aria-hidden="true"></i>Vowel · mid</span><span class="vowel-2"><i aria-hidden="true"></i>Vowel · low</span><span class="nasal-0"><i aria-hidden="true"></i>N/M · high</span><span class="nasal-1"><i aria-hidden="true"></i>N/M · mid</span><span class="nasal-2"><i aria-hidden="true"></i>N/M · low</span><span class="stem-key"><i aria-hidden="true"></i>Stem</span><span class="radical-key"><i aria-hidden="true"></i>Radical</span><span class="number-key"><i aria-hidden="true"></i>Numeral</span></div></details>
       <nav class="palette-nav" aria-label="Palettes"><button type="button" data-palette="math-tools">Math</button><button type="button" data-palette="currency-tools">₦ Currency</button><button type="button" data-palette="teaching-tools">Teaching</button><button type="button" data-palette="other-tools">Symbols and spacing</button></nav>
       <details id="currency-tools" class="extra-palette"><summary>₦ Currency</summary><div id="currency-buttons" class="symbol-buttons"></div></details>
       <details id="other-tools" class="extra-palette"><summary>Symbols and spacing</summary><div id="other-symbol-buttons" class="symbol-buttons"></div><div id="support-buttons" class="support-buttons" role="group" aria-label="Spacing"></div></details>
@@ -222,6 +224,7 @@
   <p class="site-ad-label">Advertisements</p>
 </aside>
 <div class="footer">
+    <p><a href="ndebe-main/">Ndebe Main</a> · Preview the new ndebe.org</p>
     <p>Type Ńdẹ́bẹ́ and the Ńdẹ́bẹ́ Script are the copyrighted property of Lotanna Igwe-Odunze and <a href="https://ndebe.org" target="_blank" rel="noreferrer noopener">The Ńdẹ́bẹ́ Project</a></p>
     <p>Learning Ìgbò? <a href="https://sexyigbo.com/" target="_blank" rel="noopener">Sexy Igbo</a> teaches the language with Ńdẹ́bẹ́ alongside Latin — free lessons by the script's inventor.</p>
   </div>
