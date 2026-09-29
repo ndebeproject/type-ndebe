@@ -268,12 +268,17 @@ body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;wid
 /* Palettes keep ordinary input and teaching controls separate. */
 .palette-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.palette-nav button{font:15px system-ui;padding:10px 14px;border:1px solid #bbb;border-radius:8px;background:#fafafa;color:#111}.extra-palette{border-top:1px solid #bbb;margin-top:12px;font:15px/1.5 system-ui}.extra-palette summary{cursor:pointer;padding:12px 0;font-weight:600}.extra-palette p{font:14px/1.5 system-ui}#teach-preview{font:88px var(--ndebe-font),sans-serif;min-height:140px;padding:12px;overflow-x:auto}#teaching-status{min-height:24px}.extra-palette select{max-width:220px}
 
-/* Keep the count close to the editor, with breathing room before the keyboard. */
-#charactersRemaining {
+/* Count and typing help share the row below the editor. */
+.typing-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
   margin: 14px 0 24px;
   font-size: small;
-  text-align: left;
 }
+#charactersRemaining { margin: 0; text-align: left; }
+.typing-footer a { margin-left: auto; text-align: right; white-space: nowrap; }
 
 .chart-links {
   margin-top: 24px;
