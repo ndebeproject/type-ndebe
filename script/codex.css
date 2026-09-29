@@ -922,3 +922,8 @@ footer p {
   white-space: nowrap;
   font-size: clamp(24px, 4.2vw, 58px);
 }
+
+@media (max-width: 480px) {
+  .tools { grid-template-columns: minmax(0, 1fr); }
+  .tools input, .tools select { min-width: 0; max-width: 100%; }
+}
