@@ -43,3 +43,8 @@ Temporary Items
 /keyboard/BUILD.md
 /script/README.md
 /ndebe-main/content-inventory.json
+
+# Desktop releases live in the Ndebe.org source; local packaging links only.
+/keyboard/NdebeRounded-Regular.ttf
+/keyboard/NdebeSoftBold-Regular.ttf
+/keyboard/ndebe_2026.kmp
