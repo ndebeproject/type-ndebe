@@ -93,7 +93,7 @@ footer, .footer {
   font-family: var(--latin-font);
 }
 .typing-page .vowel-chart, .typing-page .consonant-chart,
-.typing-page #ndebe-h, .typing-page #ndebe-p {
+.typing-page #ndebe-h, .typing-page .ndebe-sample {
   font-family: var(--latin-font), var(--ndebe-font);
 }
 .typing-page #ndebe-h {

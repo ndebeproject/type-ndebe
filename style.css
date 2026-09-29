@@ -98,7 +98,7 @@ h1 {
   color: #BB3E03;
 }
 
-#ndebe-p {
+.ndebe-sample {
   font-size: 2rem;
 }
 
@@ -313,3 +313,9 @@ body{font-family:var(--ndebe-font),system-ui,sans-serif}.input{display:block;wid
   line-height: 1.5;
   font-weight: 600;
 }
+
+/* Keyboard access and narrow-screen text wrapping. */
+.ndebe-sample { overflow-wrap: anywhere; }
+.editor-skip { position: absolute; left: 12px; top: -100px; z-index: 10; padding: 12px; background: #322b3d; color: #eee6dc; font: 16px system-ui; }
+.editor-skip:focus { top: 12px; }
+.center-container:focus-visible { outline: 3px solid #e2b35d; outline-offset: 2px; }
